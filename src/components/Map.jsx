@@ -5,6 +5,7 @@ import { galleries } from '../data/galleries';
 import L from 'leaflet';
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+import { getImagePath } from '../utils/imagePath';
 import './Map.scss';
 
 // Custom pulsing icon
@@ -30,7 +31,7 @@ const Map = () => {
                             <Marker key={gallery.id} position={gallery.coordinates} icon={customIcon}>
                                 <Popup>
                                     <div className="map-popup">
-                                        <img src={gallery.cover} alt={gallery.country} className="popup-cover" />
+                                        <img src={getImagePath(gallery.cover)} alt={gallery.country} className="popup-cover" />
                                         <h3>
                                             {gallery.code && (
                                                 <img
