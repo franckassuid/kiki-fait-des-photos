@@ -8,7 +8,12 @@ const ContactForm = () => {
                 <h2 className="contact-title">Contact</h2>
                 <p className="contact-subtitle">Un projet ? Une question ? Écrivez-moi.</p>
 
-                <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+                <form
+                    className="contact-form"
+                    action="mailto:fassuid@gmail.com"
+                    method="post"
+                    enctype="text/plain"
+                >
                     <div className="input-group">
                         <input type="text" placeholder="Nom" />
                         <input type="email" placeholder="Email" />
