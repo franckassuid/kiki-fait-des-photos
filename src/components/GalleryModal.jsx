@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { X } from 'lucide-react';
 import Lightbox from './Lightbox';
+import { getImagePath } from '../utils/imagePath';
 import './GalleryModal.scss';
 
 const GalleryModal = ({ gallery, onClose }) => {
@@ -59,7 +60,7 @@ const GalleryModal = ({ gallery, onClose }) => {
                                             className="image-wrapper"
                                             onClick={() => setLightboxIndex(index)}
                                         >
-                                            <img src={img.src} alt={`${gallery.country} ${index + 1}`} loading="lazy" />
+                                            <img src={getImagePath(img.src)} alt={`${gallery.country} ${index + 1}`} loading="lazy" />
                                         </div>
                                     ))}
                                 </div>
@@ -93,7 +94,7 @@ const GalleryModal = ({ gallery, onClose }) => {
                                                 className="image-wrapper"
                                                 onClick={() => setLightboxIndex(globalIndex)}
                                             >
-                                                <img src={img.src} alt={`${gallery.country} - ${subcategory} ${globalIndex + 1}`} loading="lazy" />
+                                                <img src={getImagePath(img.src)} alt={`${gallery.country} - ${subcategory} ${globalIndex + 1}`} loading="lazy" />
                                             </div>
                                         );
                                     })}

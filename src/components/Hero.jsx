@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { galleries } from '../data/galleries';
+import { getImagePath } from '../utils/imagePath';
 import './Hero.scss';
 
 const Hero = () => {
@@ -48,7 +49,7 @@ const Hero = () => {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 1.5 }}
-                    style={{ backgroundImage: `url(${currentImage.src})` }}
+                    style={{ backgroundImage: `url(${getImagePath(currentImage.src)})` }}
                 />
             </AnimatePresence>
             <div className="hero-overlay">

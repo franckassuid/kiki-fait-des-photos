@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { getImagePath } from '../utils/imagePath';
 import './Lightbox.scss';
 
 const Lightbox = ({ images, initialIndex, onClose }) => {
@@ -48,7 +49,7 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
 
             <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
                 <img
-                    src={images[currentIndex].src}
+                    src={getImagePath(images[currentIndex].src)}
                     alt={`Gallery image ${currentIndex + 1}`}
                 />
                 <div className="image-info">

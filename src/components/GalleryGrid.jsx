@@ -2,6 +2,8 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './GalleryGrid.scss';
 
+import { getImagePath } from '../utils/imagePath';
+
 const GalleryGrid = ({ galleries, onGalleryClick }) => {
     return (
         <motion.div layout className="gallery-grid">
@@ -18,7 +20,7 @@ const GalleryGrid = ({ galleries, onGalleryClick }) => {
                         onClick={() => onGalleryClick(gallery)}
                     >
                         <div className="image-container">
-                            <img src={gallery.cover} alt={gallery.country} loading="lazy" />
+                            <img src={getImagePath(gallery.cover)} alt={gallery.country} loading="lazy" />
                             <div className="overlay">
                                 <h3>
                                     {gallery.code && (
