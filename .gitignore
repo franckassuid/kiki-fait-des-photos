@@ -34,3 +34,6 @@ yarn-error.log*
 
 # Generated photos (can be regenerated with script)
 public/photos_optimized/
+
+# Original HD Photos (too heavy for git)
+public/Photos/
