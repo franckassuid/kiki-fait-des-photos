@@ -38,7 +38,7 @@ function App() {
           onGalleryClick={setSelectedGallery}
         />
 
-        <Map />
+        <Map onGalleryClick={setSelectedGallery} />
 
         <ContactForm />
       </main>

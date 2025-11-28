@@ -16,7 +16,7 @@ const customIcon = L.divIcon({
     iconAnchor: [10, 10]
 });
 
-const Map = () => {
+const Map = ({ onGalleryClick }) => {
     return (
         <section className="map-section">
             <div className="container">
@@ -30,7 +30,7 @@ const Map = () => {
                         {galleries.map((gallery) => (
                             <Marker key={gallery.id} position={gallery.coordinates} icon={customIcon}>
                                 <Popup>
-                                    <div className="map-popup">
+                                    <div className="map-popup" onClick={() => onGalleryClick && onGalleryClick(gallery)}>
                                         <img src={getImagePath(gallery.cover)} alt={gallery.country} className="popup-cover" />
                                         <h3>
                                             {gallery.code && (
