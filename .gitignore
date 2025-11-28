@@ -33,7 +33,7 @@ yarn-error.log*
 *.sw?
 
 # Generated photos (can be regenerated with script)
-public/photos_optimized/
+
 
 # Original HD Photos (too heavy for git)
 public/Photos/
