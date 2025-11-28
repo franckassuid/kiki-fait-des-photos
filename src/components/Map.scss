@@ -1,0 +1,127 @@
+.map-section {
+    padding: 4rem 0;
+    background-color: var(--color-bg);
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .map-container {
+        height: 500px;
+        width: 100%;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+.map-popup {
+    text-align: center;
+    min-width: 200px;
+
+    .popup-cover {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 0.8rem;
+        display: block;
+    }
+
+    h3 {
+        margin: 0 0 0.3rem 0;
+        font-size: 1.1rem;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        font-weight: 600;
+
+        .flag-icon {
+            height: 1em;
+            width: auto;
+            border-radius: 2px;
+        }
+    }
+
+    p {
+        margin: 0;
+        font-size: 0.85rem;
+        color: #aaa;
+    }
+}
+
+/* Leaflet Dark Mode Overrides */
+.leaflet-container {
+    background: #242424;
+    font-family: inherit;
+}
+
+.leaflet-popup-content-wrapper {
+    background: rgba(20, 20, 20, 0.95);
+    color: white;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.leaflet-popup-tip {
+    background: rgba(20, 20, 20, 0.95);
+}
+
+.leaflet-popup-content {
+    margin: 1rem;
+}
+
+.leaflet-popup-close-button {
+    color: white !important;
+}
+
+// Custom Marker Styles
+.custom-marker-container {
+    background: transparent;
+    border: none;
+
+    .custom-marker {
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        border-radius: 50%;
+        position: relative;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+
+        .marker-pulse {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.8;
+    }
+
+    70% {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}

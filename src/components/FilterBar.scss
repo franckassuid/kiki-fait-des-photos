@@ -1,0 +1,35 @@
+.filter-bar {
+    margin-bottom: 3rem;
+
+    .filter-container {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .filter-button {
+        font-size: 0.95rem;
+        color: var(--color-text-muted);
+        padding: 0.75rem 1.5rem;
+        border-radius: 2rem;
+        transition: all 0.3s ease;
+        border: 1px solid transparent;
+        background: transparent;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--color-text);
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        &.active {
+            color: var(--color-bg);
+            /* Dark text */
+            background-color: var(--color-text);
+            /* Light background */
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+    }
+}

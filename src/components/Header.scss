@@ -1,0 +1,51 @@
+.header {
+    padding: 1.5rem 0;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--color-border);
+    background-color: var(--color-bg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    background-color: rgba(18, 18, 18, 0.8);
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        /* Changed to space-between for future nav items */
+        align-items: center;
+    }
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        cursor: pointer;
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+        }
+
+        .title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+        }
+    }
+
+    .social-link {
+        color: var(--color-text);
+        transition: color 0.3s ease, transform 0.3s ease;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            color: #E1306C;
+            /* Instagram brand color */
+            transform: scale(1.1);
+        }
+    }
+}
