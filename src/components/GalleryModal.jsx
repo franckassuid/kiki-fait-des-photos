@@ -1,10 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { X } from 'lucide-react';
+import { X, Grid, Square } from 'lucide-react';
 import { getImagePath } from '../utils/imagePath';
 import './GalleryModal.scss';
 
 const GalleryModal = ({ gallery, initialSubcategory, onClose, onImageClick }) => {
     const [selectedSubcategory, setSelectedSubcategory] = useState(initialSubcategory || 'Tous');
+    const [isCompactMode, setIsCompactMode] = useState(() => {
+        const saved = localStorage.getItem('galleryCompactMode');
+        return saved === 'true';
+    });
+
+    useEffect(() => {
+        localStorage.setItem('galleryCompactMode', isCompactMode);
+    }, [isCompactMode]);
 
     useEffect(() => {
         if (initialSubcategory) {
@@ -89,13 +97,24 @@ const GalleryModal = ({ gallery, initialSubcategory, onClose, onImageClick }) =>
                     )}
                 </div>
 
+                <div className="view-controls">
+                    <button
+                        className="view-toggle-btn"
+                        onClick={() => setIsCompactMode(!isCompactMode)}
+                        title={isCompactMode ? "Vue normale" : "Vue compacte"}
+                    >
+                        {isCompactMode ? <Square size={20} /> : <Grid size={20} />}
+                        <span className="btn-label">{isCompactMode ? 'Grandes' : 'Petites'}</span>
+                    </button>
+                </div>
+
                 <div className="gallery-content">
                     {selectedSubcategory === 'Tous' && hasSubcategories ? (
                         <div className="grouped-grid">
                             {sortedGroups.map(group => (
                                 <div key={group} className="group-section">
                                     <h3 className="group-title">{group}</h3>
-                                    <div className="modal-grid">
+                                    <div className={`modal-grid ${isCompactMode ? 'compact' : ''}`}>
                                         {groupedImages[group].map((img) => {
                                             const originalIndex = gallery.images.indexOf(img);
                                             return (
@@ -113,7 +132,7 @@ const GalleryModal = ({ gallery, initialSubcategory, onClose, onImageClick }) =>
                             ))}
                         </div>
                     ) : (
-                        <div className="modal-grid">
+                        <div className={`modal-grid ${isCompactMode ? 'compact' : ''}`}>
                             {filteredImages.map((img) => {
                                 // Find the original index for the lightbox
                                 const originalIndex = gallery.images.indexOf(img);
