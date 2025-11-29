@@ -91,6 +91,7 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
                     {images[currentIndex].exif && (
                         <div className="exif-data">
                             {images[currentIndex].exif.model && <span>{images[currentIndex].exif.model}</span>}
+                            {images[currentIndex].exif.date && <span style={{ opacity: 0.7 }}>{formatDate(images[currentIndex].exif.date)}</span>}
                             {images[currentIndex].exif.focal_length && <span>{images[currentIndex].exif.focal_length}</span>}
                             {images[currentIndex].exif.f_stop && <span>{images[currentIndex].exif.f_stop}</span>}
                             {images[currentIndex].exif.shutter_speed && <span>{formatExposureTime(images[currentIndex].exif.shutter_speed)}</span>}

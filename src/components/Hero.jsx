@@ -58,46 +58,12 @@ const Hero = ({ onGalleryClick }) => {
         setCurrentImageIndex((prev) => (prev - 1 + randomImages.length) % randomImages.length);
     };
 
-    // Swipe handlers
-    const [touchStart, setTouchStart] = useState(null);
-    const [touchEnd, setTouchEnd] = useState(null);
-
-    const minSwipeDistance = 50;
-
-    const onTouchStart = (e) => {
-        setTouchEnd(null);
-        setTouchStart(e.targetTouches[0].clientX);
-    };
-
-    const onTouchMove = (e) => {
-        setTouchEnd(e.targetTouches[0].clientX);
-    };
-
-    const onTouchEnd = () => {
-        if (!touchStart || !touchEnd) return;
-        const distance = touchStart - touchEnd;
-        const isLeftSwipe = distance > minSwipeDistance;
-        const isRightSwipe = distance < -minSwipeDistance;
-
-        if (isLeftSwipe) {
-            handleNext();
-        }
-        if (isRightSwipe) {
-            handlePrev();
-        }
-    };
-
     if (randomImages.length === 0) return null;
 
     const currentImage = randomImages[currentImageIndex];
 
     return (
-        <section
-            className="hero"
-            onTouchStart={onTouchStart}
-            onTouchMove={onTouchMove}
-            onTouchEnd={onTouchEnd}
-        >
+        <section className="hero">
             <AnimatePresence mode="wait">
                 <motion.div
                     key={currentImageIndex}

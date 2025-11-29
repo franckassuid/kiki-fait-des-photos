@@ -12,3 +12,16 @@ export const formatExposureTime = (value) => {
     const denominator = Math.round(1 / num);
     return `1/${denominator}s`;
 };
+
+export const formatDate = (dateString) => {
+    if (!dateString) return '';
+    // Format: "YYYY:MM:DD HH:MM:SS"
+    const parts = dateString.split(' ');
+    if (parts.length === 0) return dateString;
+
+    const dateParts = parts[0].split(':');
+    if (dateParts.length !== 3) return dateString;
+
+    const [year, month, day] = dateParts;
+    return `${day}/${month}/${year}`;
+};

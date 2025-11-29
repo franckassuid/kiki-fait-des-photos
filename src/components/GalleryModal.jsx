@@ -31,6 +31,25 @@ const GalleryModal = ({ gallery, initialSubcategory, onClose, onImageClick }) =>
         ? gallery.images
         : gallery.images.filter(img => img.subcategory === selectedSubcategory);
 
+    // Group images by subcategory if 'Tous' is selected
+    const groupedImages = selectedSubcategory === 'Tous' && hasSubcategories
+        ? gallery.images.reduce((acc, img) => {
+            const sub = img.subcategory || 'Autres';
+            if (!acc[sub]) acc[sub] = [];
+            acc[sub].push(img);
+            return acc;
+        }, {})
+        : null;
+
+    // Sort keys to put 'Autres' last if it exists, otherwise alphabetical
+    const sortedGroups = groupedImages
+        ? Object.keys(groupedImages).sort((a, b) => {
+            if (a === 'Autres') return 1;
+            if (b === 'Autres') return -1;
+            return a.localeCompare(b);
+        })
+        : null;
+
     return (
         <div className="gallery-modal-overlay fade-in">
             <button className="close-button" onClick={onClose}>
@@ -67,21 +86,45 @@ const GalleryModal = ({ gallery, initialSubcategory, onClose, onImageClick }) =>
                 </div>
 
                 <div className="gallery-content">
-                    <div className="modal-grid">
-                        {filteredImages.map((img) => {
-                            // Find the original index for the lightbox
-                            const originalIndex = gallery.images.indexOf(img);
-                            return (
-                                <div
-                                    key={originalIndex}
-                                    className="image-wrapper"
-                                    onClick={() => onImageClick(gallery.images, originalIndex)}
-                                >
-                                    <img src={getImagePath(img.src)} alt={`${gallery.country} ${originalIndex + 1}`} loading="lazy" />
+                    {selectedSubcategory === 'Tous' && hasSubcategories ? (
+                        <div className="grouped-grid">
+                            {sortedGroups.map(group => (
+                                <div key={group} className="group-section">
+                                    <h3 className="group-title">{group}</h3>
+                                    <div className="modal-grid">
+                                        {groupedImages[group].map((img) => {
+                                            const originalIndex = gallery.images.indexOf(img);
+                                            return (
+                                                <div
+                                                    key={originalIndex}
+                                                    className="image-wrapper"
+                                                    onClick={() => onImageClick(gallery.images, originalIndex)}
+                                                >
+                                                    <img src={getImagePath(img.src)} alt={`${gallery.country} ${originalIndex + 1}`} loading="lazy" />
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
                                 </div>
-                            );
-                        })}
-                    </div>
+                            ))}
+                        </div>
+                    ) : (
+                        <div className="modal-grid">
+                            {filteredImages.map((img) => {
+                                // Find the original index for the lightbox
+                                const originalIndex = gallery.images.indexOf(img);
+                                return (
+                                    <div
+                                        key={originalIndex}
+                                        className="image-wrapper"
+                                        onClick={() => onImageClick(gallery.images, originalIndex)}
+                                    >
+                                        <img src={getImagePath(img.src)} alt={`${gallery.country} ${originalIndex + 1}`} loading="lazy" />
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

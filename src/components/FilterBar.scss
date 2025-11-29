@@ -6,6 +6,7 @@
         justify-content: center;
         gap: 1.5rem;
         flex-wrap: wrap;
+        position: relative;
     }
 
     .filter-button {
@@ -46,6 +47,23 @@
             &::-webkit-scrollbar {
                 display: none; // Chrome/Safari
             }
+
+            // Visual cue for scrolling
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                width: 40px;
+                background: linear-gradient(to right, transparent, var(--color-bg));
+                pointer-events: none;
+                opacity: 0.8;
+            }
         }
     }
 }
+
+```
