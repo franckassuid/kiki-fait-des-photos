@@ -4468,7 +4468,59 @@ export const galleries = [
     "cover": "/photos_optimized/tanzanie/Serengeti/cover.webp",
     "images": [
       {
-        "src": "/photos_optimized/tanzanie/Serengeti/DSC05989.webp",
+        "src": "/photos_optimized/tanzanie/Tarangire/DSC03929.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:04:19 14:55:53",
+          "focal_length": "190mm",
+          "shutter_speed": "0.0015625s",
+          "f_stop": "f/9.0",
+          "iso": "400"
+        },
+        "subcategory": "Tarangire"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Tarangire/DSC05776.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:04 11:15:29",
+          "focal_length": "500mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/6.7",
+          "iso": "800"
+        },
+        "subcategory": "Tarangire"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Tarangire/DSC05931.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:04 12:29:00",
+          "focal_length": "424mm",
+          "shutter_speed": "0.0008s",
+          "f_stop": "f/6.3",
+          "iso": "1600"
+        },
+        "subcategory": "Tarangire"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Tarangire/DSC05953.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:04 12:31:57",
+          "focal_length": "228mm",
+          "shutter_speed": "0.0008s",
+          "f_stop": "f/6.3",
+          "iso": "800"
+        },
+        "subcategory": "Tarangire"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Tarangire/DSC05989.webp",
         "exif": {
           "make": "SONY",
           "model": "ILCE-7CM2",
@@ -4478,10 +4530,10 @@ export const galleries = [
           "f_stop": "f/6.7",
           "iso": "2000"
         },
-        "subcategory": "Serengeti"
+        "subcategory": "Tarangire"
       },
       {
-        "src": "/photos_optimized/tanzanie/Serengeti/DSC05995.webp",
+        "src": "/photos_optimized/tanzanie/Tarangire/DSC05995.webp",
         "exif": {
           "make": "SONY",
           "model": "ILCE-7CM2",
@@ -4491,7 +4543,306 @@ export const galleries = [
           "f_stop": "f/5.0",
           "iso": "800"
         },
-        "subcategory": "Serengeti"
+        "subcategory": "Tarangire"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Tarangire/DSC06032.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:04 12:46:08",
+          "focal_length": "150mm",
+          "shutter_speed": "0.00125s",
+          "f_stop": "f/16.0",
+          "iso": "12800"
+        },
+        "subcategory": "Tarangire"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Tarangire/DSC06058.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:04 12:54:27",
+          "focal_length": "150mm",
+          "shutter_speed": "0.00125s",
+          "f_stop": "f/14.0",
+          "iso": "800"
+        },
+        "subcategory": "Tarangire"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Tarangire/DSC06111.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:04 13:07:18",
+          "focal_length": "370mm",
+          "shutter_speed": "0.00125s",
+          "f_stop": "f/9.0",
+          "iso": "800"
+        },
+        "subcategory": "Tarangire"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Tarangire/DSC06176.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:04 13:19:27",
+          "focal_length": "500mm",
+          "shutter_speed": "0.00125s",
+          "f_stop": "f/9.0",
+          "iso": "800"
+        },
+        "subcategory": "Tarangire"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Tarangire/DSC06191.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:04 13:20:16",
+          "focal_length": "500mm",
+          "shutter_speed": "0.00125s",
+          "f_stop": "f/9.0",
+          "iso": "800"
+        },
+        "subcategory": "Tarangire"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Tarangire/DSC06218.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:04 14:09:06",
+          "focal_length": "500mm",
+          "shutter_speed": "0.00125s",
+          "f_stop": "f/11.0",
+          "iso": "800"
+        },
+        "subcategory": "Tarangire"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Tarangire/DSC06227.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:04 14:12:21",
+          "focal_length": "150mm",
+          "shutter_speed": "0.0008s",
+          "f_stop": "f/9.0",
+          "iso": "800"
+        },
+        "subcategory": "Tarangire"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Tarangire/DSC06246.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:04 14:31:07",
+          "focal_length": "354mm",
+          "shutter_speed": "0.0008s",
+          "f_stop": "f/5.6",
+          "iso": "2000"
+        },
+        "subcategory": "Tarangire"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Tarangire/DSC06270.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:04 14:46:39",
+          "focal_length": "449mm",
+          "shutter_speed": "0.0008s",
+          "f_stop": "f/6.3",
+          "iso": "1250"
+        },
+        "subcategory": "Tarangire"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Ngorongoro/DSC07916.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:08 07:15:43",
+          "focal_length": "288mm",
+          "shutter_speed": "0.003125s",
+          "f_stop": "f/5.6",
+          "iso": "200"
+        },
+        "subcategory": "Ngorongoro"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Ngorongoro/DSC07964.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:08 07:34:53",
+          "focal_length": "150mm",
+          "shutter_speed": "0.004s",
+          "f_stop": "f/5.6",
+          "iso": "100"
+        },
+        "subcategory": "Ngorongoro"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Ngorongoro/DSC07967.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:08 07:34:58",
+          "focal_length": "150mm",
+          "shutter_speed": "0.004s",
+          "f_stop": "f/5.6",
+          "iso": "100"
+        },
+        "subcategory": "Ngorongoro"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Ngorongoro/DSC07972.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:08 07:36:18",
+          "focal_length": "154mm",
+          "shutter_speed": "0.0025s",
+          "f_stop": "f/5.6",
+          "iso": "100"
+        },
+        "subcategory": "Ngorongoro"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Ngorongoro/DSC08006.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:08 08:59:11",
+          "focal_length": "177mm",
+          "shutter_speed": "0.005s",
+          "f_stop": "f/5.6",
+          "iso": "125"
+        },
+        "subcategory": "Ngorongoro"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Ngorongoro/DSC08011.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:08 09:00:40",
+          "focal_length": "275mm",
+          "shutter_speed": "0.003125s",
+          "f_stop": "f/5.6",
+          "iso": "400"
+        },
+        "subcategory": "Ngorongoro"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Ngorongoro/DSC08014.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:08 09:06:54",
+          "focal_length": "500mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/6.7",
+          "iso": "320"
+        },
+        "subcategory": "Ngorongoro"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Ngorongoro/DSC08023.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:08 09:08:11",
+          "focal_length": "500mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/6.7",
+          "iso": "250"
+        },
+        "subcategory": "Ngorongoro"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Ngorongoro/DSC08025.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:08 09:08:13",
+          "focal_length": "500mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/6.7",
+          "iso": "250"
+        },
+        "subcategory": "Ngorongoro"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Ngorongoro/DSC08028.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:08 09:08:21",
+          "focal_length": "500mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/6.7",
+          "iso": "320"
+        },
+        "subcategory": "Ngorongoro"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Ngorongoro/DSC08054.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:08 09:11:53",
+          "focal_length": "239mm",
+          "shutter_speed": "0.004s",
+          "f_stop": "f/5.6",
+          "iso": "100"
+        },
+        "subcategory": "Ngorongoro"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Ngorongoro/DSC08070.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:08 09:15:57",
+          "focal_length": "459mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/6.3",
+          "iso": "320"
+        },
+        "subcategory": "Ngorongoro"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Ngorongoro/DSC08082.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:08 09:35:03",
+          "focal_length": "500mm",
+          "shutter_speed": "0.0015625s",
+          "f_stop": "f/6.7",
+          "iso": "100"
+        },
+        "subcategory": "Ngorongoro"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Ngorongoro/R0000482.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2025:10:08 08:42:36",
+          "focal_length": "18mm",
+          "shutter_speed": "0.000625s",
+          "f_stop": "f/2.8",
+          "iso": "200"
+        },
+        "subcategory": "Ngorongoro"
       },
       {
         "src": "/photos_optimized/tanzanie/Serengeti/DSC06354.webp",
@@ -4503,6 +4854,97 @@ export const galleries = [
           "shutter_speed": "0.0008s",
           "f_stop": "f/6.7",
           "iso": "800"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Serengeti/DSC06391.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:05 12:19:19",
+          "focal_length": "150mm",
+          "shutter_speed": "0.0008s",
+          "f_stop": "f/5.0",
+          "iso": "100"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Serengeti/DSC06412.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:05 12:20:07",
+          "focal_length": "309mm",
+          "shutter_speed": "0.0008s",
+          "f_stop": "f/5.6",
+          "iso": "250"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Serengeti/DSC06444.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:05 12:29:39",
+          "focal_length": "150mm",
+          "shutter_speed": "0.0008s",
+          "f_stop": "f/5.0",
+          "iso": "320"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Serengeti/DSC06467.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:05 14:23:10",
+          "focal_length": "202mm",
+          "shutter_speed": "0.0008s",
+          "f_stop": "f/5.0",
+          "iso": "400"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Serengeti/DSC06570.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:05 15:17:16",
+          "focal_length": "195mm",
+          "shutter_speed": "0.0008s",
+          "f_stop": "f/5.0",
+          "iso": "500"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Serengeti/DSC06597.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:05 15:20:13",
+          "focal_length": "308mm",
+          "shutter_speed": "0.0008s",
+          "f_stop": "f/5.6",
+          "iso": "640"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Serengeti/DSC06599.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:05 15:20:18",
+          "focal_length": "150mm",
+          "shutter_speed": "0.0008s",
+          "f_stop": "f/5.0",
+          "iso": "400"
         },
         "subcategory": "Serengeti"
       },
@@ -4533,6 +4975,71 @@ export const galleries = [
         "subcategory": "Serengeti"
       },
       {
+        "src": "/photos_optimized/tanzanie/Serengeti/DSC06711.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:05 16:11:11",
+          "focal_length": "150mm",
+          "shutter_speed": "0.00625s",
+          "f_stop": "f/5.0",
+          "iso": "320"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Serengeti/DSC06794.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:05 17:12:03",
+          "focal_length": "215mm",
+          "shutter_speed": "0.004s",
+          "f_stop": "f/5.0",
+          "iso": "2000"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Serengeti/DSC06854.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:05 17:32:11",
+          "focal_length": "500mm",
+          "shutter_speed": "0.004s",
+          "f_stop": "f/6.7",
+          "iso": "4000"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Serengeti/DSC06868.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:06 08:08:35",
+          "focal_length": "325mm",
+          "shutter_speed": "0.0025s",
+          "f_stop": "f/5.6",
+          "iso": "250"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Serengeti/DSC06907.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:06 08:29:44",
+          "focal_length": "248mm",
+          "shutter_speed": "0.0025s",
+          "f_stop": "f/5.6",
+          "iso": "100"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
         "src": "/photos_optimized/tanzanie/Serengeti/DSC06928.webp",
         "exif": {
           "make": "SONY",
@@ -4540,6 +5047,19 @@ export const galleries = [
           "date": "2025:10:06 08:45:44",
           "focal_length": "349mm",
           "shutter_speed": "0.00125s",
+          "f_stop": "f/5.6",
+          "iso": "100"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Serengeti/DSC06972.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:06 08:49:38",
+          "focal_length": "150mm",
+          "shutter_speed": "0.002s",
           "f_stop": "f/5.6",
           "iso": "100"
         },
@@ -4559,6 +5079,19 @@ export const galleries = [
         "subcategory": "Serengeti"
       },
       {
+        "src": "/photos_optimized/tanzanie/Serengeti/DSC07014.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:06 08:51:20",
+          "focal_length": "150mm",
+          "shutter_speed": "0.003125s",
+          "f_stop": "f/5.6",
+          "iso": "100"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
         "src": "/photos_optimized/tanzanie/Serengeti/DSC07073.webp",
         "exif": {
           "make": "SONY",
@@ -4568,6 +5101,84 @@ export const galleries = [
           "shutter_speed": "0.002s",
           "f_stop": "f/6.7",
           "iso": "250"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Serengeti/DSC07091.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:06 10:15:56",
+          "focal_length": "156mm",
+          "shutter_speed": "0.00125s",
+          "f_stop": "f/5.6",
+          "iso": "100"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Serengeti/DSC07115.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:06 10:21:59",
+          "focal_length": "500mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/6.7",
+          "iso": "160"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Serengeti/DSC07126.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:06 10:33:41",
+          "focal_length": "150mm",
+          "shutter_speed": "0.0015625s",
+          "f_stop": "f/5.6",
+          "iso": "100"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Serengeti/DSC07155.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:06 11:33:11",
+          "focal_length": "310mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/5.6",
+          "iso": "100"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Serengeti/DSC07189.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:06 13:53:06",
+          "focal_length": "175mm",
+          "shutter_speed": "0.005s",
+          "f_stop": "f/5.6",
+          "iso": "200"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Serengeti/DSC07224.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:06 13:57:26",
+          "focal_length": "235mm",
+          "shutter_speed": "0.003125s",
+          "f_stop": "f/5.0",
+          "iso": "320"
         },
         "subcategory": "Serengeti"
       },
@@ -4585,6 +5196,32 @@ export const galleries = [
         "subcategory": "Serengeti"
       },
       {
+        "src": "/photos_optimized/tanzanie/Serengeti/DSC07341.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:06 14:18:15",
+          "focal_length": "154mm",
+          "shutter_speed": "0.008s",
+          "f_stop": "f/5.0",
+          "iso": "200"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Serengeti/DSC07372.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:06 14:20:03",
+          "focal_length": "500mm",
+          "shutter_speed": "0.008s",
+          "f_stop": "f/6.7",
+          "iso": "320"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
         "src": "/photos_optimized/tanzanie/Serengeti/DSC07400.webp",
         "exif": {
           "make": "SONY",
@@ -4598,11 +5235,37 @@ export const galleries = [
         "subcategory": "Serengeti"
       },
       {
+        "src": "/photos_optimized/tanzanie/Serengeti/DSC07686.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:07 09:19:27",
+          "focal_length": "500mm",
+          "shutter_speed": "0.0008s",
+          "f_stop": "f/6.7",
+          "iso": "800"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
         "src": "/photos_optimized/tanzanie/Serengeti/DSC07736.webp",
         "exif": {
           "make": "SONY",
           "model": "ILCE-7CM2",
           "date": "2025:10:07 09:36:07",
+          "focal_length": "500mm",
+          "shutter_speed": "0.0005s",
+          "f_stop": "f/6.7",
+          "iso": "1000"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Serengeti/DSC07741.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:07 09:36:17",
           "focal_length": "500mm",
           "shutter_speed": "0.0005s",
           "f_stop": "f/6.7",
@@ -4624,41 +5287,28 @@ export const galleries = [
         "subcategory": "Serengeti"
       },
       {
-        "src": "/photos_optimized/tanzanie/Serengeti/DSC08023.webp",
+        "src": "/photos_optimized/tanzanie/Serengeti/DSC07809.webp",
         "exif": {
           "make": "SONY",
           "model": "ILCE-7CM2",
-          "date": "2025:10:08 09:08:11",
+          "date": "2025:10:07 11:08:43",
+          "focal_length": "479mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/6.3",
+          "iso": "200"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Serengeti/DSC07860.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:07 14:22:50",
           "focal_length": "500mm",
           "shutter_speed": "0.002s",
           "f_stop": "f/6.7",
           "iso": "250"
-        },
-        "subcategory": "Serengeti"
-      },
-      {
-        "src": "/photos_optimized/tanzanie/Serengeti/DSC08397.webp",
-        "exif": {
-          "make": "SONY",
-          "model": "ILCE-7CM2",
-          "date": "2025:10:11 17:24:00",
-          "focal_length": "262mm",
-          "shutter_speed": "0.003125s",
-          "f_stop": "f/6.3",
-          "iso": "160"
-        },
-        "subcategory": "Serengeti"
-      },
-      {
-        "src": "/photos_optimized/tanzanie/Serengeti/DSC08533.webp",
-        "exif": {
-          "make": "SONY",
-          "model": "ILCE-7CM2",
-          "date": "2025:10:16 11:49:22",
-          "focal_length": "500mm",
-          "shutter_speed": "0.002s",
-          "f_stop": "f/6.7",
-          "iso": "1250"
         },
         "subcategory": "Serengeti"
       },
@@ -4689,6 +5339,58 @@ export const galleries = [
         "subcategory": "Serengeti"
       },
       {
+        "src": "/photos_optimized/tanzanie/Serengeti/R0000428.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2025:10:07 14:52:56",
+          "focal_length": "18mm",
+          "shutter_speed": "0.001s",
+          "f_stop": "f/2.8",
+          "iso": "200"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Serengeti/R0000437.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2025:10:07 16:32:44",
+          "focal_length": "18mm",
+          "shutter_speed": "0.0005s",
+          "f_stop": "f/2.8",
+          "iso": "200"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Serengeti/R0000441.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2025:10:07 16:35:06",
+          "focal_length": "18mm",
+          "shutter_speed": "0.0004s",
+          "f_stop": "f/2.8",
+          "iso": "200"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Serengeti/R0000451.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2025:10:07 16:40:13",
+          "focal_length": "18mm",
+          "shutter_speed": "0.0008s",
+          "f_stop": "f/2.8",
+          "iso": "200"
+        },
+        "subcategory": "Serengeti"
+      },
+      {
         "src": "/photos_optimized/tanzanie/Serengeti/cover.webp",
         "exif": {
           "make": "SONY",
@@ -4700,6 +5402,409 @@ export const galleries = [
           "iso": "125"
         },
         "subcategory": "Serengeti"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Zanzibar/DSC08439.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:16 11:14:54",
+          "focal_length": "278mm",
+          "shutter_speed": "0.01s",
+          "f_stop": "f/6.3",
+          "iso": "6400"
+        },
+        "subcategory": "Zanzibar"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Zanzibar/DSC08458.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:16 11:39:55",
+          "focal_length": "380mm",
+          "shutter_speed": "0.0025s",
+          "f_stop": "f/6.3",
+          "iso": "6400"
+        },
+        "subcategory": "Zanzibar"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Zanzibar/DSC08491.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:16 11:46:22",
+          "focal_length": "500mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/6.7",
+          "iso": "640"
+        },
+        "subcategory": "Zanzibar"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Zanzibar/DSC08512.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:16 11:47:45",
+          "focal_length": "361mm",
+          "shutter_speed": "0.0025s",
+          "f_stop": "f/6.3",
+          "iso": "320"
+        },
+        "subcategory": "Zanzibar"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Zanzibar/DSC08518.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:16 11:48:12",
+          "focal_length": "280mm",
+          "shutter_speed": "0.003125s",
+          "f_stop": "f/6.3",
+          "iso": "640"
+        },
+        "subcategory": "Zanzibar"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Zanzibar/DSC08533.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:16 11:49:22",
+          "focal_length": "500mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/6.7",
+          "iso": "1250"
+        },
+        "subcategory": "Zanzibar"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Zanzibar/DSC08538.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:16 11:49:27",
+          "focal_length": "500mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/6.7",
+          "iso": "1250"
+        },
+        "subcategory": "Zanzibar"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Zanzibar/DSC08545.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:16 11:50:49",
+          "focal_length": "500mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/6.7",
+          "iso": "1250"
+        },
+        "subcategory": "Zanzibar"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Zanzibar/DSC08576.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:16 12:56:29",
+          "focal_length": "414mm",
+          "shutter_speed": "0.00125s",
+          "f_stop": "f/6.3",
+          "iso": "4000"
+        },
+        "subcategory": "Zanzibar"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Zanzibar/DSC08585.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:16 12:57:26",
+          "focal_length": "348mm",
+          "shutter_speed": "0.00125s",
+          "f_stop": "f/5.6",
+          "iso": "6400"
+        },
+        "subcategory": "Zanzibar"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Zanzibar/DSC08607.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:16 13:06:03",
+          "focal_length": "209mm",
+          "shutter_speed": "0.00125s",
+          "f_stop": "f/5.0",
+          "iso": "4000"
+        },
+        "subcategory": "Zanzibar"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Zanzibar/DSC08663.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:16 13:12:04",
+          "focal_length": "389mm",
+          "shutter_speed": "0.00125s",
+          "f_stop": "f/6.3",
+          "iso": "640"
+        },
+        "subcategory": "Zanzibar"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Zanzibar/DSC08671.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:16 13:14:30",
+          "focal_length": "456mm",
+          "shutter_speed": "0.00125s",
+          "f_stop": "f/6.3",
+          "iso": "1000"
+        },
+        "subcategory": "Zanzibar"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Zanzibar/DSC08689.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:16 13:15:42",
+          "focal_length": "316mm",
+          "shutter_speed": "0.00125s",
+          "f_stop": "f/5.6",
+          "iso": "6400"
+        },
+        "subcategory": "Zanzibar"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Zanzibar/DSC08694.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:16 13:17:47",
+          "focal_length": "256mm",
+          "shutter_speed": "0.00125s",
+          "f_stop": "f/5.6",
+          "iso": "6400"
+        },
+        "subcategory": "Zanzibar"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Zanzibar/DSC08714.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:18 12:15:58",
+          "focal_length": "25mm",
+          "shutter_speed": "0.00125s",
+          "f_stop": "f/2.8",
+          "iso": "125"
+        },
+        "subcategory": "Zanzibar"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Zanzibar/DSC08732.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:18 12:46:29",
+          "focal_length": "28mm",
+          "shutter_speed": "0.0015625s",
+          "f_stop": "f/9.0",
+          "iso": "125"
+        },
+        "subcategory": "Zanzibar"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Zanzibar/DSC08735.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:18 12:54:42",
+          "focal_length": "50mm",
+          "shutter_speed": "0.0015625s",
+          "f_stop": "f/2.8",
+          "iso": "320"
+        },
+        "subcategory": "Zanzibar"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Zanzibar/DSC08776.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:18 13:23:45",
+          "focal_length": "38mm",
+          "shutter_speed": "0.005s",
+          "f_stop": "f/4.0",
+          "iso": "125"
+        },
+        "subcategory": "Zanzibar"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Zanzibar/DSC08814.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:18 14:35:59",
+          "focal_length": "36mm",
+          "shutter_speed": "0.001s",
+          "f_stop": "f/2.8",
+          "iso": "125"
+        },
+        "subcategory": "Zanzibar"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Zanzibar/DSC08823.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:18 14:47:59",
+          "focal_length": "29mm",
+          "shutter_speed": "0.001s",
+          "f_stop": "f/2.8",
+          "iso": "125"
+        },
+        "subcategory": "Zanzibar"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Zanzibar/DSC08833.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:18 14:51:59",
+          "focal_length": "24mm",
+          "shutter_speed": "0.0004s",
+          "f_stop": "f/2.8",
+          "iso": "125"
+        },
+        "subcategory": "Zanzibar"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Zanzibar/DSC08879.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:18 16:07:50",
+          "focal_length": "31mm",
+          "shutter_speed": "0.00625s",
+          "f_stop": "f/2.8",
+          "iso": "5000"
+        },
+        "subcategory": "Zanzibar"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Zanzibar/DSC08922.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:18 17:21:10",
+          "focal_length": "31mm",
+          "shutter_speed": "0.0008s",
+          "f_stop": "f/2.8",
+          "iso": "125"
+        },
+        "subcategory": "Zanzibar"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Kilimanjaro/DSC08191.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:10 12:41:49",
+          "focal_length": "387mm",
+          "shutter_speed": "0.0025s",
+          "f_stop": "f/6.3",
+          "iso": "640"
+        },
+        "subcategory": "Kilimanjaro"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Kilimanjaro/DSC08203.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:10 12:45:31",
+          "focal_length": "459mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/6.3",
+          "iso": "4000"
+        },
+        "subcategory": "Kilimanjaro"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Kilimanjaro/DSC08229.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:11 15:41:48",
+          "focal_length": "360mm",
+          "shutter_speed": "0.0015625s",
+          "f_stop": "f/6.3",
+          "iso": "125"
+        },
+        "subcategory": "Kilimanjaro"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Kilimanjaro/DSC08298.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:11 16:27:56",
+          "focal_length": "500mm",
+          "shutter_speed": "0.000625s",
+          "f_stop": "f/6.7",
+          "iso": "500"
+        },
+        "subcategory": "Kilimanjaro"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Kilimanjaro/DSC08371.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:11 16:38:25",
+          "focal_length": "364mm",
+          "shutter_speed": "0.00025s",
+          "f_stop": "f/5.6",
+          "iso": "800"
+        },
+        "subcategory": "Kilimanjaro"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Kilimanjaro/DSC08391.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:11 17:21:33",
+          "focal_length": "150mm",
+          "shutter_speed": "0.00625s",
+          "f_stop": "f/6.3",
+          "iso": "125"
+        },
+        "subcategory": "Kilimanjaro"
+      },
+      {
+        "src": "/photos_optimized/tanzanie/Kilimanjaro/DSC08397.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:10:11 17:24:00",
+          "focal_length": "262mm",
+          "shutter_speed": "0.003125s",
+          "f_stop": "f/6.3",
+          "iso": "160"
+        },
+        "subcategory": "Kilimanjaro"
       }
     ]
   },
