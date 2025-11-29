@@ -18,6 +18,8 @@
         background-size: cover;
         background-position: center;
         filter: brightness(0.6);
+        pointer-events: none; // Disable swipe/drag interactions
+        touch-action: none;
     }
 
     .hero-overlay {
