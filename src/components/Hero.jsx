@@ -48,15 +48,7 @@ const Hero = ({ onGalleryClick }) => {
         return () => clearInterval(interval);
     }, [randomImages, currentImageIndex]); // Added currentImageIndex to dependency to reset timer on change
 
-    const handleNext = (e) => {
-        e && e.stopPropagation();
-        setCurrentImageIndex((prev) => (prev + 1) % randomImages.length);
-    };
 
-    const handlePrev = (e) => {
-        e && e.stopPropagation();
-        setCurrentImageIndex((prev) => (prev - 1 + randomImages.length) % randomImages.length);
-    };
 
     if (randomImages.length === 0) return null;
 
@@ -75,14 +67,6 @@ const Hero = ({ onGalleryClick }) => {
                     style={{ backgroundImage: `url(${getImagePath(currentImage.src)})` }}
                 />
             </AnimatePresence>
-
-            {/* Navigation Arrows */}
-            <button className="hero-nav prev" onClick={handlePrev} aria-label="Previous image">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6" /></svg>
-            </button>
-            <button className="hero-nav next" onClick={handleNext} aria-label="Next image">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6" /></svg>
-            </button>
 
             <div className="hero-overlay">
                 <div className="hero-content">

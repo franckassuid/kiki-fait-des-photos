@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { getImagePath } from '../utils/imagePath';
-import { formatExposureTime } from '../utils/formatters';
+import { formatExposureTime, formatDate } from '../utils/formatters';
 import './Lightbox.scss';
 
 const Lightbox = ({ images, initialIndex, onClose }) => {
