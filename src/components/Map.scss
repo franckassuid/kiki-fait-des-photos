@@ -136,6 +136,34 @@
     }
 }
 
+.country-tooltip {
+    @extend .city-tooltip;
+    padding: 6px 10px;
+
+    .tooltip-content {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .tooltip-flag {
+        height: 14px;
+        width: auto;
+        border-radius: 2px;
+        display: block;
+    }
+
+    .tooltip-name {
+        font-weight: 600;
+        font-size: 0.95rem;
+        line-height: 1;
+    }
+}
+
+.leaflet-control-attribution {
+    display: none !important;
+}
+
 // Custom Marker Styles
 .custom-marker-container {
     background: transparent;

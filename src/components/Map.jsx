@@ -82,7 +82,18 @@ const Map = ({ onGalleryClick }) => {
                                         click: () => handleCountryClick(gallery)
                                     }}
                                 >
-                                    {/* Optional: Add tooltip on hover */}
+                                    <Tooltip direction="top" offset={[0, -10]} opacity={1} className="country-tooltip">
+                                        <div className="tooltip-content">
+                                            {gallery.code && (
+                                                <img
+                                                    src={`https://flagcdn.com/w20/${gallery.code.toLowerCase()}.png`}
+                                                    alt={gallery.country}
+                                                    className="tooltip-flag"
+                                                />
+                                            )}
+                                            <span className="tooltip-name">{gallery.country}</span>
+                                        </div>
+                                    </Tooltip>
                                 </Marker>
                             ))
                         ) : (

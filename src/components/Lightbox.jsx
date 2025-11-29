@@ -83,6 +83,7 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
                     src={getImagePath(images[currentIndex].src)}
                     alt={`Gallery image ${currentIndex + 1}`}
                 />
+
                 <div className="image-info">
                     <div className="image-counter">
                         {images[currentIndex].subcategory && <span style={{ marginRight: '1rem', fontWeight: 'bold' }}>{images[currentIndex].subcategory}</span>}

@@ -29,6 +29,84 @@ META_DATA = {
     'uruguay': ('Uruguay', 'Amérique du Sud', [-32.522779, -55.765835], 'UY'),
 }
 
+# City Coordinates Mapping
+CITY_COORDINATES = {
+    # Argentine
+    "Chutes d'Iguazu": [-25.695272, -54.436666],
+    "Patagonie": [-50.338, -72.2648],
+    "Ushuaïa": [-54.8019, -68.3030],
+    
+    # Chili
+    "Atacama": [-23.8634, -69.1328],
+    "Santiago": [-33.4489, -70.6693],
+    
+    # Japon
+    "Fukuoka": [33.5902, 130.4017],
+    "Hiroshima": [34.3853, 132.4553],
+    "Kobe": [34.6901, 135.1955],
+    "Kyoto": [35.0116, 135.7681],
+    "Nico": [36.7199, 139.6982], # Nikko
+    "Osaka": [34.6937, 135.5023],
+    "Tokyo": [35.6762, 139.6503],
+
+    # France
+    "Paris": [48.8566, 2.3522],
+    "Lyon": [45.7640, 4.8357],
+    "Marseille": [43.2965, 5.3698],
+    "Bordeaux": [44.8378, -0.5792],
+    "Nice": [43.7102, 7.2620],
+    
+    # Italie
+    "Rome": [41.9028, 12.4964],
+    "Venise": [45.4408, 12.3155],
+    "Florence": [43.7696, 11.2558],
+    "Milan": [45.4642, 9.1900],
+    
+    # Perou
+    "Cusco": [-13.5319, -71.9675],
+    "Lima": [-12.0464, -77.0428],
+    "Machu Picchu": [-13.1631, -72.5450],
+    
+    # Bolivie
+    "La Paz": [-16.5000, -68.1500],
+    "Uyuni": [-20.4603, -66.8261],
+    "Sucre": [-19.0196, -65.2620],
+    
+    # Bresil
+    "Rio de Janeiro": [-22.9068, -43.1729],
+    "Sao Paulo": [-23.5505, -46.6333],
+    "Salvador": [-12.9777, -38.5016],
+    
+    # Equateur
+    "Quito": [-0.1807, -78.4678],
+    "Galapagos": [-0.9538, -90.9656],
+    "Cuenca": [-2.9001, -79.0059],
+    
+    # Philippines
+    "El Nido": [11.1656, 119.3929],
+    "Coron": [11.9986, 120.2043],
+    "Cebu": [10.3157, 123.8854],
+    "Siargao": [9.8596, 126.0460],
+    
+    # Tanzanie
+    "Zanzibar": [-6.1659, 39.2026],
+    "Serengeti": [-2.3333, 34.8333],
+    "Kilimanjaro": [-3.0674, 37.3556],
+    
+    # Pologne
+    "Cracovie": [50.0647, 19.9450],
+    "Varsovie": [52.2297, 21.0122],
+    
+    # Republique Dominicaine
+    "Punta Cana": [18.5601, -68.3725],
+    "Santo Domingo": [18.4861, -69.9312],
+    "Samana": [19.2056, -69.3369],
+    
+    # Uruguay
+    "Montevideo": [-34.9011, -56.1645],
+    "Punta del Este": [-34.9631, -54.9290],
+}
+
 def get_exif_data(image):
     try:
         exif = image._getexif()
@@ -92,6 +170,13 @@ def optimize_image(source_path, dest_path):
         print(f"Error optimizing {source_path}: {e}")
         return False
 
+def get_image_dimensions(path):
+    try:
+        with Image.open(path) as img:
+            return img.width, img.height
+    except Exception:
+        return 0, 0
+
 def generate_galleries():
     galleries = []
     
@@ -128,6 +213,7 @@ def generate_galleries():
         # Find images
         images = []
         cover_image = None
+        cities_map = {} # Map to store city data: name -> {coordinates, cover, images}
         
         # Create optimized folder structure
         optimized_folder_path = os.path.join(OPTIMIZED_DIR, folder_name)
@@ -162,10 +248,9 @@ def generate_galleries():
                     optimized_full_path = os.path.join(target_dir, optimized_filename)
                     
                     # Optimize the image
-                    print(f"Processing {file}...", end='\r')
+                    # print(f"Processing {file}...", end='\r')
                     
                     # We need to open the image to get EXIF before optimizing/saving
-                    # because optimization might strip it or we want original data
                     current_exif = None
                     try:
                         with Image.open(full_path) as original_img:
@@ -175,7 +260,6 @@ def generate_galleries():
 
                     if optimize_image(full_path, optimized_full_path):
                         # Create the web path (relative to public)
-                        # public/photos_optimized/country/subcat/img.webp -> /photos_optimized/country/subcat/img.webp
                         rel_path = os.path.relpath(optimized_full_path, 'public')
                         web_path = '/' + rel_path
                         
@@ -188,6 +272,18 @@ def generate_galleries():
                         # Check for cover image (prefer original name 'cover' even if converted to webp)
                         if 'cover' in file.lower():
                             cover_image = web_path
+                        
+                        # Collect city data
+                        if subcategory:
+                            if subcategory not in cities_map:
+                                cities_map[subcategory] = {
+                                    'name': subcategory,
+                                    'coordinates': CITY_COORDINATES.get(subcategory, [0, 0]),
+                                    'cover': None,
+                                    'images': []
+                                }
+                            cities_map[subcategory]['images'].append(web_path)
+                            
                     else:
                         print(f"Failed to optimize {file}")
 
@@ -199,6 +295,30 @@ def generate_galleries():
         if not cover_image:
             cover_image = images[0]['src']
 
+        # Process cities to find landscape covers
+        cities = []
+        for city_name, city_data in cities_map.items():
+            city_cover = None
+            
+            # Try to find a landscape image
+            for img_path in city_data['images']:
+                # Need absolute path to check dimensions
+                abs_path = os.path.join('public', img_path.lstrip('/'))
+                w, h = get_image_dimensions(abs_path)
+                if w > h:
+                    city_cover = img_path
+                    break
+            
+            # Fallback to first image if no landscape found
+            if not city_cover and city_data['images']:
+                city_cover = city_data['images'][0]
+            
+            cities.append({
+                'name': city_name,
+                'coordinates': city_data['coordinates'],
+                'cover': city_cover
+            })
+
         # Add to galleries list
         galleries.append({
             'id': folder_name,
@@ -207,9 +327,10 @@ def generate_galleries():
             'coordinates': coordinates,
             'code': country_code,
             'cover': cover_image,
+            'cities': cities,
             'images': images
         })
-        print(f"Processed {country_name}: {len(images)} images.")
+        print(f"Processed {country_name}: {len(images)} images, {len(cities)} cities.")
 
     # Generate JS content
     js_content = "export const galleries = " + json.dumps(galleries, indent=2, ensure_ascii=False) + ";\n"

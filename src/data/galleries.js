@@ -8,7 +8,24 @@ export const galleries = [
       -63.616672
     ],
     "code": "AR",
+    "cover": "/photos_optimized/argentine/Patagonie/cover.webp",
     "cities": [
+      {
+        "name": "Ushuaïa",
+        "coordinates": [
+          -54.8019,
+          -68.303
+        ],
+        "cover": "/photos_optimized/argentine/Ushuaïa/R0004672.webp"
+      },
+      {
+        "name": "Chutes d'Iguazu",
+        "coordinates": [
+          -25.695272,
+          -54.436666
+        ],
+        "cover": "/photos_optimized/argentine/Chutes d'Iguazu/R0005415.webp"
+      },
       {
         "name": "Patagonie",
         "coordinates": [
@@ -16,28 +33,11 @@ export const galleries = [
           -72.2648
         ],
         "cover": "/photos_optimized/argentine/Patagonie/R0004221.webp"
-      },
-      {
-        "name": "Ushuaïa",
-        "coordinates": [
-          -54.8019,
-          -68.303
-        ],
-        "cover": "/photos_optimized/argentine/Ushuaia/R0004672.webp"
-      },
-      {
-        "name": "Chutes d'Iguazu",
-        "coordinates": [
-          -25.6953,
-          -54.4367
-        ],
-        "cover": "/photos_optimized/argentine/Chutes d'Iguazu/R0005415.webp"
       }
     ],
-    "cover": "/photos_optimized/argentine/Patagonie/cover.webp",
     "images": [
       {
-        "src": "/photos_optimized/argentine/Ushuaia/R0004672.webp",
+        "src": "/photos_optimized/argentine/Ushuaïa/R0004672.webp",
         "exif": {
           "make": "RICOH IMAGING COMPANY, LTD.",
           "model": "RICOH GR III",
@@ -50,7 +50,7 @@ export const galleries = [
         "subcategory": "Ushuaïa"
       },
       {
-        "src": "/photos_optimized/argentine/Ushuaia/R0004692.webp",
+        "src": "/photos_optimized/argentine/Ushuaïa/R0004692.webp",
         "exif": {
           "make": "RICOH IMAGING COMPANY, LTD.",
           "model": "RICOH GR III",
@@ -63,7 +63,7 @@ export const galleries = [
         "subcategory": "Ushuaïa"
       },
       {
-        "src": "/photos_optimized/argentine/Ushuaia/R0004820.webp",
+        "src": "/photos_optimized/argentine/Ushuaïa/R0004820.webp",
         "exif": {
           "make": "RICOH IMAGING COMPANY, LTD.",
           "model": "RICOH GR III",
@@ -76,7 +76,7 @@ export const galleries = [
         "subcategory": "Ushuaïa"
       },
       {
-        "src": "/photos_optimized/argentine/Ushuaia/R0004821.webp",
+        "src": "/photos_optimized/argentine/Ushuaïa/R0004821.webp",
         "exif": {
           "make": "RICOH IMAGING COMPANY, LTD.",
           "model": "RICOH GR III",
@@ -89,7 +89,7 @@ export const galleries = [
         "subcategory": "Ushuaïa"
       },
       {
-        "src": "/photos_optimized/argentine/Ushuaia/R0004876.webp",
+        "src": "/photos_optimized/argentine/Ushuaïa/R0004876.webp",
         "exif": {
           "make": "RICOH IMAGING COMPANY, LTD.",
           "model": "RICOH GR III",
@@ -102,7 +102,7 @@ export const galleries = [
         "subcategory": "Ushuaïa"
       },
       {
-        "src": "/photos_optimized/argentine/Ushuaia/R0004881.webp",
+        "src": "/photos_optimized/argentine/Ushuaïa/R0004881.webp",
         "exif": {
           "make": "RICOH IMAGING COMPANY, LTD.",
           "model": "RICOH GR III",
@@ -359,14 +359,31 @@ export const galleries = [
       -63.588653
     ],
     "code": "BO",
+    "cover": "/photos_optimized/bolivie/Uyuni & Lipez/cover.webp",
     "cities": [
+      {
+        "name": "Sucre",
+        "coordinates": [
+          -19.0196,
+          -65.262
+        ],
+        "cover": "/photos_optimized/bolivie/Sucre/R0001756.webp"
+      },
       {
         "name": "Coroico",
         "coordinates": [
-          -16.1736,
-          -67.7275
+          -16.1942,
+          -67.7288
         ],
         "cover": "/photos_optimized/bolivie/Coroico/R0000369.webp"
+      },
+      {
+        "name": "Uyuni & Lipez",
+        "coordinates": [
+          -20.4597,
+          -66.8250
+        ],
+        "cover": "/photos_optimized/bolivie/Uyuni & Lipez/R0000860.webp"
       },
       {
         "name": "La Paz",
@@ -375,25 +392,8 @@ export const galleries = [
           -68.15
         ],
         "cover": "/photos_optimized/bolivie/La Paz/R0000348.webp"
-      },
-      {
-        "name": "Uyuni & Lipez",
-        "coordinates": [
-          -20.4603,
-          -66.8261
-        ],
-        "cover": "/photos_optimized/bolivie/Uyuni & Lipez/R0000860.webp"
-      },
-      {
-        "name": "Sucre",
-        "coordinates": [
-          -19.0333,
-          -65.2627
-        ],
-        "cover": "/photos_optimized/bolivie/Sucre/R0001756.webp"
       }
     ],
-    "cover": "/photos_optimized/bolivie/Uyuni & Lipez/cover.webp",
     "images": [
       {
         "src": "/photos_optimized/bolivie/Sucre/R0001756.webp",
@@ -560,7 +560,16 @@ export const galleries = [
       -51.92528
     ],
     "code": "BR",
+    "cover": "/photos_optimized/bresil/Iguazu/cover.webp",
     "cities": [
+      {
+        "name": "Iguazu",
+        "coordinates": [
+          -25.6953,
+          -54.4367
+        ],
+        "cover": "/photos_optimized/bresil/Iguazu/R0005631.webp"
+      },
       {
         "name": "Rio de Janeiro",
         "coordinates": [
@@ -568,17 +577,8 @@ export const galleries = [
           -43.1729
         ],
         "cover": "/photos_optimized/bresil/Rio de Janeiro/R0005792.webp"
-      },
-      {
-        "name": "Iguazu",
-        "coordinates": [
-          -25.5469,
-          -54.5854
-        ],
-        "cover": "/photos_optimized/bresil/Iguazu/R0005631.webp"
       }
     ],
-    "cover": "/photos_optimized/bresil/Iguazu/cover.webp",
     "images": [
       {
         "src": "/photos_optimized/bresil/Iguazu/R0005631.webp",
@@ -799,23 +799,8 @@ export const galleries = [
       -71.542969
     ],
     "code": "CL",
+    "cover": "/photos_optimized/chili/Patagonie/cover.webp",
     "cities": [
-      {
-        "name": "Patagonie",
-        "coordinates": [
-          -51.7269,
-          -72.5068
-        ],
-        "cover": "/photos_optimized/chili/Patagonie/R0003339.webp"
-      },
-      {
-        "name": "Atacama",
-        "coordinates": [
-          -22.9087,
-          -68.1997
-        ],
-        "cover": "/photos_optimized/chili/Atacama/R0001456.webp"
-      },
       {
         "name": "Santiago",
         "coordinates": [
@@ -823,9 +808,24 @@ export const galleries = [
           -70.6693
         ],
         "cover": "/photos_optimized/chili/Santiago/R0003230.webp"
+      },
+      {
+        "name": "Atacama",
+        "coordinates": [
+          -23.8634,
+          -69.1328
+        ],
+        "cover": "/photos_optimized/chili/Atacama/R0001456.webp"
+      },
+      {
+        "name": "Patagonie",
+        "coordinates": [
+          -50.338,
+          -72.2648
+        ],
+        "cover": "/photos_optimized/chili/Patagonie/R0003339.webp"
       }
     ],
-    "cover": "/photos_optimized/chili/Patagonie/cover.webp",
     "images": [
       {
         "src": "/photos_optimized/chili/Santiago/R0003230.webp",
@@ -1189,7 +1189,16 @@ export const galleries = [
       -78.183406
     ],
     "code": "EC",
+    "cover": "/photos_optimized/equateur/Galapagos/cover.webp",
     "cities": [
+      {
+        "name": "Quilotoa",
+        "coordinates": [
+          -0.8612,
+          -78.9035
+        ],
+        "cover": "/photos_optimized/equateur/Quilotoa/R0002544.webp"
+      },
       {
         "name": "Galapagos",
         "coordinates": [
@@ -1197,17 +1206,8 @@ export const galleries = [
           -90.9656
         ],
         "cover": "/photos_optimized/equateur/Galapagos/R0001912.webp"
-      },
-      {
-        "name": "Quilotoa",
-        "coordinates": [
-          -0.85,
-          -78.9
-        ],
-        "cover": "/photos_optimized/equateur/Quilotoa/R0002544.webp"
       }
     ],
-    "cover": "/photos_optimized/equateur/Galapagos/cover.webp",
     "images": [
       {
         "src": "/photos_optimized/equateur/Quilotoa/R0002544.webp",
@@ -1662,14 +1662,15 @@ export const galleries = [
       2.213749
     ],
     "code": "FR",
+    "cover": "/photos_optimized/france/Noisy-le-Grand/cover.webp",
     "cities": [
       {
-        "name": "Pornic",
+        "name": "Bourgogne",
         "coordinates": [
-          47.1153,
-          -2.1024
+          47.0000,
+          4.5000
         ],
-        "cover": "/photos_optimized/france/Pornic/DSC00414.webp"
+        "cover": "/photos_optimized/france/Bourgogne/DSC04765.webp"
       },
       {
         "name": "Nantes",
@@ -1680,47 +1681,46 @@ export const galleries = [
         "cover": "/photos_optimized/france/Nantes/DSC01016.webp"
       },
       {
+        "name": "Pornic",
+        "coordinates": [
+          47.1155,
+          -2.1044
+        ],
+        "cover": "/photos_optimized/france/Pornic/DSC00414.webp"
+      },
+      {
+        "name": "Noisy-le-Grand",
+        "coordinates": [
+          48.8478,
+          2.5528
+        ],
+        "cover": "/photos_optimized/france/Noisy-le-Grand/DSC01833.webp"
+      },
+      {
         "name": "Bretagne",
         "coordinates": [
-          48.202,
-          -2.9326
+          48.0000,
+          -3.0000
         ],
         "cover": "/photos_optimized/france/Bretagne/DSC04610.webp"
       },
       {
         "name": "Corse du sud",
         "coordinates": [
-          41.9272,
-          8.7346
+          41.8500,
+          9.0330
         ],
         "cover": "/photos_optimized/france/Corse du sud/DSC09258 (1).webp"
       },
       {
-        "name": "Noisy-le-Grand",
-        "coordinates": [
-          48.8477,
-          2.5528
-        ],
-        "cover": "/photos_optimized/france/Noisy-le-Grand/DSC01833.webp"
-      },
-      {
-        "name": "Bourgogne",
-        "coordinates": [
-          47.0525,
-          4.3837
-        ],
-        "cover": "/photos_optimized/france/Bourgogne/DSC04765.webp"
-      },
-      {
         "name": "Noisiel",
         "coordinates": [
-          48.8546,
-          2.6237
+          48.8548,
+          2.6287
         ],
         "cover": "/photos_optimized/france/Noisiel/DSC04535.webp"
       }
     ],
-    "cover": "/photos_optimized/france/Noisy-le-Grand/cover.webp",
     "images": [
       {
         "src": "/photos_optimized/france/cover.webp",
@@ -2513,215 +2513,36 @@ export const galleries = [
       12.56738
     ],
     "code": "IT",
+    "cover": "/photos_optimized/italie/Palinuro/cover.webp",
     "cities": [
       {
-        "name": "Campanie",
+        "name": "Pisciotta",
         "coordinates": [
-          40.8518,
-          14.2681
+          40.1081,
+          15.2338
         ],
-        "cover": "/photos_optimized/italie/Campanie/DSC00634.webp"
+        "cover": "/photos_optimized/italie/Pisciotta/DSC00859.webp"
+      },
+      {
+        "name": "Palinuro",
+        "coordinates": [
+          40.0393,
+          15.2909
+        ],
+        "cover": "/photos_optimized/italie/Palinuro/DSC00634.webp"
+      },
+      {
+        "name": "Agropoli",
+        "coordinates": [
+          40.3487,
+          14.9912
+        ],
+        "cover": "/photos_optimized/italie/Agropoli/DSC00649.webp"
       }
     ],
-    "cover": "/photos_optimized/italie/Campanie/cover.webp",
     "images": [
       {
-        "src": "/photos_optimized/italie/Campanie/DSC00634.webp",
-        "exif": {
-          "make": "SONY",
-          "model": "ILCE-7CM2",
-          "date": "2024:08:17 12:19:53",
-          "focal_length": "40mm",
-          "shutter_speed": "0.0015625s",
-          "f_stop": "f/5.6",
-          "iso": "200"
-        },
-        "subcategory": "Campanie"
-      },
-      {
-        "src": "/photos_optimized/italie/Campanie/DSC00638.webp",
-        "exif": {
-          "make": "SONY",
-          "model": "ILCE-7CM2",
-          "date": "2024:08:17 12:22:27",
-          "focal_length": "28mm",
-          "shutter_speed": "0.0015625s",
-          "f_stop": "f/8.0",
-          "iso": "200"
-        },
-        "subcategory": "Campanie"
-      },
-      {
-        "src": "/photos_optimized/italie/Campanie/DSC00639.webp",
-        "exif": {
-          "make": "SONY",
-          "model": "ILCE-7CM2",
-          "date": "2024:08:17 12:23:08",
-          "focal_length": "50mm",
-          "shutter_speed": "0.0015625s",
-          "f_stop": "f/3.5",
-          "iso": "200"
-        },
-        "subcategory": "Campanie"
-      },
-      {
-        "src": "/photos_optimized/italie/Campanie/DSC00649.webp",
-        "exif": {
-          "make": "SONY",
-          "model": "ILCE-7CM2",
-          "date": "2024:08:17 12:47:21",
-          "focal_length": "24mm",
-          "shutter_speed": "0.00025s",
-          "f_stop": "f/2.8",
-          "iso": "400"
-        },
-        "subcategory": "Campanie"
-      },
-      {
-        "src": "/photos_optimized/italie/Campanie/DSC00659.webp",
-        "exif": {
-          "make": "SONY",
-          "model": "ILCE-7CM2",
-          "date": "2024:08:17 12:52:00",
-          "focal_length": "40mm",
-          "shutter_speed": "0.00025s",
-          "f_stop": "f/2.8",
-          "iso": "400"
-        },
-        "subcategory": "Campanie"
-      },
-      {
-        "src": "/photos_optimized/italie/Campanie/DSC00666.webp",
-        "exif": {
-          "make": "SONY",
-          "model": "ILCE-7CM2",
-          "date": "2024:08:17 19:20:05",
-          "focal_length": "50mm",
-          "shutter_speed": "0.00025s",
-          "f_stop": "f/2.8",
-          "iso": "4000"
-        },
-        "subcategory": "Campanie"
-      },
-      {
-        "src": "/photos_optimized/italie/Campanie/DSC00698.webp",
-        "exif": {
-          "make": "SONY",
-          "model": "ILCE-7CM2",
-          "date": "2024:08:19 13:13:35",
-          "focal_length": "24mm",
-          "shutter_speed": "0.002s",
-          "f_stop": "f/6.3",
-          "iso": "200"
-        },
-        "subcategory": "Campanie"
-      },
-      {
-        "src": "/photos_optimized/italie/Campanie/DSC00709.webp",
-        "exif": {
-          "make": "SONY",
-          "model": "ILCE-7CM2",
-          "date": "2024:08:19 13:24:23",
-          "focal_length": "24mm",
-          "shutter_speed": "0.002s",
-          "f_stop": "f/5.0",
-          "iso": "200"
-        },
-        "subcategory": "Campanie"
-      },
-      {
-        "src": "/photos_optimized/italie/Campanie/DSC00718.webp",
-        "exif": {
-          "make": "SONY",
-          "model": "ILCE-7CM2",
-          "date": "2024:08:19 13:27:41",
-          "focal_length": "24mm",
-          "shutter_speed": "0.002s",
-          "f_stop": "f/4.5",
-          "iso": "200"
-        },
-        "subcategory": "Campanie"
-      },
-      {
-        "src": "/photos_optimized/italie/Campanie/DSC00756.webp",
-        "exif": {
-          "make": "SONY",
-          "model": "ILCE-7CM2",
-          "date": "2024:08:19 13:42:35",
-          "focal_length": "24mm",
-          "shutter_speed": "0.002s",
-          "f_stop": "f/7.1",
-          "iso": "200"
-        },
-        "subcategory": "Campanie"
-      },
-      {
-        "src": "/photos_optimized/italie/Campanie/DSC00767.webp",
-        "exif": {
-          "make": "SONY",
-          "model": "ILCE-7CM2",
-          "date": "2024:08:19 13:46:45",
-          "focal_length": "50mm",
-          "shutter_speed": "0.002s",
-          "f_stop": "f/3.5",
-          "iso": "200"
-        },
-        "subcategory": "Campanie"
-      },
-      {
-        "src": "/photos_optimized/italie/Campanie/DSC00789.webp",
-        "exif": {
-          "make": "SONY",
-          "model": "ILCE-7CM2",
-          "date": "2024:08:19 13:58:38",
-          "focal_length": "24mm",
-          "shutter_speed": "0.002s",
-          "f_stop": "f/2.8",
-          "iso": "5000"
-        },
-        "subcategory": "Campanie"
-      },
-      {
-        "src": "/photos_optimized/italie/Campanie/DSC00808.webp",
-        "exif": {
-          "make": "SONY",
-          "model": "ILCE-7CM2",
-          "date": "2024:08:19 14:08:17",
-          "focal_length": "50mm",
-          "shutter_speed": "0.002s",
-          "f_stop": "f/3.5",
-          "iso": "200"
-        },
-        "subcategory": "Campanie"
-      },
-      {
-        "src": "/photos_optimized/italie/Campanie/DSC00826.webp",
-        "exif": {
-          "make": "SONY",
-          "model": "ILCE-7CM2",
-          "date": "2024:08:19 17:49:36",
-          "focal_length": "33mm",
-          "shutter_speed": "0.002s",
-          "f_stop": "f/13.0",
-          "iso": "200"
-        },
-        "subcategory": "Campanie"
-      },
-      {
-        "src": "/photos_optimized/italie/Campanie/DSC00827.webp",
-        "exif": {
-          "make": "SONY",
-          "model": "ILCE-7CM2",
-          "date": "2024:08:19 17:49:55",
-          "focal_length": "33mm",
-          "shutter_speed": "0.002s",
-          "f_stop": "f/8.0",
-          "iso": "200"
-        },
-        "subcategory": "Campanie"
-      },
-      {
-        "src": "/photos_optimized/italie/Campanie/DSC00859.webp",
+        "src": "/photos_optimized/italie/Pisciotta/DSC00859.webp",
         "exif": {
           "make": "SONY",
           "model": "ILCE-7CM2",
@@ -2731,10 +2552,10 @@ export const galleries = [
           "f_stop": "f/6.3",
           "iso": "200"
         },
-        "subcategory": "Campanie"
+        "subcategory": "Pisciotta"
       },
       {
-        "src": "/photos_optimized/italie/Campanie/DSC00919.webp",
+        "src": "/photos_optimized/italie/Pisciotta/DSC00919.webp",
         "exif": {
           "make": "SONY",
           "model": "ILCE-7CM2",
@@ -2744,10 +2565,10 @@ export const galleries = [
           "f_stop": "f/3.5",
           "iso": "200"
         },
-        "subcategory": "Campanie"
+        "subcategory": "Pisciotta"
       },
       {
-        "src": "/photos_optimized/italie/Campanie/DSC00922.webp",
+        "src": "/photos_optimized/italie/Pisciotta/DSC00922.webp",
         "exif": {
           "make": "SONY",
           "model": "ILCE-7CM2",
@@ -2757,10 +2578,10 @@ export const galleries = [
           "f_stop": "f/5.0",
           "iso": "200"
         },
-        "subcategory": "Campanie"
+        "subcategory": "Pisciotta"
       },
       {
-        "src": "/photos_optimized/italie/Campanie/DSC00930.webp",
+        "src": "/photos_optimized/italie/Pisciotta/DSC00930.webp",
         "exif": {
           "make": "SONY",
           "model": "ILCE-7CM2",
@@ -2770,10 +2591,10 @@ export const galleries = [
           "f_stop": "f/3.5",
           "iso": "200"
         },
-        "subcategory": "Campanie"
+        "subcategory": "Pisciotta"
       },
       {
-        "src": "/photos_optimized/italie/Campanie/DSC00957.webp",
+        "src": "/photos_optimized/italie/Pisciotta/DSC00957.webp",
         "exif": {
           "make": "SONY",
           "model": "ILCE-7CM2",
@@ -2783,10 +2604,218 @@ export const galleries = [
           "f_stop": "f/5.0",
           "iso": "200"
         },
-        "subcategory": "Campanie"
+        "subcategory": "Pisciotta"
       },
       {
-        "src": "/photos_optimized/italie/Campanie/DSC00974.webp",
+        "src": "/photos_optimized/italie/Palinuro/DSC00634.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2024:08:17 12:19:53",
+          "focal_length": "40mm",
+          "shutter_speed": "0.0015625s",
+          "f_stop": "f/5.6",
+          "iso": "200"
+        },
+        "subcategory": "Palinuro"
+      },
+      {
+        "src": "/photos_optimized/italie/Palinuro/DSC00638.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2024:08:17 12:22:27",
+          "focal_length": "28mm",
+          "shutter_speed": "0.0015625s",
+          "f_stop": "f/8.0",
+          "iso": "200"
+        },
+        "subcategory": "Palinuro"
+      },
+      {
+        "src": "/photos_optimized/italie/Palinuro/DSC00639.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2024:08:17 12:23:08",
+          "focal_length": "50mm",
+          "shutter_speed": "0.0015625s",
+          "f_stop": "f/3.5",
+          "iso": "200"
+        },
+        "subcategory": "Palinuro"
+      },
+      {
+        "src": "/photos_optimized/italie/Palinuro/DSC00659.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2024:08:17 12:52:00",
+          "focal_length": "40mm",
+          "shutter_speed": "0.00025s",
+          "f_stop": "f/2.8",
+          "iso": "400"
+        },
+        "subcategory": "Palinuro"
+      },
+      {
+        "src": "/photos_optimized/italie/Palinuro/DSC00666.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2024:08:17 19:20:05",
+          "focal_length": "50mm",
+          "shutter_speed": "0.00025s",
+          "f_stop": "f/2.8",
+          "iso": "4000"
+        },
+        "subcategory": "Palinuro"
+      },
+      {
+        "src": "/photos_optimized/italie/Palinuro/DSC00698.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2024:08:19 13:13:35",
+          "focal_length": "24mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/6.3",
+          "iso": "200"
+        },
+        "subcategory": "Palinuro"
+      },
+      {
+        "src": "/photos_optimized/italie/Palinuro/DSC00709.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2024:08:19 13:24:23",
+          "focal_length": "24mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/5.0",
+          "iso": "200"
+        },
+        "subcategory": "Palinuro"
+      },
+      {
+        "src": "/photos_optimized/italie/Palinuro/DSC00718.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2024:08:19 13:27:41",
+          "focal_length": "24mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/4.5",
+          "iso": "200"
+        },
+        "subcategory": "Palinuro"
+      },
+      {
+        "src": "/photos_optimized/italie/Palinuro/DSC00756.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2024:08:19 13:42:35",
+          "focal_length": "24mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/7.1",
+          "iso": "200"
+        },
+        "subcategory": "Palinuro"
+      },
+      {
+        "src": "/photos_optimized/italie/Palinuro/DSC00767.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2024:08:19 13:46:45",
+          "focal_length": "50mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/3.5",
+          "iso": "200"
+        },
+        "subcategory": "Palinuro"
+      },
+      {
+        "src": "/photos_optimized/italie/Palinuro/DSC00789.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2024:08:19 13:58:38",
+          "focal_length": "24mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/2.8",
+          "iso": "5000"
+        },
+        "subcategory": "Palinuro"
+      },
+      {
+        "src": "/photos_optimized/italie/Palinuro/DSC00808.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2024:08:19 14:08:17",
+          "focal_length": "50mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/3.5",
+          "iso": "200"
+        },
+        "subcategory": "Palinuro"
+      },
+      {
+        "src": "/photos_optimized/italie/Palinuro/DSC00826.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2024:08:19 17:49:36",
+          "focal_length": "33mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/13.0",
+          "iso": "200"
+        },
+        "subcategory": "Palinuro"
+      },
+      {
+        "src": "/photos_optimized/italie/Palinuro/DSC00827.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2024:08:19 17:49:55",
+          "focal_length": "33mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/8.0",
+          "iso": "200"
+        },
+        "subcategory": "Palinuro"
+      },
+      {
+        "src": "/photos_optimized/italie/Palinuro/cover.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2024:08:23 11:17:48",
+          "focal_length": "34mm",
+          "shutter_speed": "0.000625s",
+          "f_stop": "f/5.0",
+          "iso": "200"
+        },
+        "subcategory": "Palinuro"
+      },
+      {
+        "src": "/photos_optimized/italie/Agropoli/DSC00649.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2024:08:17 12:47:21",
+          "focal_length": "24mm",
+          "shutter_speed": "0.00025s",
+          "f_stop": "f/2.8",
+          "iso": "400"
+        },
+        "subcategory": "Agropoli"
+      },
+      {
+        "src": "/photos_optimized/italie/Agropoli/DSC00974.webp",
         "exif": {
           "make": "SONY",
           "model": "ILCE-7CM2",
@@ -2796,10 +2825,10 @@ export const galleries = [
           "f_stop": "f/5.6",
           "iso": "200"
         },
-        "subcategory": "Campanie"
+        "subcategory": "Agropoli"
       },
       {
-        "src": "/photos_optimized/italie/Campanie/DSC00993.webp",
+        "src": "/photos_optimized/italie/Agropoli/DSC00993.webp",
         "exif": {
           "make": "SONY",
           "model": "ILCE-7CM2",
@@ -2809,10 +2838,10 @@ export const galleries = [
           "f_stop": "f/6.3",
           "iso": "200"
         },
-        "subcategory": "Campanie"
+        "subcategory": "Agropoli"
       },
       {
-        "src": "/photos_optimized/italie/Campanie/DSC01000.webp",
+        "src": "/photos_optimized/italie/Agropoli/DSC01000.webp",
         "exif": {
           "make": "SONY",
           "model": "ILCE-7CM2",
@@ -2822,20 +2851,7 @@ export const galleries = [
           "f_stop": "f/2.8",
           "iso": "400"
         },
-        "subcategory": "Campanie"
-      },
-      {
-        "src": "/photos_optimized/italie/Campanie/cover.webp",
-        "exif": {
-          "make": "SONY",
-          "model": "ILCE-7CM2",
-          "date": "2024:08:23 11:17:48",
-          "focal_length": "34mm",
-          "shutter_speed": "0.000625s",
-          "f_stop": "f/5.0",
-          "iso": "200"
-        },
-        "subcategory": "Campanie"
+        "subcategory": "Agropoli"
       }
     ]
   },
@@ -2848,22 +2864,15 @@ export const galleries = [
       138.252924
     ],
     "code": "JP",
+    "cover": "/photos_optimized/japon/Hiroshima/cover.webp",
     "cities": [
       {
-        "name": "Nico",
+        "name": "Tokyo",
         "coordinates": [
-          36.7199,
-          139.6982
+          35.6762,
+          139.6503
         ],
-        "cover": "/photos_optimized/japon/Nico/DSC03633.webp"
-      },
-      {
-        "name": "Osaka",
-        "coordinates": [
-          34.6937,
-          135.5023
-        ],
-        "cover": "/photos_optimized/japon/Osaka/DSC02824-Panorama.webp"
+        "cover": "/photos_optimized/japon/Tokyo/DSC03325.webp"
       },
       {
         "name": "Fukuoka",
@@ -2882,6 +2891,14 @@ export const galleries = [
         "cover": "/photos_optimized/japon/Kobe/DSC03108.webp"
       },
       {
+        "name": "Osaka",
+        "coordinates": [
+          34.6937,
+          135.5023
+        ],
+        "cover": "/photos_optimized/japon/Osaka/DSC02824-Panorama.webp"
+      },
+      {
         "name": "Hiroshima",
         "coordinates": [
           34.3853,
@@ -2890,15 +2907,14 @@ export const galleries = [
         "cover": "/photos_optimized/japon/Hiroshima/DSC02658.webp"
       },
       {
-        "name": "Tokyo",
+        "name": "Nico",
         "coordinates": [
-          35.6762,
-          139.6503
+          36.7199,
+          139.6982
         ],
-        "cover": "/photos_optimized/japon/Tokyo/DSC03325.webp"
+        "cover": "/photos_optimized/japon/Nico/DSC03633.webp"
       }
     ],
-    "cover": "/photos_optimized/japon/Hiroshima/cover.webp",
     "images": [
       {
         "src": "/photos_optimized/japon/Tokyo/DSC03325.webp",
@@ -3457,6 +3473,7 @@ export const galleries = [
       -75.015152
     ],
     "code": "PE",
+    "cover": "/photos_optimized/perou/Paracas/cover.webp",
     "cities": [
       {
         "name": "Lima",
@@ -3469,13 +3486,12 @@ export const galleries = [
       {
         "name": "Paracas",
         "coordinates": [
-          -13.8383,
-          -76.2508
+          -13.8377,
+          -76.2511
         ],
         "cover": "/photos_optimized/perou/Paracas/R0002992.webp"
       }
     ],
-    "cover": "/photos_optimized/perou/Paracas/cover.webp",
     "images": [
       {
         "src": "/photos_optimized/perou/Lima/R0002930.webp",
@@ -3696,12 +3712,21 @@ export const galleries = [
       121.774017
     ],
     "code": "PH",
+    "cover": "/photos_optimized/philippines/Malapascua/cover.webp",
     "cities": [
+      {
+        "name": "Bohol",
+        "coordinates": [
+          9.8500,
+          124.1435
+        ],
+        "cover": "/photos_optimized/philippines/Bohol/DSC01183.webp"
+      },
       {
         "name": "Malapascua",
         "coordinates": [
-          11.3333,
-          124.1167
+          11.3347,
+          124.1161
         ],
         "cover": "/photos_optimized/philippines/Malapascua/DSC00069.webp"
       },
@@ -3712,17 +3737,8 @@ export const galleries = [
           120.2043
         ],
         "cover": "/photos_optimized/philippines/Coron/DSC01355.webp"
-      },
-      {
-        "name": "Bohol",
-        "coordinates": [
-          9.85,
-          124.1435
-        ],
-        "cover": "/photos_optimized/philippines/Bohol/DSC01183.webp"
       }
     ],
-    "cover": "/photos_optimized/philippines/Malapascua/cover.webp",
     "images": [
       {
         "src": "/photos_optimized/philippines/Bohol/DSC01165.webp",
@@ -4060,6 +4076,7 @@ export const galleries = [
       19.145136
     ],
     "code": "PL",
+    "cover": "/photos_optimized/pologne/Cracovie/cover.webp",
     "cities": [
       {
         "name": "Cracovie",
@@ -4070,7 +4087,6 @@ export const galleries = [
         "cover": "/photos_optimized/pologne/Cracovie/DSC01175.webp"
       }
     ],
-    "cover": "/photos_optimized/pologne/Cracovie/cover.webp",
     "images": [
       {
         "src": "/photos_optimized/pologne/Cracovie/DSC01175.webp",
@@ -4187,14 +4203,31 @@ export const galleries = [
       -70.162651
     ],
     "code": "DO",
+    "cover": "/photos_optimized/republique-dominicaine/Samana/cover.webp",
     "cities": [
+      {
+        "name": "Bayahibe",
+        "coordinates": [
+          18.3733,
+          -68.8414
+        ],
+        "cover": "/photos_optimized/republique-dominicaine/Bayahibe/DSC02165.webp"
+      },
       {
         "name": "Samana",
         "coordinates": [
-          19.2058,
-          -69.3364
+          19.2056,
+          -69.3369
         ],
         "cover": "/photos_optimized/republique-dominicaine/Samana/DSC02407.webp"
+      },
+      {
+        "name": "Los Haitises",
+        "coordinates": [
+          19.0732,
+          -69.5929
+        ],
+        "cover": "/photos_optimized/republique-dominicaine/Los Haitises/DSC02406.webp"
       },
       {
         "name": "Saint Domingue",
@@ -4205,31 +4238,14 @@ export const galleries = [
         "cover": "/photos_optimized/republique-dominicaine/Saint Domingue/DSC02351.webp"
       },
       {
-        "name": "Bayahibe",
-        "coordinates": [
-          18.3756,
-          -68.8378
-        ],
-        "cover": "/photos_optimized/republique-dominicaine/Bayahibe/DSC02165.webp"
-      },
-      {
-        "name": "Los Haitises",
-        "coordinates": [
-          19.0333,
-          -69.6
-        ],
-        "cover": "/photos_optimized/republique-dominicaine/Los Haitises/DSC02406.webp"
-      },
-      {
         "name": "Las Terenas",
         "coordinates": [
-          19.3167,
-          -69.5333
+          19.3110,
+          -69.5430
         ],
         "cover": "/photos_optimized/republique-dominicaine/Las Terenas/P3040313.webp"
       }
     ],
-    "cover": "/photos_optimized/republique-dominicaine/Samana/cover.webp",
     "images": [
       {
         "src": "/photos_optimized/republique-dominicaine/Bayahibe/DSC02165.webp",
@@ -4801,7 +4817,24 @@ export const galleries = [
       34.888822
     ],
     "code": "TZ",
+    "cover": "/photos_optimized/tanzanie/Serengeti/cover.webp",
     "cities": [
+      {
+        "name": "Tarangire",
+        "coordinates": [
+          -3.8333,
+          36.0000
+        ],
+        "cover": "/photos_optimized/tanzanie/Tarangire/DSC05776.webp"
+      },
+      {
+        "name": "Ngorongoro",
+        "coordinates": [
+          -3.2397,
+          35.4875
+        ],
+        "cover": "/photos_optimized/tanzanie/Ngorongoro/DSC07916.webp"
+      },
       {
         "name": "Serengeti",
         "coordinates": [
@@ -4811,53 +4844,23 @@ export const galleries = [
         "cover": "/photos_optimized/tanzanie/Serengeti/DSC06354.webp"
       },
       {
-        "name": "Kilimanjaro",
-        "coordinates": [
-          -3.0674,
-          37.3556
-        ],
-        "cover": "/photos_optimized/tanzanie/Kilimanjaro/DSC08191.webp"
-      },
-      {
-        "name": "Tarangire",
-        "coordinates": [
-          -3.8333,
-          36
-        ],
-        "cover": "/photos_optimized/tanzanie/Tarangire/DSC05776.webp"
-      },
-      {
-        "name": "Ngorongoro",
-        "coordinates": [
-          -3.2333,
-          35.5
-        ],
-        "cover": "/photos_optimized/tanzanie/Ngorongoro/DSC07916.webp"
-      },
-      {
         "name": "Zanzibar",
         "coordinates": [
           -6.1659,
           39.2026
         ],
         "cover": "/photos_optimized/tanzanie/Zanzibar/DSC08439.webp"
+      },
+      {
+        "name": "Kilimanjaro",
+        "coordinates": [
+          -3.0674,
+          37.3556
+        ],
+        "cover": "/photos_optimized/tanzanie/Kilimanjaro/DSC08191.webp"
       }
     ],
-    "cover": "/photos_optimized/tanzanie/Serengeti/cover.webp",
     "images": [
-      {
-        "src": "/photos_optimized/tanzanie/Tarangire/DSC03929.webp",
-        "exif": {
-          "make": "SONY",
-          "model": "ILCE-7CM2",
-          "date": "2025:04:19 14:55:53",
-          "focal_length": "190mm",
-          "shutter_speed": "0.0015625s",
-          "f_stop": "f/9.0",
-          "iso": "400"
-        },
-        "subcategory": "Tarangire"
-      },
       {
         "src": "/photos_optimized/tanzanie/Tarangire/DSC05776.webp",
         "exif": {
@@ -6195,6 +6198,7 @@ export const galleries = [
       -55.765835
     ],
     "code": "UY",
+    "cover": "/photos_optimized/uruguay/Colonia del Sacramento/cover.webp",
     "cities": [
       {
         "name": "Colonia del Sacramento",
@@ -6205,7 +6209,6 @@ export const galleries = [
         "cover": "/photos_optimized/uruguay/Colonia del Sacramento/R0005119.webp"
       }
     ],
-    "cover": "/photos_optimized/uruguay/Colonia del Sacramento/cover.webp",
     "images": [
       {
         "src": "/photos_optimized/uruguay/Colonia del Sacramento/R0005119.webp",
@@ -6300,5 +6303,4 @@ export const galleries = [
       }
     ]
   }
-]
-;
+];
