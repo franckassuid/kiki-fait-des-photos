@@ -11,7 +11,7 @@ export const galleries = [
     "cover": "/photos_optimized/argentine/Patagonie/cover.webp",
     "images": [
       {
-        "src": "/photos_optimized/argentine/Ushuaïa/R0004672.webp",
+        "src": "/photos_optimized/argentine/Ushuaia/R0004672.webp",
         "exif": {
           "make": "RICOH IMAGING COMPANY, LTD.",
           "model": "RICOH GR III",
@@ -24,7 +24,7 @@ export const galleries = [
         "subcategory": "Ushuaïa"
       },
       {
-        "src": "/photos_optimized/argentine/Ushuaïa/R0004692.webp",
+        "src": "/photos_optimized/argentine/Ushuaia/R0004692.webp",
         "exif": {
           "make": "RICOH IMAGING COMPANY, LTD.",
           "model": "RICOH GR III",
@@ -37,7 +37,7 @@ export const galleries = [
         "subcategory": "Ushuaïa"
       },
       {
-        "src": "/photos_optimized/argentine/Ushuaïa/R0004820.webp",
+        "src": "/photos_optimized/argentine/Ushuaia/R0004820.webp",
         "exif": {
           "make": "RICOH IMAGING COMPANY, LTD.",
           "model": "RICOH GR III",
@@ -50,7 +50,7 @@ export const galleries = [
         "subcategory": "Ushuaïa"
       },
       {
-        "src": "/photos_optimized/argentine/Ushuaïa/R0004821.webp",
+        "src": "/photos_optimized/argentine/Ushuaia/R0004821.webp",
         "exif": {
           "make": "RICOH IMAGING COMPANY, LTD.",
           "model": "RICOH GR III",
@@ -63,7 +63,7 @@ export const galleries = [
         "subcategory": "Ushuaïa"
       },
       {
-        "src": "/photos_optimized/argentine/Ushuaïa/R0004876.webp",
+        "src": "/photos_optimized/argentine/Ushuaia/R0004876.webp",
         "exif": {
           "make": "RICOH IMAGING COMPANY, LTD.",
           "model": "RICOH GR III",
@@ -76,7 +76,7 @@ export const galleries = [
         "subcategory": "Ushuaïa"
       },
       {
-        "src": "/photos_optimized/argentine/Ushuaïa/R0004881.webp",
+        "src": "/photos_optimized/argentine/Ushuaia/R0004881.webp",
         "exif": {
           "make": "RICOH IMAGING COMPANY, LTD.",
           "model": "RICOH GR III",

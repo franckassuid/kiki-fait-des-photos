@@ -4,7 +4,7 @@ import Hero from './components/Hero';
 import FilterBar from './components/FilterBar';
 import GalleryGrid from './components/GalleryGrid';
 import GalleryModal from './components/GalleryModal';
-import ContactForm from './components/ContactForm';
+import Footer from './components/Footer';
 import Map from './components/Map';
 import { galleries } from './data/galleries';
 
@@ -55,7 +55,7 @@ function App() {
 
         <Map onGalleryClick={(gallery) => handleGalleryClick(gallery)} />
 
-        <ContactForm />
+        <Footer />
       </main>
 
       {selectedGalleryData && (
