@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { X } from 'lucide-react';
-import Lightbox from './Lightbox';
 import { getImagePath } from '../utils/imagePath';
 import './GalleryModal.scss';
 
-const GalleryModal = ({ gallery, onClose }) => {
-    const [lightboxIndex, setLightboxIndex] = useState(null);
-    const [selectedSubcategory, setSelectedSubcategory] = useState('Tous');
+const GalleryModal = ({ gallery, initialSubcategory, onClose, onImageClick }) => {
+    const [selectedSubcategory, setSelectedSubcategory] = useState(initialSubcategory || 'Tous');
+
+    useEffect(() => {
+        if (initialSubcategory) {
+            setSelectedSubcategory(initialSubcategory);
+        }
+    }, [initialSubcategory]);
 
     useEffect(() => {
         document.body.style.overflow = 'hidden';
@@ -71,7 +75,7 @@ const GalleryModal = ({ gallery, onClose }) => {
                                 <div
                                     key={originalIndex}
                                     className="image-wrapper"
-                                    onClick={() => setLightboxIndex(originalIndex)}
+                                    onClick={() => onImageClick(gallery.images, originalIndex)}
                                 >
                                     <img src={getImagePath(img.src)} alt={`${gallery.country} ${originalIndex + 1}`} loading="lazy" />
                                 </div>
@@ -80,14 +84,6 @@ const GalleryModal = ({ gallery, onClose }) => {
                     </div>
                 </div>
             </div>
-
-            {lightboxIndex !== null && (
-                <Lightbox
-                    images={gallery.images} // Pass all images so navigation works across filters
-                    initialIndex={lightboxIndex}
-                    onClose={() => setLightboxIndex(null)}
-                />
-            )}
         </div>
     );
 };

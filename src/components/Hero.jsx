@@ -139,7 +139,7 @@ const Hero = ({ onGalleryClick }) => {
 
             <div
                 className="hero-metadata"
-                onClick={() => onGalleryClick && onGalleryClick(currentImage.gallery)}
+                onClick={() => onGalleryClick && onGalleryClick(currentImage.gallery, currentImage.subcategory)}
                 style={{ cursor: 'pointer' }}
                 title="Voir la galerie"
             >

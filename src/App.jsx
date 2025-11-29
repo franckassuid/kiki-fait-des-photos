@@ -8,9 +8,12 @@ import ContactForm from './components/ContactForm';
 import Map from './components/Map';
 import { galleries } from './data/galleries';
 
+import Lightbox from './components/Lightbox';
+
 function App() {
   const [selectedContinent, setSelectedContinent] = useState('Tous');
-  const [selectedGallery, setSelectedGallery] = useState(null);
+  const [selectedGalleryData, setSelectedGalleryData] = useState(null); // { gallery, initialSubcategory }
+  const [lightboxState, setLightboxState] = useState({ isOpen: false, images: [], index: 0 });
 
   const continents = useMemo(() => {
     const uniqueContinents = new Set(galleries.map(g => g.continent));
@@ -21,10 +24,22 @@ function App() {
     ? galleries
     : galleries.filter(gallery => gallery.continent === selectedContinent);
 
+  const handleGalleryClick = (gallery, subcategory = null) => {
+    setSelectedGalleryData({ gallery, initialSubcategory: subcategory });
+  };
+
+  const handleImageClick = (images, index) => {
+    setLightboxState({ isOpen: true, images, index });
+  };
+
+  const closeLightbox = () => {
+    setLightboxState(prev => ({ ...prev, isOpen: false }));
+  };
+
   return (
     <div className="app">
       <Header />
-      <Hero onGalleryClick={setSelectedGallery} />
+      <Hero onGalleryClick={(gallery, subcategory) => handleGalleryClick(gallery, subcategory)} />
 
       <main className="main-content">
         <FilterBar
@@ -35,18 +50,28 @@ function App() {
 
         <GalleryGrid
           galleries={filteredGalleries}
-          onGalleryClick={setSelectedGallery}
+          onGalleryClick={(gallery) => handleGalleryClick(gallery)}
         />
 
-        <Map onGalleryClick={setSelectedGallery} />
+        <Map onGalleryClick={(gallery) => handleGalleryClick(gallery)} />
 
         <ContactForm />
       </main>
 
-      {selectedGallery && (
+      {selectedGalleryData && (
         <GalleryModal
-          gallery={selectedGallery}
-          onClose={() => setSelectedGallery(null)}
+          gallery={selectedGalleryData.gallery}
+          initialSubcategory={selectedGalleryData.initialSubcategory}
+          onClose={() => setSelectedGalleryData(null)}
+          onImageClick={handleImageClick}
+        />
+      )}
+
+      {lightboxState.isOpen && (
+        <Lightbox
+          images={lightboxState.images}
+          initialIndex={lightboxState.index}
+          onClose={closeLightbox}
         />
       )}
     </div>

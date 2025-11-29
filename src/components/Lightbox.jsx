@@ -1,4 +1,4 @@
-import { createPortal } from 'react-dom';
+import React, { useState, useEffect, useCallback } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { getImagePath } from '../utils/imagePath';
 import { formatExposureTime } from '../utils/formatters';
@@ -59,7 +59,7 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
         if (isRightSwipe) handlePrev();
     };
 
-    return createPortal(
+    return (
         <div
             className="lightbox-overlay"
             onClick={onClose}
@@ -106,8 +106,7 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
             >
                 <ChevronRight size={40} />
             </button>
-        </div>,
-        document.body
+        </div>
     );
 };
 
