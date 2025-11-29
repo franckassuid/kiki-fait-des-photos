@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { getImagePath } from '../utils/imagePath';
+import { formatExposureTime } from '../utils/formatters';
 import './Lightbox.scss';
 
 const Lightbox = ({ images, initialIndex, onClose }) => {
@@ -35,8 +35,38 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
         };
     }, []);
 
+    // Swipe handlers
+    const [touchStart, setTouchStart] = useState(null);
+    const [touchEnd, setTouchEnd] = useState(null);
+    const minSwipeDistance = 50;
+
+    const onTouchStart = (e) => {
+        setTouchEnd(null);
+        setTouchStart(e.targetTouches[0].clientX);
+    };
+
+    const onTouchMove = (e) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    const onTouchEnd = () => {
+        if (!touchStart || !touchEnd) return;
+        const distance = touchStart - touchEnd;
+        const isLeftSwipe = distance > minSwipeDistance;
+        const isRightSwipe = distance < -minSwipeDistance;
+
+        if (isLeftSwipe) handleNext();
+        if (isRightSwipe) handlePrev();
+    };
+
     return createPortal(
-        <div className="lightbox-overlay" onClick={onClose}>
+        <div
+            className="lightbox-overlay"
+            onClick={onClose}
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
+        >
             <button className="lightbox-close" onClick={onClose}>
                 <X size={32} />
             </button>
@@ -63,7 +93,7 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
                             {images[currentIndex].exif.model && <span>{images[currentIndex].exif.model}</span>}
                             {images[currentIndex].exif.focal_length && <span>{images[currentIndex].exif.focal_length}</span>}
                             {images[currentIndex].exif.f_stop && <span>{images[currentIndex].exif.f_stop}</span>}
-                            {images[currentIndex].exif.shutter_speed && <span>{images[currentIndex].exif.shutter_speed}</span>}
+                            {images[currentIndex].exif.shutter_speed && <span>{formatExposureTime(images[currentIndex].exif.shutter_speed)}</span>}
                             {images[currentIndex].exif.iso && <span>ISO {images[currentIndex].exif.iso}</span>}
                         </div>
                     )}

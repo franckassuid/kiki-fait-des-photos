@@ -26,24 +26,65 @@ const Hero = ({ onGalleryClick }) => {
         setRandomImages(shuffled.slice(0, 10));
     }, []);
 
+    // Reset interval on manual interaction
+    const resetInterval = () => {
+        // We don't need to do anything complex here because the useEffect below 
+        // depends on currentImageIndex (or we can make it depend on a 'lastInteraction' state).
+        // Actually, the simplest way is to clear the existing interval and start a new one.
+        // But React's useEffect cleanup handles this automatically if we include the dependency that changes.
+        // However, changing currentImageIndex triggers the effect again, restarting the timer.
+        // So simply updating the state is enough to reset the 5s timer IF the effect depends on currentImageIndex.
+        // Let's check the effect dependencies.
+    };
+
+    // Auto-slide effect
     useEffect(() => {
         if (randomImages.length === 0) return;
 
         const interval = setInterval(() => {
             setCurrentImageIndex((prevIndex) => (prevIndex + 1) % randomImages.length);
-        }, 5000); // Change image every 5 seconds
+        }, 5000);
 
         return () => clearInterval(interval);
-    }, [randomImages]);
+    }, [randomImages, currentImageIndex]); // Added currentImageIndex to dependency to reset timer on change
 
     const handleNext = (e) => {
-        e.stopPropagation();
+        e && e.stopPropagation();
         setCurrentImageIndex((prev) => (prev + 1) % randomImages.length);
     };
 
     const handlePrev = (e) => {
-        e.stopPropagation();
+        e && e.stopPropagation();
         setCurrentImageIndex((prev) => (prev - 1 + randomImages.length) % randomImages.length);
+    };
+
+    // Swipe handlers
+    const [touchStart, setTouchStart] = useState(null);
+    const [touchEnd, setTouchEnd] = useState(null);
+
+    const minSwipeDistance = 50;
+
+    const onTouchStart = (e) => {
+        setTouchEnd(null);
+        setTouchStart(e.targetTouches[0].clientX);
+    };
+
+    const onTouchMove = (e) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    const onTouchEnd = () => {
+        if (!touchStart || !touchEnd) return;
+        const distance = touchStart - touchEnd;
+        const isLeftSwipe = distance > minSwipeDistance;
+        const isRightSwipe = distance < -minSwipeDistance;
+
+        if (isLeftSwipe) {
+            handleNext();
+        }
+        if (isRightSwipe) {
+            handlePrev();
+        }
     };
 
     if (randomImages.length === 0) return null;
@@ -51,7 +92,12 @@ const Hero = ({ onGalleryClick }) => {
     const currentImage = randomImages[currentImageIndex];
 
     return (
-        <section className="hero">
+        <section
+            className="hero"
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
+        >
             <AnimatePresence mode="wait">
                 <motion.div
                     key={currentImageIndex}

@@ -36,6 +36,10 @@
             .modal-title {
                 font-size: 3rem;
                 margin-bottom: 0.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
             }
 
             .modal-subtitle {
@@ -47,7 +51,6 @@
 
             .modal-flag-icon {
                 height: 0.8em;
-                margin-right: 10px;
                 vertical-align: middle;
                 transition: all 0.3s ease;
             }

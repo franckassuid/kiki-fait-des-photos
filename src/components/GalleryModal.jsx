@@ -18,7 +18,8 @@ const GalleryModal = ({ gallery, onClose }) => {
     if (!gallery) return null;
 
     // Extract unique subcategories
-    const subcategories = ['Tous', ...new Set(gallery.images.map(img => img.subcategory).filter(Boolean))].sort();
+    const others = [...new Set(gallery.images.map(img => img.subcategory).filter(Boolean))].sort();
+    const subcategories = ['Tous', ...others];
     const hasSubcategories = subcategories.length > 1;
 
     // Filter images
