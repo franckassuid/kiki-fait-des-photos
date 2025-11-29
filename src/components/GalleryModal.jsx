@@ -6,6 +6,7 @@ import './GalleryModal.scss';
 
 const GalleryModal = ({ gallery, onClose }) => {
     const [lightboxIndex, setLightboxIndex] = useState(null);
+    const [selectedSubcategory, setSelectedSubcategory] = useState('Tous');
 
     useEffect(() => {
         document.body.style.overflow = 'hidden';
@@ -15,6 +16,15 @@ const GalleryModal = ({ gallery, onClose }) => {
     }, []);
 
     if (!gallery) return null;
+
+    // Extract unique subcategories
+    const subcategories = ['Tous', ...new Set(gallery.images.map(img => img.subcategory).filter(Boolean))].sort();
+    const hasSubcategories = subcategories.length > 1;
+
+    // Filter images
+    const filteredImages = selectedSubcategory === 'Tous'
+        ? gallery.images
+        : gallery.images.filter(img => img.subcategory === selectedSubcategory);
 
     return (
         <div className="gallery-modal-overlay fade-in">
@@ -35,79 +45,44 @@ const GalleryModal = ({ gallery, onClose }) => {
                         {gallery.country}
                     </h2>
                     <span className="modal-subtitle">{gallery.continent}</span>
+
+                    {hasSubcategories && (
+                        <div className="modal-filter-bar">
+                            {subcategories.map(sub => (
+                                <button
+                                    key={sub}
+                                    className={`filter-btn ${selectedSubcategory === sub ? 'active' : ''}`}
+                                    onClick={() => setSelectedSubcategory(sub)}
+                                >
+                                    {sub}
+                                </button>
+                            ))}
+                        </div>
+                    )}
                 </div>
 
                 <div className="gallery-content">
-                    {(() => {
-                        // Group images by subcategory
-                        const groups = {};
-                        let hasSubcategories = false;
-
-                        gallery.images.forEach((img) => {
-                            const sub = img.subcategory || 'General';
-                            if (img.subcategory) hasSubcategories = true;
-                            if (!groups[sub]) groups[sub] = [];
-                            groups[sub].push(img);
-                        });
-
-                        // If no subcategories exist, render as before (single grid)
-                        if (!hasSubcategories) {
+                    <div className="modal-grid">
+                        {filteredImages.map((img) => {
+                            // Find the original index for the lightbox
+                            const originalIndex = gallery.images.indexOf(img);
                             return (
-                                <div className="modal-grid">
-                                    {gallery.images.map((img, index) => (
-                                        <div
-                                            key={index}
-                                            className="image-wrapper"
-                                            onClick={() => setLightboxIndex(index)}
-                                        >
-                                            <img src={getImagePath(img.src)} alt={`${gallery.country} ${index + 1}`} loading="lazy" />
-                                        </div>
-                                    ))}
+                                <div
+                                    key={originalIndex}
+                                    className="image-wrapper"
+                                    onClick={() => setLightboxIndex(originalIndex)}
+                                >
+                                    <img src={getImagePath(img.src)} alt={`${gallery.country} ${originalIndex + 1}`} loading="lazy" />
                                 </div>
                             );
-                        }
-
-                        // Otherwise, render grouped sections
-                        // Sort keys to put 'General' first or last? Usually 'General' contains misc photos.
-                        // Let's sort alphabetically, but keep 'General' at the top if needed.
-                        const sortedKeys = Object.keys(groups).sort();
-
-                        return sortedKeys.map((subcategory) => (
-                            <div key={subcategory} className="subcategory-section" style={{ marginBottom: '3rem' }}>
-                                {subcategory !== 'General' && (
-                                    <h3 className="subcategory-title" style={{
-                                        fontSize: '1.5rem',
-                                        marginBottom: '1.5rem',
-                                        color: 'var(--color-text)',
-                                        borderBottom: '1px solid var(--color-border)',
-                                        paddingBottom: '0.5rem'
-                                    }}>
-                                        {subcategory}
-                                    </h3>
-                                )}
-                                <div className="modal-grid">
-                                    {groups[subcategory].map((img) => {
-                                        const globalIndex = gallery.images.indexOf(img);
-                                        return (
-                                            <div
-                                                key={globalIndex}
-                                                className="image-wrapper"
-                                                onClick={() => setLightboxIndex(globalIndex)}
-                                            >
-                                                <img src={getImagePath(img.src)} alt={`${gallery.country} - ${subcategory} ${globalIndex + 1}`} loading="lazy" />
-                                            </div>
-                                        );
-                                    })}
-                                </div>
-                            </div>
-                        ));
-                    })()}
+                        })}
+                    </div>
                 </div>
             </div>
 
             {lightboxIndex !== null && (
                 <Lightbox
-                    images={gallery.images}
+                    images={gallery.images} // Pass all images so navigation works across filters
                     initialIndex={lightboxIndex}
                     onClose={() => setLightboxIndex(null)}
                 />

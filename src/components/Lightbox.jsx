@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { createPortal } from 'react-dom';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { getImagePath } from '../utils/imagePath';
 import './Lightbox.scss';
@@ -34,7 +35,7 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
         };
     }, []);
 
-    return (
+    return createPortal(
         <div className="lightbox-overlay" onClick={onClose}>
             <button className="lightbox-close" onClick={onClose}>
                 <X size={32} />
@@ -74,7 +75,8 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
             >
                 <ChevronRight size={40} />
             </button>
-        </div>
+        </div>,
+        document.body
     );
 };
 
