@@ -806,7 +806,7 @@ export const galleries = [
           -51.7269,
           -72.5068
         ],
-        "cover": "/photos_optimized/chili/Patagonie/cover.webp"
+        "cover": "/photos_optimized/chili/Patagonie/R0003339.webp"
       },
       {
         "name": "Atacama",
@@ -1685,7 +1685,7 @@ export const galleries = [
           48.202,
           -2.9326
         ],
-        "cover": "/photos_optimized/france/Bretagne/DSC04561.webp"
+        "cover": "/photos_optimized/france/Bretagne/DSC04610.webp"
       },
       {
         "name": "Corse du sud",
@@ -1701,7 +1701,7 @@ export const galleries = [
           48.8477,
           2.5528
         ],
-        "cover": "/photos_optimized/france/Noisy-le-Grand/cover.webp"
+        "cover": "/photos_optimized/france/Noisy-le-Grand/DSC01833.webp"
       },
       {
         "name": "Bourgogne",
@@ -1709,7 +1709,7 @@ export const galleries = [
           47.0525,
           4.3837
         ],
-        "cover": "/photos_optimized/france/Bourgogne/DSC04760.webp"
+        "cover": "/photos_optimized/france/Bourgogne/DSC04765.webp"
       },
       {
         "name": "Noisiel",
@@ -1717,7 +1717,7 @@ export const galleries = [
           48.8546,
           2.6237
         ],
-        "cover": "/photos_optimized/france/Noisiel/DSC04544.webp"
+        "cover": "/photos_optimized/france/Noisiel/DSC04535.webp"
       }
     ],
     "cover": "/photos_optimized/france/Noisy-le-Grand/cover.webp",
@@ -2855,7 +2855,7 @@ export const galleries = [
           36.7199,
           139.6982
         ],
-        "cover": "/photos_optimized/japon/Nico/DSC03905.webp"
+        "cover": "/photos_optimized/japon/Nico/DSC03633.webp"
       },
       {
         "name": "Osaka",
@@ -2887,7 +2887,7 @@ export const galleries = [
           34.3853,
           132.4553
         ],
-        "cover": "/photos_optimized/japon/Hiroshima/cover.webp"
+        "cover": "/photos_optimized/japon/Hiroshima/DSC02658.webp"
       },
       {
         "name": "Tokyo",
@@ -3719,7 +3719,7 @@ export const galleries = [
           9.85,
           124.1435
         ],
-        "cover": "/photos_optimized/philippines/Bohol/DSC01334.webp"
+        "cover": "/photos_optimized/philippines/Bohol/DSC01183.webp"
       }
     ],
     "cover": "/photos_optimized/philippines/Malapascua/cover.webp",
@@ -4808,7 +4808,7 @@ export const galleries = [
           -2.3333,
           34.8333
         ],
-        "cover": "/photos_optimized/tanzanie/Serengeti/DSC06854.webp"
+        "cover": "/photos_optimized/tanzanie/Serengeti/DSC06354.webp"
       },
       {
         "name": "Kilimanjaro",
@@ -4824,7 +4824,7 @@ export const galleries = [
           -3.8333,
           36
         ],
-        "cover": "/photos_optimized/tanzanie/Tarangire/DSC03929.webp"
+        "cover": "/photos_optimized/tanzanie/Tarangire/DSC05776.webp"
       },
       {
         "name": "Ngorongoro",

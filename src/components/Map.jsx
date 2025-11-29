@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { galleries } from '../data/galleries';
 import L from 'leaflet';
@@ -16,26 +16,35 @@ const customIcon = L.divIcon({
 });
 
 // Component to handle map movements
-const MapController = ({ center, zoom }) => {
+const MapController = ({ center, zoom, bounds }) => {
     const map = useMap();
     useEffect(() => {
-        map.flyTo(center, zoom, { duration: 1.5 });
-    }, [center, zoom, map]);
+        if (bounds) {
+            map.flyToBounds(bounds, { padding: [50, 50], duration: 1.5 });
+        } else {
+            map.flyTo(center, zoom, { duration: 1.5 });
+        }
+    }, [center, zoom, bounds, map]);
     return null;
 };
 
 const Map = ({ onGalleryClick }) => {
     const [activeCountry, setActiveCountry] = useState(null);
-    const [viewState, setViewState] = useState({ center: [20, 0], zoom: 2 });
+    const [viewState, setViewState] = useState({ center: [20, 0], zoom: 2, bounds: null });
 
     const handleCountryClick = (gallery) => {
         setActiveCountry(gallery);
-        setViewState({ center: gallery.coordinates, zoom: 6 });
+        if (gallery.cities && gallery.cities.length > 0) {
+            const bounds = L.latLngBounds(gallery.cities.map(c => c.coordinates));
+            setViewState({ center: gallery.coordinates, zoom: 6, bounds: bounds });
+        } else {
+            setViewState({ center: gallery.coordinates, zoom: 6, bounds: null });
+        }
     };
 
     const handleReset = () => {
         setActiveCountry(null);
-        setViewState({ center: [20, 0], zoom: 2 });
+        setViewState({ center: [20, 0], zoom: 2, bounds: null });
     };
 
     return (
@@ -60,7 +69,7 @@ const Map = ({ onGalleryClick }) => {
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
                             url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
                         />
-                        <MapController center={viewState.center} zoom={viewState.zoom} />
+                        <MapController center={viewState.center} zoom={viewState.zoom} bounds={viewState.bounds} />
 
                         {!activeCountry ? (
                             // Show Country Markers
@@ -84,10 +93,22 @@ const Map = ({ onGalleryClick }) => {
                                     position={city.coordinates}
                                     icon={customIcon}
                                 >
+                                    <Tooltip direction="top" offset={[0, -10]} opacity={1} className="city-tooltip">
+                                        {city.name}
+                                    </Tooltip>
                                     <Popup className="city-popup">
                                         <div className="map-popup-content">
                                             <img src={getImagePath(city.cover)} alt={city.name} className="popup-cover" />
-                                            <h3>{city.name}</h3>
+                                            <h3>
+                                                {activeCountry.code && (
+                                                    <img
+                                                        src={`https://flagcdn.com/w20/${activeCountry.code.toLowerCase()}.png`}
+                                                        alt={activeCountry.country}
+                                                        className="popup-flag"
+                                                    />
+                                                )}
+                                                {city.name}
+                                            </h3>
                                             <button
                                                 className="view-gallery-btn"
                                                 onClick={() => onGalleryClick(activeCountry, city.name)}

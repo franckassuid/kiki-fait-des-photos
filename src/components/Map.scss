@@ -69,6 +69,12 @@
         font-weight: 600;
     }
 
+    .popup-flag {
+        height: 1em;
+        width: auto;
+        border-radius: 2px;
+    }
+
     .view-gallery-btn {
         background: white;
         color: black;
@@ -113,6 +119,21 @@
 
 .leaflet-popup-close-button {
     color: white !important;
+}
+
+.city-tooltip {
+    background: rgba(20, 20, 20, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    border-radius: 4px;
+    padding: 4px 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+    &::before {
+        border-top-color: rgba(20, 20, 20, 0.9);
+    }
 }
 
 // Custom Marker Styles

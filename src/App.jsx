@@ -53,7 +53,7 @@ function App() {
           onGalleryClick={(gallery) => handleGalleryClick(gallery)}
         />
 
-        <Map onGalleryClick={(gallery) => handleGalleryClick(gallery)} />
+        <Map onGalleryClick={handleGalleryClick} />
 
         <Footer />
       </main>
