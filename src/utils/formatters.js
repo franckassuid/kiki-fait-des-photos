@@ -25,3 +25,12 @@ export const formatDate = (dateString) => {
     const [year, month, day] = dateParts;
     return `${day}/${month}/${year}`;
 };
+
+export const formatCameraModel = (model) => {
+    if (!model) return '';
+    const mappings = {
+        'ILCE-7CM2': 'Sony A7C II',
+        // Add other mappings here if needed
+    };
+    return mappings[model] || model;
+};

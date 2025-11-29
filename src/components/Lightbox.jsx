@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { getImagePath } from '../utils/imagePath';
-import { formatExposureTime, formatDate } from '../utils/formatters';
+import { formatExposureTime, formatDate, formatCameraModel } from '../utils/formatters';
 import './Lightbox.scss';
 
 const Lightbox = ({ images, initialIndex, onClose }) => {
@@ -90,12 +90,12 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
                     </div>
                     {images[currentIndex].exif && (
                         <div className="exif-data">
-                            {images[currentIndex].exif.model && <span>{images[currentIndex].exif.model}</span>}
-                            {images[currentIndex].exif.date && <span style={{ opacity: 0.7 }}>{formatDate(images[currentIndex].exif.date)}</span>}
-                            {images[currentIndex].exif.focal_length && <span>{images[currentIndex].exif.focal_length}</span>}
-                            {images[currentIndex].exif.f_stop && <span>{images[currentIndex].exif.f_stop}</span>}
-                            {images[currentIndex].exif.shutter_speed && <span>{formatExposureTime(images[currentIndex].exif.shutter_speed)}</span>}
-                            {images[currentIndex].exif.iso && <span>ISO {images[currentIndex].exif.iso}</span>}
+                            {images[currentIndex].exif.model && <span style={{ opacity: 0.7 }}>{formatCameraModel(images[currentIndex].exif.model)}</span>}
+                            {images[currentIndex].exif.focal_length && <span style={{ opacity: 0.7 }}>{images[currentIndex].exif.focal_length}</span>}
+                            {images[currentIndex].exif.f_stop && <span style={{ opacity: 0.7 }}>{images[currentIndex].exif.f_stop}</span>}
+                            {images[currentIndex].exif.shutter_speed && <span style={{ opacity: 0.7 }}>{formatExposureTime(images[currentIndex].exif.shutter_speed)}</span>}
+                            {images[currentIndex].exif.iso && <span style={{ opacity: 0.7 }}>ISO {images[currentIndex].exif.iso}</span>}
+                            {images[currentIndex].exif.date && <span style={{ opacity: 1 }}>{formatDate(images[currentIndex].exif.date)}</span>}
                         </div>
                     )}
                 </div>
