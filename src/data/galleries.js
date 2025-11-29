@@ -8,6 +8,32 @@ export const galleries = [
       -63.616672
     ],
     "code": "AR",
+    "cities": [
+      {
+        "name": "Patagonie",
+        "coordinates": [
+          -50.338,
+          -72.2648
+        ],
+        "cover": "/photos_optimized/argentine/Patagonie/R0004221.webp"
+      },
+      {
+        "name": "Ushuaïa",
+        "coordinates": [
+          -54.8019,
+          -68.303
+        ],
+        "cover": "/photos_optimized/argentine/Ushuaia/R0004672.webp"
+      },
+      {
+        "name": "Chutes d'Iguazu",
+        "coordinates": [
+          -25.6953,
+          -54.4367
+        ],
+        "cover": "/photos_optimized/argentine/Chutes d'Iguazu/R0005415.webp"
+      }
+    ],
     "cover": "/photos_optimized/argentine/Patagonie/cover.webp",
     "images": [
       {
@@ -333,6 +359,40 @@ export const galleries = [
       -63.588653
     ],
     "code": "BO",
+    "cities": [
+      {
+        "name": "Coroico",
+        "coordinates": [
+          -16.1736,
+          -67.7275
+        ],
+        "cover": "/photos_optimized/bolivie/Coroico/R0000369.webp"
+      },
+      {
+        "name": "La Paz",
+        "coordinates": [
+          -16.5,
+          -68.15
+        ],
+        "cover": "/photos_optimized/bolivie/La Paz/R0000348.webp"
+      },
+      {
+        "name": "Uyuni & Lipez",
+        "coordinates": [
+          -20.4603,
+          -66.8261
+        ],
+        "cover": "/photos_optimized/bolivie/Uyuni & Lipez/R0000860.webp"
+      },
+      {
+        "name": "Sucre",
+        "coordinates": [
+          -19.0333,
+          -65.2627
+        ],
+        "cover": "/photos_optimized/bolivie/Sucre/R0001756.webp"
+      }
+    ],
     "cover": "/photos_optimized/bolivie/Uyuni & Lipez/cover.webp",
     "images": [
       {
@@ -500,6 +560,24 @@ export const galleries = [
       -51.92528
     ],
     "code": "BR",
+    "cities": [
+      {
+        "name": "Rio de Janeiro",
+        "coordinates": [
+          -22.9068,
+          -43.1729
+        ],
+        "cover": "/photos_optimized/bresil/Rio de Janeiro/R0005792.webp"
+      },
+      {
+        "name": "Iguazu",
+        "coordinates": [
+          -25.5469,
+          -54.5854
+        ],
+        "cover": "/photos_optimized/bresil/Iguazu/R0005631.webp"
+      }
+    ],
     "cover": "/photos_optimized/bresil/Iguazu/cover.webp",
     "images": [
       {
@@ -721,6 +799,32 @@ export const galleries = [
       -71.542969
     ],
     "code": "CL",
+    "cities": [
+      {
+        "name": "Patagonie",
+        "coordinates": [
+          -51.7269,
+          -72.5068
+        ],
+        "cover": "/photos_optimized/chili/Patagonie/cover.webp"
+      },
+      {
+        "name": "Atacama",
+        "coordinates": [
+          -22.9087,
+          -68.1997
+        ],
+        "cover": "/photos_optimized/chili/Atacama/R0001456.webp"
+      },
+      {
+        "name": "Santiago",
+        "coordinates": [
+          -33.4489,
+          -70.6693
+        ],
+        "cover": "/photos_optimized/chili/Santiago/R0003230.webp"
+      }
+    ],
     "cover": "/photos_optimized/chili/Patagonie/cover.webp",
     "images": [
       {
@@ -1085,6 +1189,24 @@ export const galleries = [
       -78.183406
     ],
     "code": "EC",
+    "cities": [
+      {
+        "name": "Galapagos",
+        "coordinates": [
+          -0.9538,
+          -90.9656
+        ],
+        "cover": "/photos_optimized/equateur/Galapagos/R0001912.webp"
+      },
+      {
+        "name": "Quilotoa",
+        "coordinates": [
+          -0.85,
+          -78.9
+        ],
+        "cover": "/photos_optimized/equateur/Quilotoa/R0002544.webp"
+      }
+    ],
     "cover": "/photos_optimized/equateur/Galapagos/cover.webp",
     "images": [
       {
@@ -1540,6 +1662,64 @@ export const galleries = [
       2.213749
     ],
     "code": "FR",
+    "cities": [
+      {
+        "name": "Pornic",
+        "coordinates": [
+          47.1153,
+          -2.1024
+        ],
+        "cover": "/photos_optimized/france/Pornic/DSC00414.webp"
+      },
+      {
+        "name": "Nantes",
+        "coordinates": [
+          47.2184,
+          -1.5536
+        ],
+        "cover": "/photos_optimized/france/Nantes/DSC01016.webp"
+      },
+      {
+        "name": "Bretagne",
+        "coordinates": [
+          48.202,
+          -2.9326
+        ],
+        "cover": "/photos_optimized/france/Bretagne/DSC04561.webp"
+      },
+      {
+        "name": "Corse du sud",
+        "coordinates": [
+          41.9272,
+          8.7346
+        ],
+        "cover": "/photos_optimized/france/Corse du sud/DSC09258 (1).webp"
+      },
+      {
+        "name": "Noisy-le-Grand",
+        "coordinates": [
+          48.8477,
+          2.5528
+        ],
+        "cover": "/photos_optimized/france/Noisy-le-Grand/cover.webp"
+      },
+      {
+        "name": "Bourgogne",
+        "coordinates": [
+          47.0525,
+          4.3837
+        ],
+        "cover": "/photos_optimized/france/Bourgogne/DSC04760.webp"
+      },
+      {
+        "name": "Noisiel",
+        "coordinates": [
+          48.8546,
+          2.6237
+        ],
+        "cover": "/photos_optimized/france/Noisiel/DSC04544.webp"
+      }
+    ],
     "cover": "/photos_optimized/france/Noisy-le-Grand/cover.webp",
     "images": [
       {
@@ -2333,6 +2513,16 @@ export const galleries = [
       12.56738
     ],
     "code": "IT",
+    "cities": [
+      {
+        "name": "Campanie",
+        "coordinates": [
+          40.8518,
+          14.2681
+        ],
+        "cover": "/photos_optimized/italie/Campanie/DSC00634.webp"
+      }
+    ],
     "cover": "/photos_optimized/italie/Campanie/cover.webp",
     "images": [
       {
@@ -2658,6 +2848,56 @@ export const galleries = [
       138.252924
     ],
     "code": "JP",
+    "cities": [
+      {
+        "name": "Nico",
+        "coordinates": [
+          36.7199,
+          139.6982
+        ],
+        "cover": "/photos_optimized/japon/Nico/DSC03905.webp"
+      },
+      {
+        "name": "Osaka",
+        "coordinates": [
+          34.6937,
+          135.5023
+        ],
+        "cover": "/photos_optimized/japon/Osaka/DSC02824-Panorama.webp"
+      },
+      {
+        "name": "Fukuoka",
+        "coordinates": [
+          33.5902,
+          130.4017
+        ],
+        "cover": "/photos_optimized/japon/Fukuoka/DSC02464.webp"
+      },
+      {
+        "name": "Kobe",
+        "coordinates": [
+          34.6901,
+          135.1955
+        ],
+        "cover": "/photos_optimized/japon/Kobe/DSC03108.webp"
+      },
+      {
+        "name": "Hiroshima",
+        "coordinates": [
+          34.3853,
+          132.4553
+        ],
+        "cover": "/photos_optimized/japon/Hiroshima/cover.webp"
+      },
+      {
+        "name": "Tokyo",
+        "coordinates": [
+          35.6762,
+          139.6503
+        ],
+        "cover": "/photos_optimized/japon/Tokyo/DSC03325.webp"
+      }
+    ],
     "cover": "/photos_optimized/japon/Hiroshima/cover.webp",
     "images": [
       {
@@ -3217,6 +3457,24 @@ export const galleries = [
       -75.015152
     ],
     "code": "PE",
+    "cities": [
+      {
+        "name": "Lima",
+        "coordinates": [
+          -12.0464,
+          -77.0428
+        ],
+        "cover": "/photos_optimized/perou/Lima/R0002930.webp"
+      },
+      {
+        "name": "Paracas",
+        "coordinates": [
+          -13.8383,
+          -76.2508
+        ],
+        "cover": "/photos_optimized/perou/Paracas/R0002992.webp"
+      }
+    ],
     "cover": "/photos_optimized/perou/Paracas/cover.webp",
     "images": [
       {
@@ -3438,6 +3696,32 @@ export const galleries = [
       121.774017
     ],
     "code": "PH",
+    "cities": [
+      {
+        "name": "Malapascua",
+        "coordinates": [
+          11.3333,
+          124.1167
+        ],
+        "cover": "/photos_optimized/philippines/Malapascua/DSC00069.webp"
+      },
+      {
+        "name": "Coron",
+        "coordinates": [
+          11.9986,
+          120.2043
+        ],
+        "cover": "/photos_optimized/philippines/Coron/DSC01355.webp"
+      },
+      {
+        "name": "Bohol",
+        "coordinates": [
+          9.85,
+          124.1435
+        ],
+        "cover": "/photos_optimized/philippines/Bohol/DSC01334.webp"
+      }
+    ],
     "cover": "/photos_optimized/philippines/Malapascua/cover.webp",
     "images": [
       {
@@ -3776,6 +4060,16 @@ export const galleries = [
       19.145136
     ],
     "code": "PL",
+    "cities": [
+      {
+        "name": "Cracovie",
+        "coordinates": [
+          50.0647,
+          19.945
+        ],
+        "cover": "/photos_optimized/pologne/Cracovie/DSC01175.webp"
+      }
+    ],
     "cover": "/photos_optimized/pologne/Cracovie/cover.webp",
     "images": [
       {
@@ -3893,6 +4187,48 @@ export const galleries = [
       -70.162651
     ],
     "code": "DO",
+    "cities": [
+      {
+        "name": "Samana",
+        "coordinates": [
+          19.2058,
+          -69.3364
+        ],
+        "cover": "/photos_optimized/republique-dominicaine/Samana/DSC02407.webp"
+      },
+      {
+        "name": "Saint Domingue",
+        "coordinates": [
+          18.4861,
+          -69.9312
+        ],
+        "cover": "/photos_optimized/republique-dominicaine/Saint Domingue/DSC02351.webp"
+      },
+      {
+        "name": "Bayahibe",
+        "coordinates": [
+          18.3756,
+          -68.8378
+        ],
+        "cover": "/photos_optimized/republique-dominicaine/Bayahibe/DSC02165.webp"
+      },
+      {
+        "name": "Los Haitises",
+        "coordinates": [
+          19.0333,
+          -69.6
+        ],
+        "cover": "/photos_optimized/republique-dominicaine/Los Haitises/DSC02406.webp"
+      },
+      {
+        "name": "Las Terenas",
+        "coordinates": [
+          19.3167,
+          -69.5333
+        ],
+        "cover": "/photos_optimized/republique-dominicaine/Las Terenas/P3040313.webp"
+      }
+    ],
     "cover": "/photos_optimized/republique-dominicaine/Samana/cover.webp",
     "images": [
       {
@@ -4465,6 +4801,48 @@ export const galleries = [
       34.888822
     ],
     "code": "TZ",
+    "cities": [
+      {
+        "name": "Serengeti",
+        "coordinates": [
+          -2.3333,
+          34.8333
+        ],
+        "cover": "/photos_optimized/tanzanie/Serengeti/DSC06854.webp"
+      },
+      {
+        "name": "Kilimanjaro",
+        "coordinates": [
+          -3.0674,
+          37.3556
+        ],
+        "cover": "/photos_optimized/tanzanie/Kilimanjaro/DSC08191.webp"
+      },
+      {
+        "name": "Tarangire",
+        "coordinates": [
+          -3.8333,
+          36
+        ],
+        "cover": "/photos_optimized/tanzanie/Tarangire/DSC03929.webp"
+      },
+      {
+        "name": "Ngorongoro",
+        "coordinates": [
+          -3.2333,
+          35.5
+        ],
+        "cover": "/photos_optimized/tanzanie/Ngorongoro/DSC07916.webp"
+      },
+      {
+        "name": "Zanzibar",
+        "coordinates": [
+          -6.1659,
+          39.2026
+        ],
+        "cover": "/photos_optimized/tanzanie/Zanzibar/DSC08439.webp"
+      }
+    ],
     "cover": "/photos_optimized/tanzanie/Serengeti/cover.webp",
     "images": [
       {
@@ -5817,6 +6195,16 @@ export const galleries = [
       -55.765835
     ],
     "code": "UY",
+    "cities": [
+      {
+        "name": "Colonia del Sacramento",
+        "coordinates": [
+          -34.4626,
+          -57.8398
+        ],
+        "cover": "/photos_optimized/uruguay/Colonia del Sacramento/R0005119.webp"
+      }
+    ],
     "cover": "/photos_optimized/uruguay/Colonia del Sacramento/cover.webp",
     "images": [
       {
@@ -5912,4 +6300,5 @@ export const galleries = [
       }
     ]
   }
-];
+]
+;

@@ -8,6 +8,54 @@
     z-index: 1000;
     overflow-y: auto;
 
+    .modal-logo-container {
+        position: fixed;
+        top: 2rem;
+        left: 2rem;
+        z-index: 1001;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: 2rem;
+        transition: all 0.3s ease;
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(4px);
+
+        .modal-logo {
+            height: 40px;
+            width: auto;
+        }
+
+        .modal-logo-text {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            top: 1rem;
+            left: 1rem;
+
+            .modal-logo {
+                height: 32px;
+            }
+
+            .modal-logo-text {
+                display: none; // Hide text on mobile to save space
+            }
+        }
+    }
+
     .close-button {
         position: fixed;
         top: 2rem;

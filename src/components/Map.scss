@@ -10,55 +10,82 @@
     }
 
     .map-container {
-        height: 500px;
+        height: 600px;
         width: 100%;
         border-radius: 1rem;
         overflow: hidden;
+        position: relative;
+        z-index: 1;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         border: 1px solid rgba(255, 255, 255, 0.1);
+
+        .map-back-button {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            z-index: 1000;
+            background: var(--color-bg);
+            color: var(--color-text);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+            &:hover {
+                background: var(--color-text);
+                color: var(--color-bg);
+            }
+        }
     }
 }
 
-.map-popup {
+.map-popup-content {
     text-align: center;
     min-width: 200px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-
-    &:hover {
-        transform: scale(1.02);
-    }
 
     .popup-cover {
         width: 100%;
         height: 120px;
         object-fit: cover;
-        border-radius: 8px;
-        margin-bottom: 0.8rem;
+        border-radius: 0.5rem;
+        margin-bottom: 0.5rem;
         display: block;
     }
 
     h3 {
-        margin: 0 0 0.3rem 0;
+        margin: 0.5rem 0;
         font-size: 1.1rem;
-        color: #fff;
+        color: white;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 0.5rem;
         font-weight: 600;
-
-        .flag-icon {
-            height: 1em;
-            width: auto;
-            border-radius: 2px;
-        }
     }
 
-    p {
-        margin: 0;
-        font-size: 0.85rem;
-        color: #aaa;
+    .view-gallery-btn {
+        background: white;
+        color: black;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        cursor: pointer;
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+        width: 100%;
+        transition: all 0.3s ease;
+        font-weight: 600;
+
+        &:hover {
+            background: #ddd;
+            transform: translateY(-2px);
+        }
     }
 }
 

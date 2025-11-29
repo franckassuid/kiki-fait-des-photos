@@ -52,6 +52,10 @@ const GalleryModal = ({ gallery, initialSubcategory, onClose, onImageClick }) =>
 
     return (
         <div className="gallery-modal-overlay fade-in">
+            <div className="modal-logo-container" onClick={onClose}>
+                <img src={getImagePath('/logo.svg')} alt="Logo" className="modal-logo" />
+                <span className="modal-logo-text">Kiki fait des photos</span>
+            </div>
             <button className="close-button" onClick={onClose}>
                 <X size={32} />
             </button>
