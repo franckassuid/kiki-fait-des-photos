@@ -60,6 +60,19 @@
             gap: 1rem;
             margin-top: 2rem;
 
+            @media (max-width: 768px) {
+                justify-content: flex-start;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                padding-bottom: 0.5rem;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+
             .filter-btn {
                 background: transparent;
                 border: 1px solid var(--color-border);
@@ -69,6 +82,7 @@
                 cursor: pointer;
                 transition: all 0.3s ease;
                 font-size: 0.9rem;
+                white-space: nowrap;
 
                 &:hover {
                     border-color: var(--color-text);

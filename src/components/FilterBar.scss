@@ -1,5 +1,5 @@
 .filter-bar {
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 
     .filter-container {
         display: flex;
@@ -17,6 +17,7 @@
         border: 1px solid transparent;
         background: transparent;
         cursor: pointer;
+        white-space: nowrap;
 
         &:hover {
             color: var(--color-text);
@@ -30,6 +31,21 @@
             /* Light background */
             font-weight: 600;
             transform: scale(1.05);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .filter-container {
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding-bottom: 1rem;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none; // Firefox
+
+            &::-webkit-scrollbar {
+                display: none; // Chrome/Safari
+            }
         }
     }
 }

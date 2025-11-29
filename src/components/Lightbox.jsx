@@ -55,6 +55,7 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
                 />
                 <div className="image-info">
                     <div className="image-counter">
+                        {images[currentIndex].subcategory && <span style={{ marginRight: '1rem', fontWeight: 'bold' }}>{images[currentIndex].subcategory}</span>}
                         {currentIndex + 1} / {images.length}
                     </div>
                     {images[currentIndex].exif && (

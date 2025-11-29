@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <Hero />
+      <Hero onGalleryClick={setSelectedGallery} />
 
       <main className="main-content">
         <FilterBar

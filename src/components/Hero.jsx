@@ -4,7 +4,7 @@ import { galleries } from '../data/galleries';
 import { getImagePath } from '../utils/imagePath';
 import './Hero.scss';
 
-const Hero = () => {
+const Hero = ({ onGalleryClick }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [randomImages, setRandomImages] = useState([]);
 
@@ -16,7 +16,8 @@ const Hero = () => {
                 country: gallery.country,
                 code: gallery.code,
                 // Use subcategory if available, otherwise just country
-                location: img.subcategory ? `${img.subcategory}, ${gallery.country}` : gallery.country
+                location: img.subcategory ? `${img.subcategory}, ${gallery.country}` : gallery.country,
+                gallery: gallery // Store reference to full gallery object
             }))
         );
 
@@ -35,6 +36,16 @@ const Hero = () => {
         return () => clearInterval(interval);
     }, [randomImages]);
 
+    const handleNext = (e) => {
+        e.stopPropagation();
+        setCurrentImageIndex((prev) => (prev + 1) % randomImages.length);
+    };
+
+    const handlePrev = (e) => {
+        e.stopPropagation();
+        setCurrentImageIndex((prev) => (prev - 1 + randomImages.length) % randomImages.length);
+    };
+
     if (randomImages.length === 0) return null;
 
     const currentImage = randomImages[currentImageIndex];
@@ -52,6 +63,15 @@ const Hero = () => {
                     style={{ backgroundImage: `url(${getImagePath(currentImage.src)})` }}
                 />
             </AnimatePresence>
+
+            {/* Navigation Arrows */}
+            <button className="hero-nav prev" onClick={handlePrev} aria-label="Previous image">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6" /></svg>
+            </button>
+            <button className="hero-nav next" onClick={handleNext} aria-label="Next image">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6" /></svg>
+            </button>
+
             <div className="hero-overlay">
                 <div className="hero-content">
                     <motion.h2
@@ -71,7 +91,12 @@ const Hero = () => {
                 </div>
             </div>
 
-            <div className="hero-metadata">
+            <div
+                className="hero-metadata"
+                onClick={() => onGalleryClick && onGalleryClick(currentImage.gallery)}
+                style={{ cursor: 'pointer' }}
+                title="Voir la galerie"
+            >
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={currentImageIndex}
