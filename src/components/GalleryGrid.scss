@@ -91,6 +91,8 @@
         gap: 1rem;
 
         .gallery-card {
+            aspect-ratio: 2.25/1;
+
             .image-container .overlay {
                 opacity: 1; // Always show title on mobile
                 background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
