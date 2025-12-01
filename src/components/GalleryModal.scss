@@ -181,9 +181,13 @@
         }
 
         .view-controls {
-            display: flex;
+            display: none;
             justify-content: center;
             margin-bottom: 2rem;
+
+            @media (max-width: 600px) {
+                display: flex;
+            }
 
             .view-toggle-btn {
                 display: flex;
