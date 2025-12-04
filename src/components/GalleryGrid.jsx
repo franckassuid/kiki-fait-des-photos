@@ -4,23 +4,39 @@ import './GalleryGrid.scss';
 
 import { getImagePath } from '../utils/imagePath';
 
+import Loader from './Loader';
+
 const GalleryGrid = ({ galleries, onGalleryClick }) => {
+    const [loadingImages, setLoadingImages] = React.useState({});
+
+    const handleImageLoad = (id) => {
+        setLoadingImages(prev => ({ ...prev, [id]: false }));
+    };
+
+
+
     return (
-        <motion.div layout className="gallery-grid">
-            <AnimatePresence mode="popLayout">
+        <motion.div className="gallery-grid">
+            <AnimatePresence mode="wait">
                 {galleries.map((gallery) => (
                     <motion.div
-                        layout
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.8 }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
                         key={gallery.id}
                         className="gallery-card"
                         onClick={() => onGalleryClick(gallery)}
                     >
                         <div className="image-container">
-                            <img src={getImagePath(gallery.cover)} alt={gallery.country} loading="lazy" />
+                            {loadingImages[gallery.id] !== false && <Loader />}
+                            <img
+                                src={getImagePath(gallery.cover)}
+                                alt={gallery.country}
+                                loading="lazy"
+                                onLoad={() => handleImageLoad(gallery.id)}
+                                style={{ opacity: loadingImages[gallery.id] === false ? 1 : 0 }}
+                            />
                             <div className="overlay">
                                 <h3>
                                     {gallery.code && (
