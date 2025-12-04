@@ -6,36 +6,20 @@ import './Hero.scss';
 
 const Hero = ({ onGalleryClick }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const [randomImages, setRandomImages] = useState([]);
 
-    useEffect(() => {
-        // Flatten all images into a single array, preserving metadata
+    // Initialize random images synchronously to avoid loading delay
+    const [randomImages] = useState(() => {
         const allImages = galleries.flatMap(gallery =>
             gallery.images.map(img => ({
                 ...img,
                 country: gallery.country,
                 code: gallery.code,
-                // Use subcategory if available, otherwise just country
                 location: img.subcategory ? `${img.subcategory}, ${gallery.country}` : gallery.country,
-                gallery: gallery // Store reference to full gallery object
+                gallery: gallery
             }))
         );
-
-        // Shuffle and pick 10 random images
-        const shuffled = allImages.sort(() => 0.5 - Math.random());
-        setRandomImages(shuffled.slice(0, 10));
-    }, []);
-
-    // Reset interval on manual interaction
-    const resetInterval = () => {
-        // We don't need to do anything complex here because the useEffect below 
-        // depends on currentImageIndex (or we can make it depend on a 'lastInteraction' state).
-        // Actually, the simplest way is to clear the existing interval and start a new one.
-        // But React's useEffect cleanup handles this automatically if we include the dependency that changes.
-        // However, changing currentImageIndex triggers the effect again, restarting the timer.
-        // So simply updating the state is enough to reset the 5s timer IF the effect depends on currentImageIndex.
-        // Let's check the effect dependencies.
-    };
+        return allImages.sort(() => 0.5 - Math.random()).slice(0, 10);
+    });
 
     // Auto-slide effect
     useEffect(() => {
@@ -46,9 +30,7 @@ const Hero = ({ onGalleryClick }) => {
         }, 5000);
 
         return () => clearInterval(interval);
-    }, [randomImages, currentImageIndex]); // Added currentImageIndex to dependency to reset timer on change
-
-
+    }, [randomImages]);
 
     if (randomImages.length === 0) return null;
 
@@ -56,7 +38,7 @@ const Hero = ({ onGalleryClick }) => {
 
     return (
         <section className="hero">
-            <AnimatePresence mode="wait">
+            <AnimatePresence>
                 <motion.div
                     key={currentImageIndex}
                     className="hero-background"

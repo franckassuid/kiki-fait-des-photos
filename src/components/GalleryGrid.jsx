@@ -7,13 +7,13 @@ import { getImagePath } from '../utils/imagePath';
 const GalleryGrid = ({ galleries, onGalleryClick }) => {
     return (
         <motion.div layout className="gallery-grid">
-            <AnimatePresence>
+            <AnimatePresence mode="popLayout">
                 {galleries.map((gallery) => (
                     <motion.div
                         layout
-                        initial={{ opacity: 0, scale: 0.9 }}
+                        initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.9 }}
+                        exit={{ opacity: 0, scale: 0.8 }}
                         transition={{ duration: 0.3 }}
                         key={gallery.id}
                         className="gallery-card"
@@ -30,7 +30,7 @@ const GalleryGrid = ({ galleries, onGalleryClick }) => {
                                             className="flag-icon"
                                         />
                                     )}
-                                    {gallery.country}
+                                    <span>{gallery.country}</span>
                                 </h3>
                                 <span className="photo-count">{gallery.images.length} photos</span>
                             </div>

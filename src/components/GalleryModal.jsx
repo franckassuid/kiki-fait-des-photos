@@ -2,6 +2,24 @@ import React, { useEffect, useState } from 'react';
 import { X, Grid, Square } from 'lucide-react';
 import { getImagePath } from '../utils/imagePath';
 import './GalleryModal.scss';
+import Loader from './Loader';
+
+const GalleryImage = ({ src, alt, onClick }) => {
+    const [isLoading, setIsLoading] = useState(true);
+
+    return (
+        <div className="image-wrapper" onClick={onClick}>
+            {isLoading && <Loader />}
+            <img
+                src={src}
+                alt={alt}
+                loading="lazy"
+                onLoad={() => setIsLoading(false)}
+                className={isLoading ? '' : 'loaded'}
+            />
+        </div>
+    );
+};
 
 const GalleryModal = ({ gallery, initialSubcategory, onClose, onImageClick }) => {
     const [selectedSubcategory, setSelectedSubcategory] = useState(initialSubcategory || 'Tous');
@@ -118,13 +136,12 @@ const GalleryModal = ({ gallery, initialSubcategory, onClose, onImageClick }) =>
                                         {groupedImages[group].map((img) => {
                                             const originalIndex = gallery.images.indexOf(img);
                                             return (
-                                                <div
+                                                <GalleryImage
                                                     key={originalIndex}
-                                                    className="image-wrapper"
+                                                    src={getImagePath(img.src)}
+                                                    alt={`${gallery.country} ${originalIndex + 1}`}
                                                     onClick={() => onImageClick(gallery.images, originalIndex)}
-                                                >
-                                                    <img src={getImagePath(img.src)} alt={`${gallery.country} ${originalIndex + 1}`} loading="lazy" />
-                                                </div>
+                                                />
                                             );
                                         })}
                                     </div>
@@ -137,13 +154,12 @@ const GalleryModal = ({ gallery, initialSubcategory, onClose, onImageClick }) =>
                                 // Find the original index for the lightbox
                                 const originalIndex = gallery.images.indexOf(img);
                                 return (
-                                    <div
+                                    <GalleryImage
                                         key={originalIndex}
-                                        className="image-wrapper"
+                                        src={getImagePath(img.src)}
+                                        alt={`${gallery.country} ${originalIndex + 1}`}
                                         onClick={() => onImageClick(gallery.images, originalIndex)}
-                                    >
-                                        <img src={getImagePath(img.src)} alt={`${gallery.country} ${originalIndex + 1}`} loading="lazy" />
-                                    </div>
+                                    />
                                 );
                             })}
                         </div>

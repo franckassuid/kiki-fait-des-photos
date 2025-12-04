@@ -59,8 +59,9 @@
                     font-weight: 600;
                     margin-bottom: 0.5rem;
                     display: flex;
-                    align-items: center;
+                    align-items: flex-start; // Align to top for multi-line text
                     gap: 0.5rem;
+                    line-height: 1.2;
 
                     .flag-icon {
                         height: 1em;
@@ -69,6 +70,15 @@
                         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
                         opacity: 0.7;
                         transition: all 0.3s ease;
+                        margin-top: 0.1em; // Align with the first line of text
+                        flex-shrink: 0; // Prevent flag from shrinking
+                    }
+
+                    span {
+                        display: block;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        // white-space: nowrap; // Remove this to allow wrapping
                     }
                 }
 

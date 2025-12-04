@@ -242,22 +242,40 @@
                 width: 100%;
                 margin-bottom: 1rem;
                 break-inside: avoid;
+                position: relative;
+                border-radius: 4px;
                 overflow: hidden;
-                border-radius: var(--radius-md);
                 cursor: pointer;
+                background-color: #f0f0f0;
+                /* Placeholder color */
                 /* Clickable */
 
                 img {
                     width: 100%;
-                    height: auto;
-                    display: block;
+                    height: 100%;
                     object-fit: cover;
-                    transition: transform 0.3s ease;
+                    transition: transform 0.3s ease, opacity 0.3s ease;
+                    opacity: 0;
+                    /* Hidden by default until loaded */
+                    display: block;
+                    /* Ensure it's a block element */
 
-                    &:hover {
-                        transform: scale(1.03);
-                        filter: brightness(1.1);
+                    &.loaded {
+                        opacity: 1;
                     }
+                }
+
+                .loader-container {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                }
+
+                &:hover img.loaded {
+                    transform: scale(1.05);
                 }
             }
         }
