@@ -1,11 +1,13 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { getImagePath } from '../utils/imagePath';
 import { formatExposureTime, formatDate, formatCameraModel } from '../utils/formatters';
 import './Lightbox.scss';
 
 const Lightbox = ({ images, initialIndex, onClose }) => {
     const [currentIndex, setCurrentIndex] = useState(initialIndex);
+    const transformRef = useRef(null);
 
     const handleNext = useCallback(() => {
         setCurrentIndex((prev) => (prev + 1) % images.length);
@@ -14,6 +16,13 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
     const handlePrev = useCallback(() => {
         setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
     }, [images.length]);
+
+    // Reset zoom when image changes
+    useEffect(() => {
+        if (transformRef.current) {
+            transformRef.current.resetTransform();
+        }
+    }, [currentIndex]);
 
     // Keyboard navigation
     useEffect(() => {
@@ -41,12 +50,23 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
     const minSwipeDistance = 50;
 
     const onTouchStart = (e) => {
+        // If zoomed in, don't enable swipe navigation
+        if (transformRef.current) {
+            const { scale } = transformRef.current.instance.transformState;
+            if (scale > 1) return;
+        }
+
         if (e.touches.length > 1) return;
         setTouchEnd(null);
         setTouchStart(e.targetTouches[0].clientX);
     };
 
     const onTouchMove = (e) => {
+        if (transformRef.current) {
+            const { scale } = transformRef.current.instance.transformState;
+            if (scale > 1) return;
+        }
+
         if (e.touches.length > 1) {
             setTouchStart(null);
             setTouchEnd(null);
@@ -85,10 +105,21 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
             </button>
 
             <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
-                <img
-                    src={getImagePath(images[currentIndex].src)}
-                    alt={`Gallery image ${currentIndex + 1}`}
-                />
+                <TransformWrapper
+                    ref={transformRef}
+                    initialScale={1}
+                    minScale={1}
+                    maxScale={5}
+                    centerOnInit={true}
+                >
+                    <TransformComponent wrapperStyle={{ width: "100%", height: "100%" }}>
+                        <img
+                            src={getImagePath(images[currentIndex].src)}
+                            alt={`Gallery image ${currentIndex + 1}`}
+                            style={{ maxHeight: '85vh', width: 'auto', maxWidth: '100%' }}
+                        />
+                    </TransformComponent>
+                </TransformWrapper>
 
                 <div className="image-info">
                     <div className="image-counter">
