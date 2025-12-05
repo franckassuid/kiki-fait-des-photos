@@ -7,6 +7,7 @@ import './Lightbox.scss';
 
 const Lightbox = ({ images, initialIndex, onClose }) => {
     const [currentIndex, setCurrentIndex] = useState(initialIndex);
+    const [isZoomed, setIsZoomed] = useState(false);
     const transformRef = useRef(null);
 
     const handleNext = useCallback(() => {
@@ -22,6 +23,7 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
         if (transformRef.current) {
             transformRef.current.resetTransform();
         }
+        setIsZoomed(false);
     }, [currentIndex]);
 
     // Keyboard navigation
@@ -50,23 +52,14 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
     const minSwipeDistance = 50;
 
     const onTouchStart = (e) => {
-        // If zoomed in, don't enable swipe navigation
-        if (transformRef.current) {
-            const { scale } = transformRef.current.instance.transformState;
-            if (scale > 1) return;
-        }
-
+        if (isZoomed) return;
         if (e.touches.length > 1) return;
         setTouchEnd(null);
         setTouchStart(e.targetTouches[0].clientX);
     };
 
     const onTouchMove = (e) => {
-        if (transformRef.current) {
-            const { scale } = transformRef.current.instance.transformState;
-            if (scale > 1) return;
-        }
-
+        if (isZoomed) return;
         if (e.touches.length > 1) {
             setTouchStart(null);
             setTouchEnd(null);
@@ -113,6 +106,8 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
                     centerOnInit={true}
                     doubleClick={{ disabled: false }}
                     wheel={{ disabled: true }}
+                    panning={{ disabled: !isZoomed }}
+                    onTransformed={(ref) => setIsZoomed(ref.instance.transformState.scale > 1)}
                 >
                     <TransformComponent>
                         <img
