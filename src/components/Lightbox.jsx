@@ -97,6 +97,21 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
         if (isRightSwipe) handlePrev();
     };
 
+    const handleImageClick = (e) => {
+        if (isZoomed) return;
+
+        const { clientX, currentTarget } = e;
+        const { width, left } = currentTarget.getBoundingClientRect();
+        const x = clientX - left;
+
+        // Navigation zones (left 30%, right 30%)
+        if (x < width * 0.3) {
+            handlePrev();
+        } else if (x > width * 0.7) {
+            handleNext();
+        }
+    };
+
     return (
         <div
             className="lightbox-overlay"
@@ -124,20 +139,25 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
                     maxScale={5}
                     centerOnInit={true}
                     doubleClick={{ disabled: false, mode: 'toggle' }}
-                    wheel={{ disabled: true }}
+                    wheel={{ disabled: false, step: 0.2 }}
                     panning={{ disabled: !isZoomed }}
                     onTransformed={(ref) => setIsZoomed(ref.instance.transformState.scale > 1)}
                 >
-                    <TransformComponent>
-                        <img
-                            src={getImagePath(images[currentIndex].src)}
-                            alt={`Gallery image ${currentIndex + 1}`}
-                            style={{ maxHeight: '85vh', width: 'auto', maxWidth: '100%' }}
-                        />
+                    <TransformComponent wrapperStyle={{ width: "100%", height: "100%" }}>
+                        <div
+                            style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                            onClick={handleImageClick}
+                        >
+                            <img
+                                src={getImagePath(images[currentIndex].src)}
+                                alt={`Gallery image ${currentIndex + 1}`}
+                                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                            />
+                        </div>
                     </TransformComponent>
                 </TransformWrapper>
 
-                <div className="image-info">
+                <div className="image-info" style={{ opacity: isZoomed ? 0 : 1, transition: 'opacity 0.3s ease' }}>
                     <div className="image-counter">
                         {images[currentIndex].subcategory && <span style={{ marginRight: '1rem', fontWeight: 'bold' }}>{images[currentIndex].subcategory}</span>}
                         {currentIndex + 1} / {images.length}
