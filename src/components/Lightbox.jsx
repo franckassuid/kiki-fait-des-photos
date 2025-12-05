@@ -9,6 +9,7 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
     const [currentIndex, setCurrentIndex] = useState(initialIndex);
     const [isZoomed, setIsZoomed] = useState(false);
     const transformRef = useRef(null);
+    const hasMultiTouchOccurred = useRef(false);
 
     const handleNext = useCallback(() => {
         setCurrentIndex((prev) => (prev + 1) % images.length);
@@ -24,6 +25,7 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
             transformRef.current.resetTransform();
         }
         setIsZoomed(false);
+        hasMultiTouchOccurred.current = false;
     }, [currentIndex]);
 
     // Keyboard navigation
@@ -52,15 +54,22 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
     const minSwipeDistance = 50;
 
     const onTouchStart = (e) => {
-        if (isZoomed) return;
-        if (e.touches.length > 1) return;
+        if (e.touches.length > 1) {
+            hasMultiTouchOccurred.current = true;
+        }
+
+        if (isZoomed || hasMultiTouchOccurred.current) return;
+
         setTouchEnd(null);
         setTouchStart(e.targetTouches[0].clientX);
     };
 
     const onTouchMove = (e) => {
-        if (isZoomed) return;
         if (e.touches.length > 1) {
+            hasMultiTouchOccurred.current = true;
+        }
+
+        if (isZoomed || hasMultiTouchOccurred.current) {
             setTouchStart(null);
             setTouchEnd(null);
             return;
@@ -68,8 +77,18 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
         setTouchEnd(e.targetTouches[0].clientX);
     };
 
-    const onTouchEnd = () => {
+    const onTouchEnd = (e) => {
+        // Reset multi-touch flag only when all fingers are lifted
+        if (e.touches.length === 0) {
+            if (hasMultiTouchOccurred.current) {
+                hasMultiTouchOccurred.current = false;
+                return;
+            }
+        }
+
+        if (isZoomed || hasMultiTouchOccurred.current) return;
         if (!touchStart || !touchEnd) return;
+
         const distance = touchStart - touchEnd;
         const isLeftSwipe = distance > minSwipeDistance;
         const isRightSwipe = distance < -minSwipeDistance;
@@ -104,7 +123,7 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
                     minScale={1}
                     maxScale={5}
                     centerOnInit={true}
-                    doubleClick={{ disabled: false }}
+                    doubleClick={{ disabled: false, mode: 'toggle' }}
                     wheel={{ disabled: true }}
                     panning={{ disabled: !isZoomed }}
                     onTransformed={(ref) => setIsZoomed(ref.instance.transformState.scale > 1)}
