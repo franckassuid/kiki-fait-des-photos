@@ -111,8 +111,10 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
                     minScale={1}
                     maxScale={5}
                     centerOnInit={true}
+                    doubleClick={{ disabled: false }}
+                    wheel={{ disabled: true }}
                 >
-                    <TransformComponent wrapperStyle={{ width: "100%", height: "100%" }}>
+                    <TransformComponent>
                         <img
                             src={getImagePath(images[currentIndex].src)}
                             alt={`Gallery image ${currentIndex + 1}`}
