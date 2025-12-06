@@ -372,16 +372,16 @@ export const galleries = [
       {
         "name": "Coroico",
         "coordinates": [
-          -16.1942,
-          -67.7288
+          0,
+          0
         ],
         "cover": "/photos_optimized/bolivie/Coroico/R0000369.webp"
       },
       {
         "name": "Uyuni & Lipez",
         "coordinates": [
-          -20.4597,
-          -66.8250
+          0,
+          0
         ],
         "cover": "/photos_optimized/bolivie/Uyuni & Lipez/R0000860.webp"
       },
@@ -565,8 +565,8 @@ export const galleries = [
       {
         "name": "Iguazu",
         "coordinates": [
-          -25.6953,
-          -54.4367
+          0,
+          0
         ],
         "cover": "/photos_optimized/bresil/Iguazu/R0005631.webp"
       },
@@ -1194,8 +1194,8 @@ export const galleries = [
       {
         "name": "Quilotoa",
         "coordinates": [
-          -0.8612,
-          -78.9035
+          0,
+          0
         ],
         "cover": "/photos_optimized/equateur/Quilotoa/R0002544.webp"
       },
@@ -1667,58 +1667,66 @@ export const galleries = [
       {
         "name": "Bourgogne",
         "coordinates": [
-          47.0000,
-          4.5000
+          0,
+          0
         ],
         "cover": "/photos_optimized/france/Bourgogne/DSC04765.webp"
       },
       {
         "name": "Nantes",
         "coordinates": [
-          47.2184,
-          -1.5536
+          0,
+          0
         ],
         "cover": "/photos_optimized/france/Nantes/DSC01016.webp"
       },
       {
         "name": "Pornic",
         "coordinates": [
-          47.1155,
-          -2.1044
+          0,
+          0
         ],
         "cover": "/photos_optimized/france/Pornic/DSC00414.webp"
       },
       {
         "name": "Noisy-le-Grand",
         "coordinates": [
-          48.8478,
-          2.5528
+          0,
+          0
         ],
         "cover": "/photos_optimized/france/Noisy-le-Grand/DSC01833.webp"
       },
       {
         "name": "Bretagne",
         "coordinates": [
-          48.0000,
-          -3.0000
+          0,
+          0
         ],
         "cover": "/photos_optimized/france/Bretagne/DSC04610.webp"
       },
       {
         "name": "Corse du sud",
         "coordinates": [
-          41.8500,
-          9.0330
+          0,
+          0
         ],
         "cover": "/photos_optimized/france/Corse du sud/DSC09258 (1).webp"
       },
       {
         "name": "Noisiel",
         "coordinates": [
-          48.8548,
-          2.6287
+          0,
+          0
         ],
         "cover": "/photos_optimized/france/Noisiel/DSC04535.webp"
+      },
+      {
+        "name": "Chateaux de la Loire",
+        "coordinates": [
+          0,
+          0
+        ],
+        "cover": "/photos_optimized/france/Chateaux de la Loire/DSC04038.webp"
       }
     ],
     "images": [
@@ -2501,6 +2509,123 @@ export const galleries = [
           "iso": "800"
         },
         "subcategory": "Noisiel"
+      },
+      {
+        "src": "/photos_optimized/france/Chateaux de la Loire/DSC04038.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:05:29 18:29:19",
+          "focal_length": "49mm",
+          "shutter_speed": "0.00625s",
+          "f_stop": "f/9.0",
+          "iso": "200"
+        },
+        "subcategory": "Chateaux de la Loire"
+      },
+      {
+        "src": "/photos_optimized/france/Chateaux de la Loire/DSC04051.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:05:29 18:45:19",
+          "focal_length": "42mm",
+          "shutter_speed": "0.005s",
+          "f_stop": "f/13.0",
+          "iso": "200"
+        },
+        "subcategory": "Chateaux de la Loire"
+      },
+      {
+        "src": "/photos_optimized/france/Chateaux de la Loire/DSC04056.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:05:29 18:46:16",
+          "focal_length": "24mm",
+          "shutter_speed": "0.005s",
+          "f_stop": "f/13.0",
+          "iso": "200"
+        },
+        "subcategory": "Chateaux de la Loire"
+      },
+      {
+        "src": "/photos_optimized/france/Chateaux de la Loire/DSC04101.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:05:30 13:57:32",
+          "focal_length": "36mm",
+          "shutter_speed": "0.005s",
+          "f_stop": "f/14.0",
+          "iso": "200"
+        },
+        "subcategory": "Chateaux de la Loire"
+      },
+      {
+        "src": "/photos_optimized/france/Chateaux de la Loire/DSC04117.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:05:30 14:01:57",
+          "focal_length": "37mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/9.0",
+          "iso": "200"
+        },
+        "subcategory": "Chateaux de la Loire"
+      },
+      {
+        "src": "/photos_optimized/france/Chateaux de la Loire/DSC04127.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:05:30 14:04:34",
+          "focal_length": "24mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/9.0",
+          "iso": "200"
+        },
+        "subcategory": "Chateaux de la Loire"
+      },
+      {
+        "src": "/photos_optimized/france/Chateaux de la Loire/DSC04151.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:05:30 14:20:51",
+          "focal_length": "41mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/6.3",
+          "iso": "200"
+        },
+        "subcategory": "Chateaux de la Loire"
+      },
+      {
+        "src": "/photos_optimized/france/Chateaux de la Loire/DSC04154.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:05:30 14:47:00",
+          "focal_length": "42mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/9.0",
+          "iso": "200"
+        },
+        "subcategory": "Chateaux de la Loire"
+      },
+      {
+        "src": "/photos_optimized/france/Chateaux de la Loire/DSC04168.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2025:05:30 16:08:15",
+          "focal_length": "276mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/9.0",
+          "iso": "200"
+        },
+        "subcategory": "Chateaux de la Loire"
       }
     ]
   },
@@ -2518,24 +2643,24 @@ export const galleries = [
       {
         "name": "Pisciotta",
         "coordinates": [
-          40.1081,
-          15.2338
+          0,
+          0
         ],
         "cover": "/photos_optimized/italie/Pisciotta/DSC00859.webp"
       },
       {
         "name": "Palinuro",
         "coordinates": [
-          40.0393,
-          15.2909
+          0,
+          0
         ],
         "cover": "/photos_optimized/italie/Palinuro/DSC00634.webp"
       },
       {
         "name": "Agropoli",
         "coordinates": [
-          40.3487,
-          14.9912
+          0,
+          0
         ],
         "cover": "/photos_optimized/italie/Agropoli/DSC00649.webp"
       }
@@ -3486,8 +3611,8 @@ export const galleries = [
       {
         "name": "Paracas",
         "coordinates": [
-          -13.8377,
-          -76.2511
+          0,
+          0
         ],
         "cover": "/photos_optimized/perou/Paracas/R0002992.webp"
       }
@@ -3717,16 +3842,16 @@ export const galleries = [
       {
         "name": "Bohol",
         "coordinates": [
-          9.8500,
-          124.1435
+          0,
+          0
         ],
         "cover": "/photos_optimized/philippines/Bohol/DSC01183.webp"
       },
       {
         "name": "Malapascua",
         "coordinates": [
-          11.3347,
-          124.1161
+          0,
+          0
         ],
         "cover": "/photos_optimized/philippines/Malapascua/DSC00069.webp"
       },
@@ -4208,8 +4333,8 @@ export const galleries = [
       {
         "name": "Bayahibe",
         "coordinates": [
-          18.3733,
-          -68.8414
+          0,
+          0
         ],
         "cover": "/photos_optimized/republique-dominicaine/Bayahibe/DSC02165.webp"
       },
@@ -4224,24 +4349,24 @@ export const galleries = [
       {
         "name": "Los Haitises",
         "coordinates": [
-          19.0732,
-          -69.5929
+          0,
+          0
         ],
         "cover": "/photos_optimized/republique-dominicaine/Los Haitises/DSC02406.webp"
       },
       {
         "name": "Saint Domingue",
         "coordinates": [
-          18.4861,
-          -69.9312
+          0,
+          0
         ],
         "cover": "/photos_optimized/republique-dominicaine/Saint Domingue/DSC02351.webp"
       },
       {
         "name": "Las Terenas",
         "coordinates": [
-          19.3110,
-          -69.5430
+          0,
+          0
         ],
         "cover": "/photos_optimized/republique-dominicaine/Las Terenas/P3040313.webp"
       }
@@ -4822,16 +4947,16 @@ export const galleries = [
       {
         "name": "Tarangire",
         "coordinates": [
-          -3.8333,
-          36.0000
+          0,
+          0
         ],
         "cover": "/photos_optimized/tanzanie/Tarangire/DSC05776.webp"
       },
       {
         "name": "Ngorongoro",
         "coordinates": [
-          -3.2397,
-          35.4875
+          0,
+          0
         ],
         "cover": "/photos_optimized/tanzanie/Ngorongoro/DSC07916.webp"
       },
@@ -6203,8 +6328,8 @@ export const galleries = [
       {
         "name": "Colonia del Sacramento",
         "coordinates": [
-          -34.4626,
-          -57.8398
+          0,
+          0
         ],
         "cover": "/photos_optimized/uruguay/Colonia del Sacramento/R0005119.webp"
       }
