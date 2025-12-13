@@ -150,6 +150,12 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
                         >
                             <img
                                 src={getImagePath(images[currentIndex].src)}
+                                srcSet={images[currentIndex].srcSet ? `
+                                    ${getImagePath(images[currentIndex].srcSet.thumbnail)} 400w,
+                                    ${getImagePath(images[currentIndex].srcSet.medium)} 800w,
+                                    ${getImagePath(images[currentIndex].srcSet.large)} 1920w
+                                ` : undefined}
+                                sizes="100vw"
                                 alt={`Gallery image ${currentIndex + 1}`}
                                 style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                             />
@@ -157,21 +163,28 @@ const Lightbox = ({ images, initialIndex, onClose }) => {
                     </TransformComponent>
                 </TransformWrapper>
 
-                <div className="image-info" style={{ opacity: isZoomed ? 0 : 1, transition: 'opacity 0.3s ease' }}>
-                    <div className="image-counter">
-                        {images[currentIndex].subcategory && <span style={{ marginRight: '1rem', fontWeight: 'bold' }}>{images[currentIndex].subcategory}</span>}
-                        {currentIndex + 1} / {images.length}
-                    </div>
-                    {images[currentIndex].exif && (
-                        <div className="exif-data">
-                            {images[currentIndex].exif.model && <span style={{ opacity: 0.7 }}>{formatCameraModel(images[currentIndex].exif.model)}</span>}
-                            {images[currentIndex].exif.focal_length && <span style={{ opacity: 0.7 }}>{images[currentIndex].exif.focal_length}</span>}
-                            {images[currentIndex].exif.f_stop && <span style={{ opacity: 0.7 }}>{images[currentIndex].exif.f_stop}</span>}
-                            {images[currentIndex].exif.shutter_speed && <span style={{ opacity: 0.7 }}>{formatExposureTime(images[currentIndex].exif.shutter_speed)}</span>}
-                            {images[currentIndex].exif.iso && <span style={{ opacity: 0.7 }}>ISO {images[currentIndex].exif.iso}</span>}
-                            {images[currentIndex].exif.date && <span style={{ opacity: 1 }}>{formatDate(images[currentIndex].exif.date)}</span>}
+                <div className="image-footer" style={{ opacity: isZoomed ? 0 : 1 }}>
+                    {images[currentIndex].description && (
+                        <div className="description-container">
+                            <p>{images[currentIndex].description}</p>
                         </div>
                     )}
+                    <div className="image-info">
+                        <div className="image-counter">
+                            {images[currentIndex].subcategory && <span className="subcategory">{images[currentIndex].subcategory}</span>}
+                            {currentIndex + 1} / {images.length}
+                        </div>
+                        {images[currentIndex].exif && (
+                            <div className="exif-data">
+                                {images[currentIndex].exif.model && <span>{formatCameraModel(images[currentIndex].exif.model)}</span>}
+                                {images[currentIndex].exif.focal_length && <span>{images[currentIndex].exif.focal_length}</span>}
+                                {images[currentIndex].exif.f_stop && <span>{images[currentIndex].exif.f_stop}</span>}
+                                {images[currentIndex].exif.shutter_speed && <span>{formatExposureTime(images[currentIndex].exif.shutter_speed)}</span>}
+                                {images[currentIndex].exif.iso && <span>ISO {images[currentIndex].exif.iso}</span>}
+                                {images[currentIndex].exif.date && <span className="date">{formatDate(images[currentIndex].exif.date)}</span>}
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
 

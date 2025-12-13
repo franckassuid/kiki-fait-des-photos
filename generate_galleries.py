@@ -1,13 +1,36 @@
 import os
 import json
+import base64
+import requests
 from PIL import Image
 from PIL.ExifTags import TAGS
+
+# Load .env manually
+if os.path.exists('.env'):
+    with open('.env', 'r') as f:
+        for line in f:
+            line = line.strip()
+            if line and not line.startswith('#') and '=' in line:
+                key, value = line.split('=', 1)
+                os.environ[key] = value
 
 # Configuration
 PHOTOS_DIR = 'public/Photos'
 OPTIMIZED_DIR = 'public/photos_optimized'
 OUTPUT_FILE = 'src/data/galleries.js'
-MAX_WIDTH = 1920
+HERO_FILE = 'src/data/hero_images.json'
+DESCRIPTIONS_FILE = 'src/data/descriptions.json'
+
+# OpenAI Configuration
+OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
+OPENAI_API_URL = "https://api.openai.com/v1/chat/completions"
+
+# Image Sizes configuration
+SIZES = {
+    'thumbnail': {'width': 400, 'suffix': '_thumb'},
+    'medium': {'width': 800, 'suffix': '_medium'},
+    'large': {'width': 1920, 'suffix': '_large'}
+}
 QUALITY = 80
 
 # Mapping for display names and continents
@@ -55,6 +78,7 @@ CITY_COORDINATES = {
     "Marseille": [43.2965, 5.3698],
     "Bordeaux": [44.8378, -0.5792],
     "Nice": [43.7102, 7.2620],
+    "Chateaux de la Loire": [47.3833, 0.6833],
     
     # Italie
     "Rome": [41.9028, 12.4964],
@@ -107,6 +131,62 @@ CITY_COORDINATES = {
     "Punta del Este": [-34.9631, -54.9290],
 }
 
+def encode_image(image_path):
+    with open(image_path, "rb") as image_file:
+        # Resize if huge to save tokens/upload time? OpenAI handles up to 20MB.
+        # But we can just send the optimized medium version!
+        return base64.b64encode(image_file.read()).decode('utf-8')
+
+def generate_description_ai(image_path, context=""):
+    if not OPENAI_API_KEY:
+        return None, "no_api_key"
+
+    try:
+        base64_image = encode_image(image_path)
+        
+        headers = {
+          "Content-Type": "application/json",
+          "Authorization": f"Bearer {OPENAI_API_KEY}"
+        }
+
+        payload = {
+          "model": "gpt-4o-mini", # Use mini for speed/cost
+          "messages": [
+            {
+              "role": "user",
+              "content": [
+                {
+                  "type": "text",
+                  "text": f"Identifie le lieu, l'animal ou le bâtiment principal sur cette photo prise à {context}. Réponds uniquement par le nom précis (ex: 'Lion dans la savane', 'Temple du Kinkaku-ji', 'Vue sur le mont Fuji'). Pas de phrase, pas de ponctuation finale."
+                },
+                {
+                  "type": "image_url",
+                  "image_url": {
+                    "url": f"data:image/jpeg;base64,{base64_image}"
+                  }
+                }
+              ]
+            }
+          ],
+          "max_tokens": 100
+        }
+
+        response = requests.post(OPENAI_API_URL, headers=headers, json=payload)
+        response_json = response.json()
+        
+        if 'error' in response_json:
+            error_code = response_json['error'].get('code', 'unknown_error')
+            return None, error_code
+
+        if 'choices' in response_json and len(response_json['choices']) > 0:
+            return response_json['choices'][0]['message']['content'].strip(), None
+        else:
+            return None, "no_choices"
+
+    except Exception as e:
+        print(f"Error generating description: {e}")
+        return None, str(e)
+
 def get_exif_data(image):
     try:
         exif = image._getexif()
@@ -136,49 +216,89 @@ def get_exif_data(image):
         print(f"Error reading EXIF: {e}")
         return None
 
-def optimize_image(source_path, dest_path):
+def process_single_image(source_path, dest_dir_base, file_name_no_ext):
     """
-    Resizes and converts image to WebP.
-    Returns True if successful, False otherwise.
+    Generates all required sizes for a single image.
+    Returns a dictionary of paths relative to public/
     """
+    results = {}
+    
     try:
-        # Check if destination exists and is newer than source
-        if os.path.exists(dest_path):
-            source_mtime = os.path.getmtime(source_path)
-            dest_mtime = os.path.getmtime(dest_path)
-            if dest_mtime > source_mtime:
-                return True # Already optimized
-
         with Image.open(source_path) as img:
             # Fix orientation based on EXIF
             from PIL import ImageOps
             img = ImageOps.exif_transpose(img)
-
-            # Resize if too large
-            if img.width > MAX_WIDTH:
-                ratio = MAX_WIDTH / img.width
+            
+            # Save original optimized (or fallback to large)
+            # Actually, we should probably just have specific sizes to avoid confusion
+            # Let's verify if we need a 'master' webp or just the sizes
+            
+            for size_name, size_config in SIZES.items():
+                target_width = size_config['width']
+                suffix = size_config['suffix']
+                
+                # If image is smaller than target, just use original size but optimize
+                # But to keep consistent naming, we always use the suffix
+                
+                new_width = min(img.width, target_width)
+                ratio = new_width / img.width
                 new_height = int(img.height * ratio)
-                img = img.resize((MAX_WIDTH, new_height), Image.Resampling.LANCZOS)
-
-            # Ensure directory exists
-            os.makedirs(os.path.dirname(dest_path), exist_ok=True)
-
-            # Save as WebP
-            img.save(dest_path, 'WEBP', quality=QUALITY)
-            return True
+                
+                if ratio < 1:
+                    resized_img = img.resize((new_width, new_height), Image.Resampling.LANCZOS)
+                else:
+                    resized_img = img.copy()
+                
+                # Construct filename
+                optimized_filename = f"{file_name_no_ext}{suffix}.webp"
+                
+                # Construct full path
+                # dest_dir_base is like 'public/photos_optimized/france/Paris'
+                os.makedirs(dest_dir_base, exist_ok=True)
+                dest_path = os.path.join(dest_dir_base, optimized_filename)
+                
+                # Check if exists and fresher
+                should_save = True
+                if os.path.exists(dest_path):
+                    if os.path.getmtime(dest_path) > os.path.getmtime(source_path):
+                        should_save = False
+                
+                if should_save:
+                    resized_img.save(dest_path, 'WEBP', quality=QUALITY)
+                
+                # Store web path
+                rel_path = os.path.relpath(dest_path, 'public')
+                results[size_name] = '/' + rel_path
+                
+        return results
+            
     except Exception as e:
-        print(f"Error optimizing {source_path}: {e}")
-        return False
+        print(f"Error processing {source_path}: {e}")
+        return None
 
-def get_image_dimensions(path):
+def get_hero_images():
     try:
-        with Image.open(path) as img:
-            return img.width, img.height
-    except Exception:
-        return 0, 0
+        if os.path.exists(HERO_FILE):
+            with open(HERO_FILE, 'r') as f:
+                return set(json.load(f))
+    except Exception as e:
+        print(f"Error reading hero file: {e}")
+    return set()
+
+def get_descriptions():
+    try:
+        if os.path.exists(DESCRIPTIONS_FILE):
+            with open(DESCRIPTIONS_FILE, 'r') as f:
+                return json.load(f)
+    except Exception as e:
+        print(f"Error reading descriptions file: {e}")
+    return {}
 
 def generate_galleries():
     galleries = []
+    hero_images = get_hero_images()
+    descriptions = get_descriptions()
+    skip_ai = False
     
     # Get all items in the photos directory
     try:
@@ -189,8 +309,7 @@ def generate_galleries():
 
     # Sort items to ensure consistent order
     items.sort()
-
-    print(f"Starting optimization... Target: {MAX_WIDTH}px width, {QUALITY}% quality WebP.")
+    print(f"Starting optimization... Sizes: {', '.join(SIZES.keys())}")
 
     for folder_name in items:
         folder_path = os.path.join(PHOTOS_DIR, folder_name)
@@ -215,9 +334,8 @@ def generate_galleries():
         cover_image = None
         cities_map = {} # Map to store city data: name -> {coordinates, cover, images}
         
-        # Create optimized folder structure
+        # Create optimized folder structure base
         optimized_folder_path = os.path.join(OPTIMIZED_DIR, folder_name)
-        os.makedirs(optimized_folder_path, exist_ok=True)
 
         # Walk through the folder
         for root, _, files in os.walk(folder_path):
@@ -240,38 +358,64 @@ def generate_galleries():
                     else:
                         target_dir = optimized_folder_path
                     
-                    os.makedirs(target_dir, exist_ok=True)
-
-                    # Define optimized path (change extension to .webp)
                     file_name_no_ext = os.path.splitext(file)[0]
-                    optimized_filename = f"{file_name_no_ext}.webp"
-                    optimized_full_path = os.path.join(target_dir, optimized_filename)
                     
-                    # Optimize the image
-                    # print(f"Processing {file}...", end='\r')
+                    # Process image for all sizes
+                    image_variants = process_single_image(full_path, target_dir, file_name_no_ext)
                     
-                    # We need to open the image to get EXIF before optimizing/saving
-                    current_exif = None
-                    try:
-                        with Image.open(full_path) as original_img:
-                            current_exif = get_exif_data(original_img)
-                    except Exception as e:
-                        print(f"Error reading original for EXIF {file}: {e}")
+                    if image_variants:
+                        # Get EXIF
+                        current_exif = None
+                        try:
+                            with Image.open(full_path) as original_img:
+                                current_exif = get_exif_data(original_img)
+                        except Exception:
+                            pass
+                            
+                        # Check if this image is a selected hero
+                        is_hero = file in hero_images # Check full filename match first
+                        
+                        # Lookup description (from file only)
+                        desc_key = f"{folder_name}/{subcategory}/{file}" if subcategory else f"{folder_name}/{file}"
+                        description = descriptions.get(desc_key)
 
-                    if optimize_image(full_path, optimized_full_path):
-                        # Create the web path (relative to public)
-                        rel_path = os.path.relpath(optimized_full_path, 'public')
-                        web_path = '/' + rel_path
-                        
-                        images.append({
-                            'src': web_path,
+                        # Check if we should try to generate description
+                        if not description and OPENAI_API_KEY and not skip_ai:
+                            print(f"Generating description for {file}...", end='', flush=True)
+                            
+                            # Web path is /photos_optimized/...
+                            # Local path is public/photos_optimized/...
+                            medium_web_path = image_variants['medium']
+                            medium_local_path = os.path.join('public', medium_web_path.lstrip('/'))
+                            
+                            context = f"{subcategory}, {country_name}" if subcategory else country_name
+                            
+                            ai_desc, error_type = generate_description_ai(medium_local_path, context)
+                            
+                            if ai_desc:
+                                description = ai_desc
+                                descriptions[desc_key] = description
+                                print(" Done.")
+                            else:
+                                print(f" Failed ({error_type}).")
+                                if error_type in ["insufficient_quota", "rate_limit_exceeded"]:
+                                    print(f"Stopping AI generation due to {error_type}.")
+                                    skip_ai = True
+
+                        image_data = {
+                            'src': image_variants['large'], # Default src is large
+                            'srcSet': image_variants,
                             'exif': current_exif,
-                            'subcategory': subcategory
-                        })
+                            'subcategory': subcategory,
+                            'isHero': is_hero,
+                            'description': description
+                        }
                         
-                        # Check for cover image (prefer original name 'cover' even if converted to webp)
+                        images.append(image_data)
+                        
+                        # Check for cover image
                         if 'cover' in file.lower():
-                            cover_image = web_path
+                            cover_image = image_variants['medium'] # Use medium for cover
                         
                         # Collect city data
                         if subcategory:
@@ -282,7 +426,7 @@ def generate_galleries():
                                     'cover': None,
                                     'images': []
                                 }
-                            cities_map[subcategory]['images'].append(web_path)
+                            cities_map[subcategory]['images'].append(image_variants['medium'])
                             
                     else:
                         print(f"Failed to optimize {file}")
@@ -291,26 +435,18 @@ def generate_galleries():
             print(f"Warning: No images found in {folder_name}")
             continue
 
-        # If no cover found, use the first image
+        # If no cover found, use the first image (medium)
         if not cover_image:
-            cover_image = images[0]['src']
+            cover_image = images[0]['srcSet']['medium']
 
         # Process cities to find landscape covers
         cities = []
         for city_name, city_data in cities_map.items():
             city_cover = None
             
-            # Try to find a landscape image
-            for img_path in city_data['images']:
-                # Need absolute path to check dimensions
-                abs_path = os.path.join('public', img_path.lstrip('/'))
-                w, h = get_image_dimensions(abs_path)
-                if w > h:
-                    city_cover = img_path
-                    break
-            
-            # Fallback to first image if no landscape found
-            if not city_cover and city_data['images']:
+            # Simple fallback to first image for now since we don't want to open all optimized images to check dim
+            # In V1 we checked dimensions, here we assume landscape preference or just take first
+            if city_data['images']:
                 city_cover = city_data['images'][0]
             
             cities.append({
@@ -330,7 +466,15 @@ def generate_galleries():
             'cities': cities,
             'images': images
         })
-        print(f"Processed {country_name}: {len(images)} images, {len(cities)} cities.")
+        print(f"Processed {country_name}: {len(images)} images.")
+
+    # Save descriptions back to file
+    try:
+        with open(DESCRIPTIONS_FILE, 'w', encoding='utf-8') as f:
+            json.dump(descriptions, f, indent=2, ensure_ascii=False)
+        print(f"Updated descriptions saved to {DESCRIPTIONS_FILE}")
+    except Exception as e:
+        print(f"Error saving descriptions: {e}")
 
     # Generate JS content
     js_content = "export const galleries = " + json.dumps(galleries, indent=2, ensure_ascii=False) + ";\n"

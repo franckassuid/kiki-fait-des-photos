@@ -13,7 +13,17 @@ const GalleryGrid = ({ galleries, onGalleryClick }) => {
         setLoadingImages(prev => ({ ...prev, [id]: false }));
     };
 
-
+    // Helper to generate srcset from the medium cover path
+    // Assumes file ends with _medium.webp
+    const getCoverSrcSet = (coverPath) => {
+        if (!coverPath) return '';
+        const basePath = coverPath.replace('_medium.webp', '');
+        return `
+            ${getImagePath(basePath + '_thumb.webp')} 400w,
+            ${getImagePath(basePath + '_medium.webp')} 800w,
+            ${getImagePath(basePath + '_large.webp')} 1920w
+        `;
+    };
 
     return (
         <motion.div className="gallery-grid">
@@ -32,6 +42,8 @@ const GalleryGrid = ({ galleries, onGalleryClick }) => {
                             {loadingImages[gallery.id] !== false && <Loader />}
                             <img
                                 src={getImagePath(gallery.cover)}
+                                srcSet={getCoverSrcSet(gallery.cover)}
+                                sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 800px"
                                 alt={gallery.country}
                                 loading="lazy"
                                 onLoad={() => handleImageLoad(gallery.id)}

@@ -72,34 +72,63 @@
             border-radius: 4px;
         }
 
-        .image-info {
+        .image-footer {
             width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             margin-top: 1rem;
-            color: rgba(255, 255, 255, 0.8);
-            font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            transition: opacity 0.3s ease;
 
-            .image-counter {
-                font-weight: 500;
+            .description-container {
+                width: 100%;
+                text-align: center;
+
+                p {
+                    font-family: 'Inter', sans-serif;
+                    font-size: 1rem;
+                    color: white;
+                    margin: 0;
+                    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+                }
             }
 
-            .exif-data {
+            .image-info {
+                width: 100%;
                 display: flex;
-                gap: 1rem;
+                justify-content: space-between;
+                align-items: center;
+                color: rgba(255, 255, 255, 0.7);
+                font-family: 'Inter', sans-serif;
                 font-size: 0.85rem;
-                opacity: 0.8;
 
-                span {
-                    position: relative;
+                .image-counter {
+                    font-weight: 500;
 
-                    &:not(:last-child)::after {
-                        content: "•";
-                        position: absolute;
-                        right: -0.6rem;
-                        opacity: 0.5;
+                    .subcategory {
+                        margin-right: 1rem;
+                        font-weight: bold;
+                        color: white;
+                    }
+                }
+
+                .exif-data {
+                    display: flex;
+                    gap: 1rem;
+
+                    span {
+                        position: relative;
+
+                        &:not(:last-child)::after {
+                            content: "•";
+                            position: absolute;
+                            right: -0.6rem;
+                            opacity: 0.5;
+                        }
+
+                        &.date {
+                            color: rgba(255, 255, 255, 0.9);
+                        }
                     }
                 }
             }
@@ -128,23 +157,38 @@
                 object-fit: contain;
             }
 
-            .image-info {
+            .image-footer {
                 position: absolute;
                 bottom: 0;
                 left: 0;
                 width: 100%;
-                padding: 1rem;
-                background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-                flex-direction: column;
-                gap: 0.5rem;
-                text-align: center;
+                padding: 1.5rem 1rem 1rem;
+                background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 60%, transparent 100%);
                 z-index: 10;
-                pointer-events: none; // Allow clicks to pass through to the image/zoom container
+                pointer-events: none;
+                margin-top: 0;
 
-                .exif-data {
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    gap: 0.8rem;
+                .description-container {
+                    margin-bottom: 0.5rem;
+
+                    p {
+                        font-size: 0.95rem;
+                        line-height: 1.4;
+                    }
+                }
+
+                .image-info {
+                    flex-direction: column;
+                    gap: 0.3rem;
+                    text-align: center;
+                    font-size: 0.8rem;
+
+                    .exif-data {
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        gap: 0.8rem;
+                        opacity: 0.8;
+                    }
                 }
             }
         }
