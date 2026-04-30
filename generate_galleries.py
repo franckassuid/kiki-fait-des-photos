@@ -18,6 +18,8 @@ META_DATA = {
     'bresil': ('Brésil', 'Amérique du Sud', [-14.235004, -51.92528], 'BR'),
     'chili': ('Chili', 'Amérique du Sud', [-35.675147, -71.542969], 'CL'),
     'equateur': ('Équateur', 'Amérique du Sud', [-1.831239, -78.183406], 'EC'),
+    'espagne': ('Espagne', 'Europe', [40.4637, -3.7492], 'ES'),
+    'Espagne': ('Espagne', 'Europe', [40.4637, -3.7492], 'ES'),
     'france': ('France', 'Europe', [46.227638, 2.213749], 'FR'),
     'italie': ('Italie', 'Europe', [41.87194, 12.56738], 'IT'),
     'japon': ('Japon', 'Asie', [36.204824, 138.252924], 'JP'),
@@ -61,6 +63,11 @@ CITY_COORDINATES = {
     "Venise": [45.4408, 12.3155],
     "Florence": [43.7696, 11.2558],
     "Milan": [45.4642, 9.1900],
+    
+    # Espagne
+    "Seville": [37.3891, -5.9845],
+    "Grenade": [37.1773, -3.5986],
+    "Cordoue": [37.8882, -4.7794],
     
     # Perou
     "Cusco": [-13.5319, -71.9675],
@@ -177,8 +184,27 @@ def get_image_dimensions(path):
     except Exception:
         return 0, 0
 
+def load_existing_galleries():
+    if not os.path.exists(OUTPUT_FILE):
+        return []
+    with open(OUTPUT_FILE, 'r', encoding='utf-8') as f:
+        content = f.read()
+    start_idx = content.find('[')
+    if start_idx == -1:
+        return []
+    content = content[start_idx:].strip()
+    if content.endswith(';'):
+        content = content[:-1]
+    try:
+        return json.loads(content)
+    except Exception as e:
+        print(f"Error parsing existing galleries: {e}")
+        return []
+
 def generate_galleries():
-    galleries = []
+    existing_galleries = load_existing_galleries()
+    # Map country id -> gallery object
+    galleries_map = {g['id']: g for g in existing_galleries}
     
     # Get all items in the photos directory
     try:
@@ -210,10 +236,17 @@ def generate_galleries():
             country_code = None
             print(f"Warning: No metadata for {folder_name}, using defaults.")
 
-        # Find images
-        images = []
-        cover_image = None
-        cities_map = {} # Map to store city data: name -> {coordinates, cover, images}
+        # Check if country exists to merge
+        existing_country = galleries_map.get(folder_name, {})
+        images = existing_country.get('images', [])
+        cover_image = existing_country.get('cover', None)
+        cities_list = existing_country.get('cities', [])
+        
+        # Convert existing cities to map for easy merging
+        cities_map = {c['name']: {'name': c['name'], 'coordinates': c.get('coordinates', [0, 0]), 'cover': c.get('cover', None), 'images': [img['src'] for img in images if img.get('subcategory') == c['name']]} for c in cities_list}
+        
+        # Keep track of existing image paths to avoid duplicates
+        existing_image_paths = set(img['src'] for img in images)
         
         # Create optimized folder structure
         optimized_folder_path = os.path.join(OPTIMIZED_DIR, folder_name)
@@ -263,11 +296,13 @@ def generate_galleries():
                         rel_path = os.path.relpath(optimized_full_path, 'public')
                         web_path = '/' + rel_path
                         
-                        images.append({
-                            'src': web_path,
-                            'exif': current_exif,
-                            'subcategory': subcategory
-                        })
+                        if web_path not in existing_image_paths:
+                            images.append({
+                                'src': web_path,
+                                'exif': current_exif,
+                                'subcategory': subcategory
+                            })
+                            existing_image_paths.add(web_path)
                         
                         # Check for cover image (prefer original name 'cover' even if converted to webp)
                         if 'cover' in file.lower():
@@ -319,18 +354,22 @@ def generate_galleries():
                 'cover': city_cover
             })
 
-        # Add to galleries list
-        galleries.append({
+        # Add or update in galleries map
+        galleries_map[folder_name] = {
             'id': folder_name,
             'country': country_name,
             'continent': continent,
-            'coordinates': coordinates,
-            'code': country_code,
+            'coordinates': existing_country.get('coordinates', coordinates),
+            'code': existing_country.get('code', country_code),
             'cover': cover_image,
             'cities': cities,
             'images': images
-        })
+        }
         print(f"Processed {country_name}: {len(images)} images, {len(cities)} cities.")
+
+    # Rebuild final galleries list and sort alphabetically by country name
+    galleries = list(galleries_map.values())
+    galleries.sort(key=lambda x: x['country'])
 
     # Generate JS content
     js_content = "export const galleries = " + json.dumps(galleries, indent=2, ensure_ascii=False) + ";\n"

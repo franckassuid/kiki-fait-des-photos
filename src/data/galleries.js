@@ -372,16 +372,16 @@ export const galleries = [
       {
         "name": "Coroico",
         "coordinates": [
-          0,
-          0
+          -16.1888,
+          -67.7283
         ],
         "cover": "/photos_optimized/bolivie/Coroico/R0000369.webp"
       },
       {
         "name": "Uyuni & Lipez",
         "coordinates": [
-          0,
-          0
+          -20.4697,
+          -66.825
         ],
         "cover": "/photos_optimized/bolivie/Uyuni & Lipez/R0000860.webp"
       },
@@ -565,8 +565,8 @@ export const galleries = [
       {
         "name": "Iguazu",
         "coordinates": [
-          0,
-          0
+          -25.6953,
+          -54.4367
         ],
         "cover": "/photos_optimized/bresil/Iguazu/R0005631.webp"
       },
@@ -1181,475 +1181,899 @@ export const galleries = [
     ]
   },
   {
-    "id": "equateur",
-    "country": "Équateur",
-    "continent": "Amérique du Sud",
+    "id": "Espagne",
+    "country": "Espagne",
+    "continent": "Europe",
     "coordinates": [
-      -1.831239,
-      -78.183406
+      40.4637,
+      -3.7492
     ],
-    "code": "EC",
-    "cover": "/photos_optimized/equateur/Galapagos/cover.webp",
+    "code": "ES",
+    "cover": "/photos_optimized/Espagne/Seville/DSC00526.webp",
     "cities": [
       {
-        "name": "Quilotoa",
+        "name": "Seville",
         "coordinates": [
-          0,
-          0
+          37.3891,
+          -5.9845
         ],
-        "cover": "/photos_optimized/equateur/Quilotoa/R0002544.webp"
+        "cover": "/photos_optimized/Espagne/Seville/DSC00529.webp"
       },
       {
-        "name": "Galapagos",
+        "name": "Grenade",
         "coordinates": [
-          -0.9538,
-          -90.9656
+          37.1773,
+          -3.5986
         ],
-        "cover": "/photos_optimized/equateur/Galapagos/R0001912.webp"
+        "cover": "/photos_optimized/Espagne/Grenade/DSC01601.webp"
+      },
+      {
+        "name": "Cordoue",
+        "coordinates": [
+          37.8882,
+          -4.7794
+        ],
+        "cover": "/photos_optimized/Espagne/Cordoue/DSC01190.webp"
       }
     ],
     "images": [
       {
-        "src": "/photos_optimized/equateur/Quilotoa/R0002544.webp",
+        "src": "/photos_optimized/Espagne/Seville/DSC00526.webp",
         "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:25 12:10:08",
-          "iso": "200",
-          "focal_length": "18mm",
-          "shutter_speed": "0.0025s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Quilotoa"
-      },
-      {
-        "src": "/photos_optimized/equateur/Quilotoa/R0002561.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:25 12:54:54",
-          "iso": "200",
-          "focal_length": "18mm",
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:11 12:51:30",
+          "focal_length": "70mm",
           "shutter_speed": "0.004s",
-          "f_stop": "f/8.0"
+          "f_stop": "f/5.6",
+          "iso": "125"
         },
-        "subcategory": "Quilotoa"
+        "subcategory": "Seville"
       },
       {
-        "src": "/photos_optimized/equateur/Quilotoa/R0002582.webp",
+        "src": "/photos_optimized/Espagne/Seville/DSC00529.webp",
         "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:25 13:18:33",
-          "iso": "200",
-          "focal_length": "18mm",
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:11 13:08:23",
+          "focal_length": "70mm",
+          "shutter_speed": "0.004s",
+          "f_stop": "f/6.3",
+          "iso": "125"
+        },
+        "subcategory": "Seville"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Seville/DSC00532.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:11 13:10:08",
+          "focal_length": "106mm",
+          "shutter_speed": "0.004s",
+          "f_stop": "f/5.0",
+          "iso": "125"
+        },
+        "subcategory": "Seville"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Seville/DSC00551.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:11 13:44:49",
+          "focal_length": "98mm",
+          "shutter_speed": "0.004s",
+          "f_stop": "f/4.0",
+          "iso": "125"
+        },
+        "subcategory": "Seville"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Seville/DSC00558.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:11 13:46:58",
+          "focal_length": "70mm",
+          "shutter_speed": "0.004s",
+          "f_stop": "f/8.0",
+          "iso": "125"
+        },
+        "subcategory": "Seville"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Seville/DSC00622.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:11 19:23:05",
+          "focal_length": "111mm",
+          "shutter_speed": "0.005s",
+          "f_stop": "f/4.0",
+          "iso": "6400"
+        },
+        "subcategory": "Seville"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Seville/DSC00628.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:11 19:23:19",
+          "focal_length": "78mm",
+          "shutter_speed": "0.005s",
+          "f_stop": "f/4.0",
+          "iso": "6400"
+        },
+        "subcategory": "Seville"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Seville/DSC00640.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:12 11:13:22",
+          "focal_length": "130mm",
           "shutter_speed": "0.0025s",
-          "f_stop": "f/8.0"
+          "f_stop": "f/7.1",
+          "iso": "125"
         },
-        "subcategory": "Quilotoa"
+        "subcategory": "Seville"
       },
       {
-        "src": "/photos_optimized/equateur/Quilotoa/R0002592.webp",
+        "src": "/photos_optimized/Espagne/Seville/DSC00654.webp",
         "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:25 14:29:52",
-          "iso": "200",
-          "focal_length": "18mm",
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:12 11:27:54",
+          "focal_length": "200mm",
           "shutter_speed": "0.0015625s",
-          "f_stop": "f/8.0"
+          "f_stop": "f/5.6",
+          "iso": "125"
         },
-        "subcategory": "Quilotoa"
+        "subcategory": "Seville"
       },
       {
-        "src": "/photos_optimized/equateur/Quilotoa/R0002632.webp",
+        "src": "/photos_optimized/Espagne/Seville/DSC00677.webp",
         "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:26 10:44:52",
-          "iso": "100",
-          "focal_length": "18mm",
-          "shutter_speed": "0.005s",
-          "f_stop": "f/8.0"
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:12 11:55:51",
+          "focal_length": "70mm",
+          "shutter_speed": "0.0015625s",
+          "f_stop": "f/8.0",
+          "iso": "125"
         },
-        "subcategory": "Quilotoa"
+        "subcategory": "Seville"
       },
       {
-        "src": "/photos_optimized/equateur/Quilotoa/R0002639.webp",
+        "src": "/photos_optimized/Espagne/Seville/DSC00689.webp",
         "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:26 11:07:12",
-          "iso": "100",
-          "focal_length": "18mm",
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:12 12:04:02",
+          "focal_length": "88mm",
+          "shutter_speed": "0.0015625s",
+          "f_stop": "f/4.5",
+          "iso": "125"
+        },
+        "subcategory": "Seville"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Seville/DSC00706.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:12 15:17:36",
+          "focal_length": "156mm",
           "shutter_speed": "0.003125s",
-          "f_stop": "f/8.0"
+          "f_stop": "f/9.0",
+          "iso": "125"
         },
-        "subcategory": "Quilotoa"
+        "subcategory": "Seville"
       },
       {
-        "src": "/photos_optimized/equateur/Quilotoa/R0002662.webp",
+        "src": "/photos_optimized/Espagne/Seville/DSC00727.webp",
         "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:26 11:36:02",
-          "iso": "200",
-          "focal_length": "18mm",
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:12 15:58:33",
+          "focal_length": "70mm",
           "shutter_speed": "0.002s",
-          "f_stop": "f/8.0"
+          "f_stop": "f/4.0",
+          "iso": "6400"
         },
-        "subcategory": "Quilotoa"
+        "subcategory": "Seville"
       },
       {
-        "src": "/photos_optimized/equateur/Quilotoa/R0002677.webp",
+        "src": "/photos_optimized/Espagne/Seville/DSC00755.webp",
         "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:26 12:17:56",
-          "iso": "100",
-          "focal_length": "18mm",
-          "shutter_speed": "0.0125s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Quilotoa"
-      },
-      {
-        "src": "/photos_optimized/equateur/Quilotoa/R0002695.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:26 12:57:23",
-          "iso": "200",
-          "focal_length": "18mm",
-          "shutter_speed": "0.0025s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Quilotoa"
-      },
-      {
-        "src": "/photos_optimized/equateur/Quilotoa/R0002745.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:27 15:57:50",
-          "iso": "200",
-          "focal_length": "18mm",
-          "shutter_speed": "0.005s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Quilotoa"
-      },
-      {
-        "src": "/photos_optimized/equateur/Quilotoa/R0002753.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:27 16:17:04",
-          "iso": "100",
-          "focal_length": "18mm",
-          "shutter_speed": "0.01s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Quilotoa"
-      },
-      {
-        "src": "/photos_optimized/equateur/Quilotoa/R0002763.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:27 16:50:11",
-          "iso": "100",
-          "focal_length": "18mm",
-          "shutter_speed": "0.0125s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Quilotoa"
-      },
-      {
-        "src": "/photos_optimized/equateur/Galapagos/R0001912.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:06 14:25:35",
-          "iso": "200",
-          "focal_length": "18mm",
-          "shutter_speed": "0.003125s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Galapagos"
-      },
-      {
-        "src": "/photos_optimized/equateur/Galapagos/R0001941.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:06 14:51:27",
-          "iso": "100",
-          "focal_length": "18mm",
-          "shutter_speed": "0.004s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Galapagos"
-      },
-      {
-        "src": "/photos_optimized/equateur/Galapagos/R0001946.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:06 14:53:13",
-          "iso": "200",
-          "focal_length": "18mm",
-          "shutter_speed": "0.0125s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Galapagos"
-      },
-      {
-        "src": "/photos_optimized/equateur/Galapagos/R0001953.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:06 15:20:12",
-          "iso": "200",
-          "focal_length": "18mm",
-          "shutter_speed": "0.0025s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Galapagos"
-      },
-      {
-        "src": "/photos_optimized/equateur/Galapagos/R0001970.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:06 17:25:36",
-          "iso": "100",
-          "focal_length": "18mm",
-          "shutter_speed": "0.004s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Galapagos"
-      },
-      {
-        "src": "/photos_optimized/equateur/Galapagos/R0001971.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:06 17:25:42",
-          "iso": "200",
-          "focal_length": "18mm",
-          "shutter_speed": "0.002s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Galapagos"
-      },
-      {
-        "src": "/photos_optimized/equateur/Galapagos/R0002040.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:06 18:46:29",
-          "iso": "200",
-          "focal_length": "18mm",
-          "shutter_speed": "0.008s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Galapagos"
-      },
-      {
-        "src": "/photos_optimized/equateur/Galapagos/R0002079.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:06 19:11:03",
-          "iso": "200",
-          "focal_length": "18mm",
-          "shutter_speed": "0.003125s",
-          "f_stop": "f/2.8"
-        },
-        "subcategory": "Galapagos"
-      },
-      {
-        "src": "/photos_optimized/equateur/Galapagos/R0002101.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:07 12:08:13",
-          "iso": "200",
-          "focal_length": "18mm",
-          "shutter_speed": "0.004s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Galapagos"
-      },
-      {
-        "src": "/photos_optimized/equateur/Galapagos/R0002121.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:07 13:27:18",
-          "iso": "100",
-          "focal_length": "18mm",
-          "shutter_speed": "0.001s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Galapagos"
-      },
-      {
-        "src": "/photos_optimized/equateur/Galapagos/R0002134.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:07 13:37:44",
-          "iso": "100",
-          "focal_length": "18mm",
-          "shutter_speed": "0.002s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Galapagos"
-      },
-      {
-        "src": "/photos_optimized/equateur/Galapagos/R0002145.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:07 17:32:17",
-          "iso": "100",
-          "focal_length": "18mm",
-          "shutter_speed": "0.005s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Galapagos"
-      },
-      {
-        "src": "/photos_optimized/equateur/Galapagos/R0002162.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:07 18:08:20",
-          "iso": "200",
-          "focal_length": "18mm",
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:12 16:26:43",
+          "focal_length": "70mm",
           "shutter_speed": "0.00625s",
-          "f_stop": "f/8.0"
+          "f_stop": "f/4.0",
+          "iso": "6400"
         },
-        "subcategory": "Galapagos"
+        "subcategory": "Seville"
       },
       {
-        "src": "/photos_optimized/equateur/Galapagos/R0002202.webp",
+        "src": "/photos_optimized/Espagne/Seville/DSC00774.webp",
         "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:10 19:40:15",
-          "iso": "200",
-          "focal_length": "18mm",
-          "shutter_speed": "0.0015625s",
-          "f_stop": "f/8.0"
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:12 16:38:16",
+          "focal_length": "200mm",
+          "shutter_speed": "0.008s",
+          "f_stop": "f/18.0",
+          "iso": "125"
         },
-        "subcategory": "Galapagos"
+        "subcategory": "Seville"
       },
       {
-        "src": "/photos_optimized/equateur/Galapagos/R0002244.webp",
+        "src": "/photos_optimized/Espagne/Seville/DSC00805.webp",
         "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:13 12:35:15",
-          "iso": "200",
-          "focal_length": "18mm",
-          "shutter_speed": "0.0025s",
-          "f_stop": "f/8.0"
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:12 17:08:35",
+          "focal_length": "99mm",
+          "shutter_speed": "0.0004s",
+          "f_stop": "f/4.0",
+          "iso": "320"
         },
-        "subcategory": "Galapagos"
+        "subcategory": "Seville"
       },
       {
-        "src": "/photos_optimized/equateur/Galapagos/R0002276.webp",
+        "src": "/photos_optimized/Espagne/Seville/DSC00821.webp",
         "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:13 14:55:10",
-          "iso": "200",
-          "focal_length": "18mm",
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:12 17:17:23",
+          "focal_length": "200mm",
+          "shutter_speed": "0.0004s",
+          "f_stop": "f/4.0",
+          "iso": "250"
+        },
+        "subcategory": "Seville"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Seville/DSC00843.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:12 17:27:09",
+          "focal_length": "70mm",
+          "shutter_speed": "0.0004s",
+          "f_stop": "f/4.0",
+          "iso": "250"
+        },
+        "subcategory": "Seville"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Seville/DSC00872.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:12 17:42:51",
+          "focal_length": "70mm",
+          "shutter_speed": "0.0005s",
+          "f_stop": "f/4.0",
+          "iso": "4000"
+        },
+        "subcategory": "Seville"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Seville/DSC00933.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:12 17:53:12",
+          "focal_length": "200mm",
+          "shutter_speed": "0.0005s",
+          "f_stop": "f/4.0",
+          "iso": "800"
+        },
+        "subcategory": "Seville"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Seville/DSC00985.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:12 18:12:18",
+          "focal_length": "143mm",
+          "shutter_speed": "0.00125s",
+          "f_stop": "f/4.0",
+          "iso": "2000"
+        },
+        "subcategory": "Seville"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Seville/DSC01014.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:12 18:20:02",
+          "focal_length": "200mm",
+          "shutter_speed": "0.00125s",
+          "f_stop": "f/5.6",
+          "iso": "125"
+        },
+        "subcategory": "Seville"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Seville/DSC01039.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:12 18:30:59",
+          "focal_length": "70mm",
+          "shutter_speed": "0.01s",
+          "f_stop": "f/4.0",
+          "iso": "6400"
+        },
+        "subcategory": "Seville"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Seville/DSC01044.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:12 18:40:06",
+          "focal_length": "114mm",
+          "shutter_speed": "0.01s",
+          "f_stop": "f/5.6",
+          "iso": "125"
+        },
+        "subcategory": "Seville"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Seville/DSC01054.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:12 19:13:23",
+          "focal_length": "78mm",
+          "shutter_speed": "0.01s",
+          "f_stop": "f/14.0",
+          "iso": "125"
+        },
+        "subcategory": "Seville"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Seville/DSC01058.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:12 19:21:27",
+          "focal_length": "92mm",
+          "shutter_speed": "0.01s",
+          "f_stop": "f/13.0",
+          "iso": "125"
+        },
+        "subcategory": "Seville"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Seville/DSC01076.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:12 19:26:49",
+          "focal_length": "153mm",
+          "shutter_speed": "0.01s",
+          "f_stop": "f/6.3",
+          "iso": "125"
+        },
+        "subcategory": "Seville"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Seville/DSC01092.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:12 19:29:18",
+          "focal_length": "70mm",
           "shutter_speed": "0.003125s",
-          "f_stop": "f/8.0"
+          "f_stop": "f/7.1",
+          "iso": "125"
         },
-        "subcategory": "Galapagos"
+        "subcategory": "Seville"
       },
       {
-        "src": "/photos_optimized/equateur/Galapagos/R0002338.webp",
+        "src": "/photos_optimized/Espagne/Seville/DSC01103.webp",
         "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:14 19:43:03",
-          "iso": "200",
-          "focal_length": "18mm",
-          "shutter_speed": "0.004s",
-          "f_stop": "f/4.0"
-        },
-        "subcategory": "Galapagos"
-      },
-      {
-        "src": "/photos_optimized/equateur/Galapagos/R0002355.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:18 12:44:30",
-          "iso": "100",
-          "focal_length": "18mm",
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:12 19:44:10",
+          "focal_length": "70mm",
           "shutter_speed": "0.002s",
-          "f_stop": "f/8.0"
+          "f_stop": "f/5.6",
+          "iso": "125"
         },
-        "subcategory": "Galapagos"
+        "subcategory": "Seville"
       },
       {
-        "src": "/photos_optimized/equateur/Galapagos/R0002367.webp",
+        "src": "/photos_optimized/Espagne/Seville/DSC01140.webp",
         "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:18 12:51:50",
-          "iso": "200",
-          "focal_length": "18mm",
-          "shutter_speed": "0.003125s",
-          "f_stop": "f/8.0"
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:13 13:00:20",
+          "focal_length": "24mm",
+          "shutter_speed": "0.01s",
+          "f_stop": "f/2.8",
+          "iso": "2500"
         },
-        "subcategory": "Galapagos"
+        "subcategory": "Seville"
       },
       {
-        "src": "/photos_optimized/equateur/Galapagos/R0002377.webp",
+        "src": "/photos_optimized/Espagne/Seville/DSC01149.webp",
         "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:18 13:25:29",
-          "iso": "100",
-          "focal_length": "18mm",
-          "shutter_speed": "0.004s",
-          "f_stop": "f/9.0"
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:13 13:23:24",
+          "focal_length": "50mm",
+          "shutter_speed": "0.01s",
+          "f_stop": "f/14.0",
+          "iso": "125"
         },
-        "subcategory": "Galapagos"
+        "subcategory": "Seville"
       },
       {
-        "src": "/photos_optimized/equateur/Galapagos/R0002450.webp",
+        "src": "/photos_optimized/Espagne/Seville/DSC01158.webp",
         "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:18 13:53:49",
-          "iso": "200",
-          "focal_length": "18mm",
-          "shutter_speed": "0.001s",
-          "f_stop": "f/8.0"
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:13 13:28:14",
+          "focal_length": "135mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/8.0",
+          "iso": "125"
         },
-        "subcategory": "Galapagos"
+        "subcategory": "Seville"
       },
       {
-        "src": "/photos_optimized/equateur/Galapagos/cover.webp",
+        "src": "/photos_optimized/Espagne/Seville/DSC01168.webp",
         "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:11:13 12:35:15",
-          "iso": "200",
-          "focal_length": "18mm",
-          "shutter_speed": "0.0025s",
-          "f_stop": "f/8.0"
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:13 13:30:09",
+          "focal_length": "200mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/9.0",
+          "iso": "125"
         },
-        "subcategory": "Galapagos"
+        "subcategory": "Seville"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Seville/DSC01174.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:13 13:34:44",
+          "focal_length": "138mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/6.3",
+          "iso": "125"
+        },
+        "subcategory": "Seville"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Grenade/DSC01579.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:15 14:49:47",
+          "focal_length": "154mm",
+          "shutter_speed": "0.0008s",
+          "f_stop": "f/5.6",
+          "iso": "125"
+        },
+        "subcategory": "Grenade"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Grenade/DSC01586.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:15 15:44:17",
+          "focal_length": "90mm",
+          "shutter_speed": "0.0008s",
+          "f_stop": "f/4.5",
+          "iso": "125"
+        },
+        "subcategory": "Grenade"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Grenade/DSC01601.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:15 15:51:49",
+          "focal_length": "177mm",
+          "shutter_speed": "0.0008s",
+          "f_stop": "f/4.5",
+          "iso": "125"
+        },
+        "subcategory": "Grenade"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Grenade/DSC01617.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:15 16:14:25",
+          "focal_length": "70mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/5.6",
+          "iso": "125"
+        },
+        "subcategory": "Grenade"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Grenade/DSC01626.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:15 20:09:09",
+          "focal_length": "70mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/8.0",
+          "iso": "125"
+        },
+        "subcategory": "Grenade"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Grenade/DSC01629.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:15 20:16:00",
+          "focal_length": "200mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/5.0",
+          "iso": "125"
+        },
+        "subcategory": "Grenade"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Grenade/DSC01633.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:15 20:35:54",
+          "focal_length": "200mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/4.5",
+          "iso": "125"
+        },
+        "subcategory": "Grenade"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Grenade/DSC01644.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:15 20:42:23",
+          "focal_length": "200mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/4.0",
+          "iso": "125"
+        },
+        "subcategory": "Grenade"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Grenade/DSC01662.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:15 20:57:19",
+          "focal_length": "105mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/4.0",
+          "iso": "400"
+        },
+        "subcategory": "Grenade"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Grenade/DSC01690.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:16 12:31:36",
+          "focal_length": "70mm",
+          "shutter_speed": "0.0015625s",
+          "f_stop": "f/4.0",
+          "iso": "6400"
+        },
+        "subcategory": "Grenade"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Grenade/DSC01692.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:16 12:31:47",
+          "focal_length": "70mm",
+          "shutter_speed": "0.0015625s",
+          "f_stop": "f/4.0",
+          "iso": "5000"
+        },
+        "subcategory": "Grenade"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Cordoue/DSC01190.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:13 21:26:39",
+          "focal_length": "70mm",
+          "shutter_speed": "0.008s",
+          "f_stop": "f/4.0",
+          "iso": "2500"
+        },
+        "subcategory": "Cordoue"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Cordoue/DSC01193 (1).webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:13 21:26:59",
+          "focal_length": "70mm",
+          "shutter_speed": "0.01s",
+          "f_stop": "f/4.0",
+          "iso": "4000"
+        },
+        "subcategory": "Cordoue"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Cordoue/DSC01193.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:13 21:26:59",
+          "focal_length": "70mm",
+          "shutter_speed": "0.01s",
+          "f_stop": "f/4.0",
+          "iso": "4000"
+        },
+        "subcategory": "Cordoue"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Cordoue/DSC01215.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:13 21:31:48",
+          "focal_length": "100mm",
+          "shutter_speed": "0.008s",
+          "f_stop": "f/4.0",
+          "iso": "6400"
+        },
+        "subcategory": "Cordoue"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Cordoue/DSC01237.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:13 21:47:20",
+          "focal_length": "24mm",
+          "shutter_speed": "0.008s",
+          "f_stop": "f/2.8",
+          "iso": "6400"
+        },
+        "subcategory": "Cordoue"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Cordoue/DSC01245.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:13 21:53:19",
+          "focal_length": "49mm",
+          "shutter_speed": "0.008s",
+          "f_stop": "f/2.8",
+          "iso": "6400"
+        },
+        "subcategory": "Cordoue"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Cordoue/DSC01272.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:14 11:06:35",
+          "focal_length": "24mm",
+          "shutter_speed": "0.008s",
+          "f_stop": "f/2.8",
+          "iso": "6400"
+        },
+        "subcategory": "Cordoue"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Cordoue/DSC01302.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:14 11:16:54",
+          "focal_length": "24mm",
+          "shutter_speed": "0.008s",
+          "f_stop": "f/2.8",
+          "iso": "2500"
+        },
+        "subcategory": "Cordoue"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Cordoue/DSC01328.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:14 11:28:48",
+          "focal_length": "24mm",
+          "shutter_speed": "0.008s",
+          "f_stop": "f/2.8",
+          "iso": "2000"
+        },
+        "subcategory": "Cordoue"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Cordoue/DSC01340.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:14 11:32:43",
+          "focal_length": "24mm",
+          "shutter_speed": "0.008s",
+          "f_stop": "f/2.8",
+          "iso": "3200"
+        },
+        "subcategory": "Cordoue"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Cordoue/DSC01363.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:14 11:44:33",
+          "focal_length": "24mm",
+          "shutter_speed": "0.008s",
+          "f_stop": "f/2.8",
+          "iso": "5000"
+        },
+        "subcategory": "Cordoue"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Cordoue/DSC01393.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:14 11:50:19",
+          "focal_length": "88mm",
+          "shutter_speed": "0.008s",
+          "f_stop": "f/4.0",
+          "iso": "6400"
+        },
+        "subcategory": "Cordoue"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Cordoue/DSC01399.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:14 11:53:05",
+          "focal_length": "70mm",
+          "shutter_speed": "0.008s",
+          "f_stop": "f/4.0",
+          "iso": "6400"
+        },
+        "subcategory": "Cordoue"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Cordoue/DSC01416.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:14 11:59:16",
+          "focal_length": "70mm",
+          "shutter_speed": "0.008s",
+          "f_stop": "f/4.0",
+          "iso": "3200"
+        },
+        "subcategory": "Cordoue"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Cordoue/DSC01422.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:14 12:00:32",
+          "focal_length": "88mm",
+          "shutter_speed": "0.008s",
+          "f_stop": "f/4.0",
+          "iso": "200"
+        },
+        "subcategory": "Cordoue"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Cordoue/DSC01428.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:14 12:03:20",
+          "focal_length": "130mm",
+          "shutter_speed": "0.008s",
+          "f_stop": "f/4.0",
+          "iso": "1600"
+        },
+        "subcategory": "Cordoue"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Cordoue/DSC01436.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:14 12:39:20",
+          "focal_length": "70mm",
+          "shutter_speed": "0.0008s",
+          "f_stop": "f/4.0",
+          "iso": "160"
+        },
+        "subcategory": "Cordoue"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Cordoue/DSC01439.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:14 12:44:56",
+          "focal_length": "70mm",
+          "shutter_speed": "0.0008s",
+          "f_stop": "f/5.0",
+          "iso": "125"
+        },
+        "subcategory": "Cordoue"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Cordoue/DSC01464.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:14 14:15:48",
+          "focal_length": "70mm",
+          "shutter_speed": "0.0008s",
+          "f_stop": "f/4.0",
+          "iso": "125"
+        },
+        "subcategory": "Cordoue"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Cordoue/DSC01499.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:14 14:42:36",
+          "focal_length": "124mm",
+          "shutter_speed": "0.008s",
+          "f_stop": "f/11.0",
+          "iso": "125"
+        },
+        "subcategory": "Cordoue"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Cordoue/DSC01516.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:14 15:28:00",
+          "focal_length": "24mm",
+          "shutter_speed": "0.0015625s",
+          "f_stop": "f/5.6",
+          "iso": "125"
+        },
+        "subcategory": "Cordoue"
       }
     ]
   },
@@ -1667,64 +2091,64 @@ export const galleries = [
       {
         "name": "Bourgogne",
         "coordinates": [
-          0,
-          0
+          47.0525,
+          4.3837
         ],
         "cover": "/photos_optimized/france/Bourgogne/DSC04765.webp"
       },
       {
         "name": "Nantes",
         "coordinates": [
-          0,
-          0
+          47.2184,
+          -1.5536
         ],
         "cover": "/photos_optimized/france/Nantes/DSC01016.webp"
       },
       {
         "name": "Pornic",
         "coordinates": [
-          0,
-          0
+          47.1147,
+          -2.1039
         ],
         "cover": "/photos_optimized/france/Pornic/DSC00414.webp"
       },
       {
         "name": "Noisy-le-Grand",
         "coordinates": [
-          0,
-          0
+          48.8456,
+          2.5516
         ],
         "cover": "/photos_optimized/france/Noisy-le-Grand/DSC01833.webp"
       },
       {
         "name": "Bretagne",
         "coordinates": [
-          0,
-          0
+          48.202,
+          -2.9326
         ],
         "cover": "/photos_optimized/france/Bretagne/DSC04610.webp"
       },
       {
         "name": "Corse du sud",
         "coordinates": [
-          0,
-          0
+          41.8385,
+          8.9221
         ],
         "cover": "/photos_optimized/france/Corse du sud/DSC09258 (1).webp"
       },
       {
         "name": "Noisiel",
         "coordinates": [
-          0,
-          0
+          48.8436,
+          2.6288
         ],
         "cover": "/photos_optimized/france/Noisiel/DSC04535.webp"
       },
       {
         "name": "Chateaux de la Loire",
         "coordinates": [
-          0,
-          0
+          47.5028,
+          0.7725
         ],
         "cover": "/photos_optimized/france/Chateaux de la Loire/DSC04038.webp"
       }
@@ -2643,24 +3067,24 @@ export const galleries = [
       {
         "name": "Pisciotta",
         "coordinates": [
-          0,
-          0
+          40.1118,
+          15.2346
         ],
         "cover": "/photos_optimized/italie/Pisciotta/DSC00859.webp"
       },
       {
         "name": "Palinuro",
         "coordinates": [
-          0,
-          0
+          40.0305,
+          15.2818
         ],
         "cover": "/photos_optimized/italie/Palinuro/DSC00634.webp"
       },
       {
         "name": "Agropoli",
         "coordinates": [
-          0,
-          0
+          40.3475,
+          14.9961
         ],
         "cover": "/photos_optimized/italie/Agropoli/DSC00649.webp"
       }
@@ -3590,245 +4014,6 @@ export const galleries = [
     ]
   },
   {
-    "id": "perou",
-    "country": "Pérou",
-    "continent": "Amérique du Sud",
-    "coordinates": [
-      -9.19,
-      -75.015152
-    ],
-    "code": "PE",
-    "cover": "/photos_optimized/perou/Paracas/cover.webp",
-    "cities": [
-      {
-        "name": "Lima",
-        "coordinates": [
-          -12.0464,
-          -77.0428
-        ],
-        "cover": "/photos_optimized/perou/Lima/R0002930.webp"
-      },
-      {
-        "name": "Paracas",
-        "coordinates": [
-          0,
-          0
-        ],
-        "cover": "/photos_optimized/perou/Paracas/R0002992.webp"
-      }
-    ],
-    "images": [
-      {
-        "src": "/photos_optimized/perou/Lima/R0002930.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:12:05 18:38:10",
-          "iso": "200",
-          "focal_length": "18mm",
-          "shutter_speed": "0.0025s",
-          "f_stop": "f/7.1"
-        },
-        "subcategory": "Lima"
-      },
-      {
-        "src": "/photos_optimized/perou/Lima/R0002951.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:12:05 19:35:18",
-          "iso": "1000",
-          "focal_length": "18mm",
-          "shutter_speed": "0.016666666666666666s",
-          "f_stop": "f/2.8"
-        },
-        "subcategory": "Lima"
-      },
-      {
-        "src": "/photos_optimized/perou/Paracas/R0002992.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:12:08 09:56:20",
-          "iso": "100",
-          "focal_length": "18mm",
-          "shutter_speed": "0.002s",
-          "f_stop": "f/6.3"
-        },
-        "subcategory": "Paracas"
-      },
-      {
-        "src": "/photos_optimized/perou/Paracas/R0003008.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:12:08 10:10:36",
-          "iso": "400",
-          "focal_length": "18mm",
-          "shutter_speed": "0.002s",
-          "f_stop": "f/2.8"
-        },
-        "subcategory": "Paracas"
-      },
-      {
-        "src": "/photos_optimized/perou/Paracas/R0003047.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:12:08 10:23:58",
-          "iso": "200",
-          "focal_length": "18mm",
-          "shutter_speed": "0.002s",
-          "f_stop": "f/9.0"
-        },
-        "subcategory": "Paracas"
-      },
-      {
-        "src": "/photos_optimized/perou/Paracas/R0003051.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:12:08 10:24:11",
-          "iso": "200",
-          "focal_length": "18mm",
-          "shutter_speed": "0.002s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Paracas"
-      },
-      {
-        "src": "/photos_optimized/perou/Paracas/R0003073.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:12:08 13:44:01",
-          "iso": "100",
-          "focal_length": "18mm",
-          "shutter_speed": "0.002s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Paracas"
-      },
-      {
-        "src": "/photos_optimized/perou/Paracas/R0003075.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:12:08 13:45:10",
-          "iso": "100",
-          "focal_length": "18mm",
-          "shutter_speed": "0.002s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Paracas"
-      },
-      {
-        "src": "/photos_optimized/perou/Paracas/R0003079.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:12:08 13:46:01",
-          "iso": "100",
-          "focal_length": "18mm",
-          "shutter_speed": "0.00125s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Paracas"
-      },
-      {
-        "src": "/photos_optimized/perou/Paracas/R0003083.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:12:08 13:51:57",
-          "iso": "100",
-          "focal_length": "18mm",
-          "shutter_speed": "0.002s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Paracas"
-      },
-      {
-        "src": "/photos_optimized/perou/Paracas/R0003096.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:12:08 14:46:36",
-          "iso": "100",
-          "focal_length": "18mm",
-          "shutter_speed": "0.002s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Paracas"
-      },
-      {
-        "src": "/photos_optimized/perou/Paracas/R0003109.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:12:08 14:50:56",
-          "iso": "100",
-          "focal_length": "18mm",
-          "shutter_speed": "0.0025s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Paracas"
-      },
-      {
-        "src": "/photos_optimized/perou/Paracas/R0003111.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:12:08 15:11:34",
-          "iso": "200",
-          "focal_length": "18mm",
-          "shutter_speed": "0.001s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Paracas"
-      },
-      {
-        "src": "/photos_optimized/perou/Paracas/R0003128.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:12:08 15:29:40",
-          "iso": "200",
-          "focal_length": "18mm",
-          "shutter_speed": "0.002s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Paracas"
-      },
-      {
-        "src": "/photos_optimized/perou/Paracas/R0003130.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:12:08 15:29:50",
-          "iso": "200",
-          "focal_length": "18mm",
-          "shutter_speed": "0.00125s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Paracas"
-      },
-      {
-        "src": "/photos_optimized/perou/Paracas/cover.webp",
-        "exif": {
-          "make": "RICOH IMAGING COMPANY, LTD.",
-          "model": "RICOH GR III",
-          "date": "2022:12:08 13:44:01",
-          "iso": "100",
-          "focal_length": "18mm",
-          "shutter_speed": "0.002s",
-          "f_stop": "f/8.0"
-        },
-        "subcategory": "Paracas"
-      }
-    ]
-  },
-  {
     "id": "philippines",
     "country": "Philippines",
     "continent": "Asie",
@@ -3842,16 +4027,16 @@ export const galleries = [
       {
         "name": "Bohol",
         "coordinates": [
-          0,
-          0
+          9.85,
+          124.1435
         ],
         "cover": "/photos_optimized/philippines/Bohol/DSC01183.webp"
       },
       {
         "name": "Malapascua",
         "coordinates": [
-          0,
-          0
+          11.3304,
+          124.1165
         ],
         "cover": "/photos_optimized/philippines/Malapascua/DSC00069.webp"
       },
@@ -4320,6 +4505,245 @@ export const galleries = [
     ]
   },
   {
+    "id": "perou",
+    "country": "Pérou",
+    "continent": "Amérique du Sud",
+    "coordinates": [
+      -9.19,
+      -75.015152
+    ],
+    "code": "PE",
+    "cover": "/photos_optimized/perou/Paracas/cover.webp",
+    "cities": [
+      {
+        "name": "Lima",
+        "coordinates": [
+          -12.0464,
+          -77.0428
+        ],
+        "cover": "/photos_optimized/perou/Lima/R0002930.webp"
+      },
+      {
+        "name": "Paracas",
+        "coordinates": [
+          -13.834,
+          -76.2505
+        ],
+        "cover": "/photos_optimized/perou/Paracas/R0002992.webp"
+      }
+    ],
+    "images": [
+      {
+        "src": "/photos_optimized/perou/Lima/R0002930.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:12:05 18:38:10",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.0025s",
+          "f_stop": "f/7.1"
+        },
+        "subcategory": "Lima"
+      },
+      {
+        "src": "/photos_optimized/perou/Lima/R0002951.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:12:05 19:35:18",
+          "iso": "1000",
+          "focal_length": "18mm",
+          "shutter_speed": "0.016666666666666666s",
+          "f_stop": "f/2.8"
+        },
+        "subcategory": "Lima"
+      },
+      {
+        "src": "/photos_optimized/perou/Paracas/R0002992.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:12:08 09:56:20",
+          "iso": "100",
+          "focal_length": "18mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/6.3"
+        },
+        "subcategory": "Paracas"
+      },
+      {
+        "src": "/photos_optimized/perou/Paracas/R0003008.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:12:08 10:10:36",
+          "iso": "400",
+          "focal_length": "18mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/2.8"
+        },
+        "subcategory": "Paracas"
+      },
+      {
+        "src": "/photos_optimized/perou/Paracas/R0003047.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:12:08 10:23:58",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/9.0"
+        },
+        "subcategory": "Paracas"
+      },
+      {
+        "src": "/photos_optimized/perou/Paracas/R0003051.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:12:08 10:24:11",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Paracas"
+      },
+      {
+        "src": "/photos_optimized/perou/Paracas/R0003073.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:12:08 13:44:01",
+          "iso": "100",
+          "focal_length": "18mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Paracas"
+      },
+      {
+        "src": "/photos_optimized/perou/Paracas/R0003075.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:12:08 13:45:10",
+          "iso": "100",
+          "focal_length": "18mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Paracas"
+      },
+      {
+        "src": "/photos_optimized/perou/Paracas/R0003079.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:12:08 13:46:01",
+          "iso": "100",
+          "focal_length": "18mm",
+          "shutter_speed": "0.00125s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Paracas"
+      },
+      {
+        "src": "/photos_optimized/perou/Paracas/R0003083.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:12:08 13:51:57",
+          "iso": "100",
+          "focal_length": "18mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Paracas"
+      },
+      {
+        "src": "/photos_optimized/perou/Paracas/R0003096.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:12:08 14:46:36",
+          "iso": "100",
+          "focal_length": "18mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Paracas"
+      },
+      {
+        "src": "/photos_optimized/perou/Paracas/R0003109.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:12:08 14:50:56",
+          "iso": "100",
+          "focal_length": "18mm",
+          "shutter_speed": "0.0025s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Paracas"
+      },
+      {
+        "src": "/photos_optimized/perou/Paracas/R0003111.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:12:08 15:11:34",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.001s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Paracas"
+      },
+      {
+        "src": "/photos_optimized/perou/Paracas/R0003128.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:12:08 15:29:40",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Paracas"
+      },
+      {
+        "src": "/photos_optimized/perou/Paracas/R0003130.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:12:08 15:29:50",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.00125s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Paracas"
+      },
+      {
+        "src": "/photos_optimized/perou/Paracas/cover.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:12:08 13:44:01",
+          "iso": "100",
+          "focal_length": "18mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Paracas"
+      }
+    ]
+  },
+  {
     "id": "republique-dominicaine",
     "country": "République Dominicaine",
     "continent": "Caraïbes",
@@ -4333,8 +4757,8 @@ export const galleries = [
       {
         "name": "Bayahibe",
         "coordinates": [
-          0,
-          0
+          18.3752,
+          -68.8382
         ],
         "cover": "/photos_optimized/republique-dominicaine/Bayahibe/DSC02165.webp"
       },
@@ -4349,24 +4773,24 @@ export const galleries = [
       {
         "name": "Los Haitises",
         "coordinates": [
-          0,
-          0
+          19.0538,
+          -69.5772
         ],
         "cover": "/photos_optimized/republique-dominicaine/Los Haitises/DSC02406.webp"
       },
       {
         "name": "Saint Domingue",
         "coordinates": [
-          0,
-          0
+          18.4861,
+          -69.9312
         ],
         "cover": "/photos_optimized/republique-dominicaine/Saint Domingue/DSC02351.webp"
       },
       {
         "name": "Las Terenas",
         "coordinates": [
-          0,
-          0
+          19.3136,
+          -69.5312
         ],
         "cover": "/photos_optimized/republique-dominicaine/Las Terenas/P3040313.webp"
       }
@@ -4947,16 +5371,16 @@ export const galleries = [
       {
         "name": "Tarangire",
         "coordinates": [
-          0,
-          0
+          -3.8407,
+          36.0463
         ],
         "cover": "/photos_optimized/tanzanie/Tarangire/DSC05776.webp"
       },
       {
         "name": "Ngorongoro",
         "coordinates": [
-          0,
-          0
+          -3.1736,
+          35.5866
         ],
         "cover": "/photos_optimized/tanzanie/Ngorongoro/DSC07916.webp"
       },
@@ -6328,8 +6752,8 @@ export const galleries = [
       {
         "name": "Colonia del Sacramento",
         "coordinates": [
-          0,
-          0
+          -34.4714,
+          -57.8341
         ],
         "cover": "/photos_optimized/uruguay/Colonia del Sacramento/R0005119.webp"
       }
@@ -6425,6 +6849,479 @@ export const galleries = [
           "f_stop": "f/8.0"
         },
         "subcategory": "Colonia del Sacramento"
+      }
+    ]
+  },
+  {
+    "id": "equateur",
+    "country": "Équateur",
+    "continent": "Amérique du Sud",
+    "coordinates": [
+      -1.831239,
+      -78.183406
+    ],
+    "code": "EC",
+    "cover": "/photos_optimized/equateur/Galapagos/cover.webp",
+    "cities": [
+      {
+        "name": "Quilotoa",
+        "coordinates": [
+          -0.8661,
+          -78.9045
+        ],
+        "cover": "/photos_optimized/equateur/Quilotoa/R0002544.webp"
+      },
+      {
+        "name": "Galapagos",
+        "coordinates": [
+          -0.9538,
+          -90.9656
+        ],
+        "cover": "/photos_optimized/equateur/Galapagos/R0001912.webp"
+      }
+    ],
+    "images": [
+      {
+        "src": "/photos_optimized/equateur/Quilotoa/R0002544.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:25 12:10:08",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.0025s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Quilotoa"
+      },
+      {
+        "src": "/photos_optimized/equateur/Quilotoa/R0002561.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:25 12:54:54",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.004s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Quilotoa"
+      },
+      {
+        "src": "/photos_optimized/equateur/Quilotoa/R0002582.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:25 13:18:33",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.0025s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Quilotoa"
+      },
+      {
+        "src": "/photos_optimized/equateur/Quilotoa/R0002592.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:25 14:29:52",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.0015625s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Quilotoa"
+      },
+      {
+        "src": "/photos_optimized/equateur/Quilotoa/R0002632.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:26 10:44:52",
+          "iso": "100",
+          "focal_length": "18mm",
+          "shutter_speed": "0.005s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Quilotoa"
+      },
+      {
+        "src": "/photos_optimized/equateur/Quilotoa/R0002639.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:26 11:07:12",
+          "iso": "100",
+          "focal_length": "18mm",
+          "shutter_speed": "0.003125s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Quilotoa"
+      },
+      {
+        "src": "/photos_optimized/equateur/Quilotoa/R0002662.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:26 11:36:02",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Quilotoa"
+      },
+      {
+        "src": "/photos_optimized/equateur/Quilotoa/R0002677.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:26 12:17:56",
+          "iso": "100",
+          "focal_length": "18mm",
+          "shutter_speed": "0.0125s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Quilotoa"
+      },
+      {
+        "src": "/photos_optimized/equateur/Quilotoa/R0002695.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:26 12:57:23",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.0025s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Quilotoa"
+      },
+      {
+        "src": "/photos_optimized/equateur/Quilotoa/R0002745.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:27 15:57:50",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.005s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Quilotoa"
+      },
+      {
+        "src": "/photos_optimized/equateur/Quilotoa/R0002753.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:27 16:17:04",
+          "iso": "100",
+          "focal_length": "18mm",
+          "shutter_speed": "0.01s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Quilotoa"
+      },
+      {
+        "src": "/photos_optimized/equateur/Quilotoa/R0002763.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:27 16:50:11",
+          "iso": "100",
+          "focal_length": "18mm",
+          "shutter_speed": "0.0125s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Quilotoa"
+      },
+      {
+        "src": "/photos_optimized/equateur/Galapagos/R0001912.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:06 14:25:35",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.003125s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Galapagos"
+      },
+      {
+        "src": "/photos_optimized/equateur/Galapagos/R0001941.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:06 14:51:27",
+          "iso": "100",
+          "focal_length": "18mm",
+          "shutter_speed": "0.004s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Galapagos"
+      },
+      {
+        "src": "/photos_optimized/equateur/Galapagos/R0001946.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:06 14:53:13",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.0125s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Galapagos"
+      },
+      {
+        "src": "/photos_optimized/equateur/Galapagos/R0001953.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:06 15:20:12",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.0025s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Galapagos"
+      },
+      {
+        "src": "/photos_optimized/equateur/Galapagos/R0001970.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:06 17:25:36",
+          "iso": "100",
+          "focal_length": "18mm",
+          "shutter_speed": "0.004s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Galapagos"
+      },
+      {
+        "src": "/photos_optimized/equateur/Galapagos/R0001971.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:06 17:25:42",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Galapagos"
+      },
+      {
+        "src": "/photos_optimized/equateur/Galapagos/R0002040.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:06 18:46:29",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.008s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Galapagos"
+      },
+      {
+        "src": "/photos_optimized/equateur/Galapagos/R0002079.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:06 19:11:03",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.003125s",
+          "f_stop": "f/2.8"
+        },
+        "subcategory": "Galapagos"
+      },
+      {
+        "src": "/photos_optimized/equateur/Galapagos/R0002101.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:07 12:08:13",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.004s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Galapagos"
+      },
+      {
+        "src": "/photos_optimized/equateur/Galapagos/R0002121.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:07 13:27:18",
+          "iso": "100",
+          "focal_length": "18mm",
+          "shutter_speed": "0.001s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Galapagos"
+      },
+      {
+        "src": "/photos_optimized/equateur/Galapagos/R0002134.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:07 13:37:44",
+          "iso": "100",
+          "focal_length": "18mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Galapagos"
+      },
+      {
+        "src": "/photos_optimized/equateur/Galapagos/R0002145.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:07 17:32:17",
+          "iso": "100",
+          "focal_length": "18mm",
+          "shutter_speed": "0.005s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Galapagos"
+      },
+      {
+        "src": "/photos_optimized/equateur/Galapagos/R0002162.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:07 18:08:20",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.00625s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Galapagos"
+      },
+      {
+        "src": "/photos_optimized/equateur/Galapagos/R0002202.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:10 19:40:15",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.0015625s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Galapagos"
+      },
+      {
+        "src": "/photos_optimized/equateur/Galapagos/R0002244.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:13 12:35:15",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.0025s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Galapagos"
+      },
+      {
+        "src": "/photos_optimized/equateur/Galapagos/R0002276.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:13 14:55:10",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.003125s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Galapagos"
+      },
+      {
+        "src": "/photos_optimized/equateur/Galapagos/R0002338.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:14 19:43:03",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.004s",
+          "f_stop": "f/4.0"
+        },
+        "subcategory": "Galapagos"
+      },
+      {
+        "src": "/photos_optimized/equateur/Galapagos/R0002355.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:18 12:44:30",
+          "iso": "100",
+          "focal_length": "18mm",
+          "shutter_speed": "0.002s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Galapagos"
+      },
+      {
+        "src": "/photos_optimized/equateur/Galapagos/R0002367.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:18 12:51:50",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.003125s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Galapagos"
+      },
+      {
+        "src": "/photos_optimized/equateur/Galapagos/R0002377.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:18 13:25:29",
+          "iso": "100",
+          "focal_length": "18mm",
+          "shutter_speed": "0.004s",
+          "f_stop": "f/9.0"
+        },
+        "subcategory": "Galapagos"
+      },
+      {
+        "src": "/photos_optimized/equateur/Galapagos/R0002450.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:18 13:53:49",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.001s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Galapagos"
+      },
+      {
+        "src": "/photos_optimized/equateur/Galapagos/cover.webp",
+        "exif": {
+          "make": "RICOH IMAGING COMPANY, LTD.",
+          "model": "RICOH GR III",
+          "date": "2022:11:13 12:35:15",
+          "iso": "200",
+          "focal_length": "18mm",
+          "shutter_speed": "0.0025s",
+          "f_stop": "f/8.0"
+        },
+        "subcategory": "Galapagos"
       }
     ]
   }
