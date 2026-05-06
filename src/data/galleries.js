@@ -1214,6 +1214,14 @@ export const galleries = [
           -4.7794
         ],
         "cover": "/photos_optimized/Espagne/Cordoue/DSC01190.webp"
+      },
+      {
+        "name": "Malaga",
+        "coordinates": [
+          36.7213,
+          -4.4214
+        ],
+        "cover": "/photos_optimized/Espagne/Malaga/DSC01816.webp"
       }
     ],
     "images": [
@@ -2074,6 +2082,58 @@ export const galleries = [
           "iso": "125"
         },
         "subcategory": "Cordoue"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Malaga/DSC01816.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:19 13:19:35",
+          "focal_length": "108mm",
+          "shutter_speed": "0.001s",
+          "f_stop": "f/4.5",
+          "iso": "125"
+        },
+        "subcategory": "Malaga"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Malaga/DSC01819.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:19 13:20:22",
+          "focal_length": "70mm",
+          "shutter_speed": "0.001s",
+          "f_stop": "f/4.5",
+          "iso": "125"
+        },
+        "subcategory": "Malaga"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Malaga/DSC01827.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:19 13:48:50",
+          "focal_length": "107mm",
+          "shutter_speed": "0.001s",
+          "f_stop": "f/4.5",
+          "iso": "125"
+        },
+        "subcategory": "Malaga"
+      },
+      {
+        "src": "/photos_optimized/Espagne/Malaga/DSC01865.webp",
+        "exif": {
+          "make": "SONY",
+          "model": "ILCE-7CM2",
+          "date": "2026:04:19 14:23:23",
+          "focal_length": "200mm",
+          "shutter_speed": "0.0008s",
+          "f_stop": "f/5.0",
+          "iso": "125"
+        },
+        "subcategory": "Malaga"
       }
     ]
   },
